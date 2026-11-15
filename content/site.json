@@ -1,0 +1,146 @@
+{
+  "name": "Zunera",
+  "domain": "https://eatzunera.com",
+  "tagline": "Rooted in sourcing. Driven by quality.",
+  "description": "Zunera brings dates and dry fruits from trusted origins to Indian homes and businesses. Sourced, sorted and packed with care. Available on Amazon.",
+  "announcement": [
+    "Rooted in sourcing",
+    "Driven by quality",
+    "Now available on Amazon"
+  ],
+  "contact": {
+    "whatsapp": "918168154023",
+    "whatsappDisplay": "+91 81681 54023",
+    "email": "contact@foodsyexports.com",
+    "hours": "Monday to Saturday, 10 am to 6 pm IST",
+    "addressLines": [
+      "FOODSY EXPORTS",
+      "Jagadhri, Haryana",
+      "India, 135003"
+    ],
+    "coordinates": "30.13°N · 77.27°E",
+    "phone2": "+91 98120 70807",
+    "phone2Link": "+919812070807",
+    "city": "Jagadhri, Haryana",
+    "website": "www.foodsyexports.com"
+  },
+  "social": {
+    "instagramHandle": "@eatzunera",
+    "instagram": "https://www.instagram.com/eatzunera"
+  },
+  "amazonStore": "https://www.amazon.in/s?k=Zunera+dry+fruits",
+  "legal": {
+    "company": "Foodsy Exports",
+    "fssai": "10823999000048",
+    "gst": "06AAIFF3841N1Z5"
+  },
+  "nav": [
+    {
+      "label": "Shop",
+      "href": "shop.html"
+    },
+    {
+      "label": "Our story",
+      "href": "about.html"
+    },
+    {
+      "label": "Trade",
+      "href": "trade.html"
+    },
+    {
+      "label": "Contact",
+      "href": "contact.html"
+    }
+  ],
+  "categories": [
+    {
+      "id": "dates",
+      "label": "Dates"
+    },
+    {
+      "id": "nuts",
+      "label": "Nuts"
+    },
+    {
+      "id": "dried-fruit",
+      "label": "Dried fruit"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Source",
+      "body": "Identifying the right products and origins.",
+      "icon": "source"
+    },
+    {
+      "title": "Import",
+      "body": "Bringing selected products into the Indian market.",
+      "icon": "import"
+    },
+    {
+      "title": "Quality",
+      "body": "Managing selection, handling and preparation.",
+      "icon": "quality"
+    },
+    {
+      "title": "Pack",
+      "body": "Developing formats suited to the product and purpose.",
+      "icon": "pack"
+    },
+    {
+      "title": "Supply",
+      "body": "Delivering finished products to homes and businesses.",
+      "icon": "supply"
+    }
+  ],
+  "moments": [
+    {
+      "id": "morning",
+      "label": "Morning",
+      "line": "Start slow. A few soaked almonds, a date or two, and the day is already on your side.",
+      "products": [
+        "almonds",
+        "ajwa-dates",
+        "figs"
+      ],
+      "icon": "morning"
+    },
+    {
+      "id": "chai",
+      "label": "Chai-time",
+      "line": "Something to pass around when the cups come out and nobody is in a hurry.",
+      "products": [
+        "cashews",
+        "pistachios",
+        "raisins"
+      ],
+      "icon": "chai"
+    },
+    {
+      "id": "gifting",
+      "label": "Gifting",
+      "line": "A box that says you chose with care. For festivals, weddings and thank-yous.",
+      "products": [
+        "ajwa-dates",
+        "medjool-dates",
+        "pistachios"
+      ],
+      "icon": "gifting"
+    },
+    {
+      "id": "kitchen",
+      "label": "In the kitchen",
+      "line": "For kheer, biryani, halwa and everything that is better with a handful on top.",
+      "products": [
+        "cashews",
+        "raisins",
+        "almonds"
+      ],
+      "icon": "kitchen"
+    }
+  ],
+  "taglineItems": [
+    "Rooted in sourcing",
+    "Driven by quality"
+  ]
+}

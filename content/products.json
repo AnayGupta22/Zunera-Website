@@ -1,0 +1,245 @@
+[
+  {
+    "slug": "ajwa-dates",
+    "name": "Ajwa Dates",
+    "title": "AJWA *dates*",
+    "category": "dates",
+    "origin": "Saudi Arabia",
+    "badge": "Now available",
+    "image": "assets/img/ajwa.jpg",
+    "imageAlt": "A bowl of dark Ajwa dates in front of gold and green Zunera gift boxes",
+    "photoBrief": "",
+    "short": "Dark, soft and gently sweet.",
+    "description": "An exceptional harvest, carefully handpicked for you. Our Ajwa dates are selected at origin in Saudi Arabia, brought to India, then sorted by hand and packed so that every date in the box is one we would serve ourselves.",
+    "notes": {
+      "Taste": "Mellow, raisin-like sweetness with a hint of cocoa.",
+      "Texture": "Soft and fine, with a tender skin.",
+      "Best with": "Warm milk, black coffee, or simply on their own."
+    },
+    "enjoy": [
+      "Open your fast or your morning with two or three.",
+      "Stuff with an almond or pistachio for an easy sweet.",
+      "Chop into oats, laddoos or a bowl of curd."
+    ],
+    "sizes": [
+      "200 g pouch",
+      "5 kg gift box",
+      "10 kg gift box"
+    ],
+    "storage": "Store in a cool, dry place. Refrigerate after opening.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Ajwa+Dates",
+    "color": "#E2A93B",
+    "on": "ink"
+  },
+  {
+    "slug": "medjool-dates",
+    "name": "Medjool Dates",
+    "title": "MEDJOOL *dates*",
+    "category": "dates",
+    "origin": "Jordan",
+    "badge": "",
+    "image": "",
+    "imageAlt": "",
+    "photoBrief": "Zunera Medjool box open on travertine, large amber-brown dates, a few split to show the flesh. Warm side light. Portrait 4:5.",
+    "short": "Large, caramel-soft and generous.",
+    "description": "Medjool dates chosen for size and a soft, caramel-like flesh. We grade every lot by size and moisture, then pack them so each date arrives whole and tender.",
+    "notes": {
+      "Taste": "Rich caramel and honey.",
+      "Texture": "Thick, soft and almost fudgy.",
+      "Best with": "Nut butter, cheese, or black coffee."
+    },
+    "enjoy": [
+      "Pit and fill with almond butter or a walnut half.",
+      "Blend into milkshakes and smoothies for natural sweetness.",
+      "Chop into salads, tagines and baking."
+    ],
+    "sizes": [
+      "200 g pouch",
+      "5 kg gift box"
+    ],
+    "storage": "Store in a cool, dry place. Refrigerate after opening.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Medjool+Dates",
+    "color": "#F4DFAE",
+    "on": "ink"
+  },
+  {
+    "slug": "almonds",
+    "name": "Almonds",
+    "title": "WHOLE *almonds*",
+    "category": "nuts",
+    "origin": "California, USA",
+    "badge": "",
+    "image": "",
+    "imageAlt": "",
+    "photoBrief": "Zunera almond pouch standing on travertine with a stone bowl of whole almonds beside it. Warm, golden-hour side light. Portrait 4:5.",
+    "short": "Crisp, clean and evenly sized.",
+    "description": "Whole almonds chosen for size and snap. We sort each lot for uniform kernels and pack them fresh, so the last handful in the pouch is as crisp as the first.",
+    "notes": {
+      "Taste": "Clean and nutty with a light natural sweetness.",
+      "Texture": "Firm bite, crisp snap.",
+      "Best with": "Soaked overnight, or roasted with a pinch of salt."
+    },
+    "enjoy": [
+      "Soak a handful overnight and peel in the morning.",
+      "Sliver over kheer, phirni or halwa.",
+      "Blend into badam milk with saffron and cardamom."
+    ],
+    "sizes": [
+      "200 g pouch"
+    ],
+    "storage": "Store in an airtight container in a cool, dry place.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Almonds",
+    "color": "#4C5A31",
+    "on": "cream"
+  },
+  {
+    "slug": "cashews",
+    "name": "Cashews",
+    "title": "WHOLE *cashews*",
+    "category": "nuts",
+    "origin": "India",
+    "badge": "",
+    "image": "",
+    "imageAlt": "",
+    "photoBrief": "Zunera cashew pouch with a wicker basket of whole white cashews, linen drape behind. Soft warm light. Portrait 4:5.",
+    "short": "Whole, creamy and ivory-white.",
+    "description": "Whole cashews graded for colour and size. Sorted to keep broken pieces out of the pack, so what you pour into the bowl looks as good as it tastes.",
+    "notes": {
+      "Taste": "Buttery and mildly sweet.",
+      "Texture": "Creamy with a gentle crunch.",
+      "Best with": "Chai, a light roast in ghee, or a rich gravy."
+    },
+    "enjoy": [
+      "Roast in a little ghee with pepper and salt.",
+      "Grind into a paste for korma and shahi gravies.",
+      "Press onto kaju katli, barfi and cookies."
+    ],
+    "sizes": [
+      "200 g pouch"
+    ],
+    "storage": "Store in an airtight container in a cool, dry place.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Cashews",
+    "color": "#A84E33",
+    "on": "cream"
+  },
+  {
+    "slug": "pistachios",
+    "name": "Pistachios",
+    "title": "ROASTED *pistachios*",
+    "category": "nuts",
+    "origin": "Iran",
+    "badge": "",
+    "image": "",
+    "imageAlt": "",
+    "photoBrief": "Zunera pistachio pouch beside a ceramic bowl of in-shell pistachios, a few cracked open on stone. Warm daylight. Portrait 4:5.",
+    "short": "Naturally open, bright green inside.",
+    "description": "In-shell pistachios selected for naturally split shells and a full green kernel. Lightly roasted and salted, then packed quickly to hold their crunch.",
+    "notes": {
+      "Taste": "Rich and savoury with a sweet finish.",
+      "Texture": "Crunchy kernel, easy-open shell.",
+      "Best with": "Evening chai, or crushed over desserts."
+    },
+    "enjoy": [
+      "Shell and share. They rarely last the evening.",
+      "Crush over kulfi, rabri or ice cream.",
+      "Fold into pulao with saffron and raisins."
+    ],
+    "sizes": [
+      "200 g pouch"
+    ],
+    "storage": "Store in an airtight container away from moisture.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Pistachios",
+    "color": "#6E3B4E",
+    "on": "cream"
+  },
+  {
+    "slug": "raisins",
+    "name": "Raisins",
+    "title": "GOLDEN *raisins*",
+    "category": "dried-fruit",
+    "origin": "Afghanistan",
+    "badge": "",
+    "image": "",
+    "imageAlt": "",
+    "photoBrief": "Zunera raisin pouch with a brass bowl of golden and black raisins on linen. Sunlit, warm tones. Portrait 4:5.",
+    "short": "Plump, juicy and sun-dried.",
+    "description": "Raisins chosen for plumpness and colour, cleaned and sorted to remove stems. Naturally sweet, with nothing we would need to hide on the label.",
+    "notes": {
+      "Taste": "Honeyed and bright.",
+      "Texture": "Plump and soft, never dry.",
+      "Best with": "Curd, kheer, or straight from the pouch."
+    },
+    "enjoy": [
+      "Soak overnight and have first thing.",
+      "Fry in ghee and scatter over halwa and pulao.",
+      "Toss through salads, oats and trail mix."
+    ],
+    "sizes": [
+      "200 g pouch"
+    ],
+    "storage": "Store in a cool, dry place. Reseal after opening.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Raisins",
+    "color": "#4A2A1D",
+    "on": "cream"
+  },
+  {
+    "slug": "figs",
+    "name": "Figs",
+    "title": "DRIED *figs*",
+    "category": "dried-fruit",
+    "origin": "Afghanistan",
+    "badge": "",
+    "image": "",
+    "imageAlt": "",
+    "photoBrief": "Zunera anjeer pouch with a stone plate of dried fig rounds, one torn open to show the seeds. Warm low light. Portrait 4:5.",
+    "short": "Soft anjeer with a honeyed centre.",
+    "description": "Dried figs, or anjeer, graded by size and softness. Each piece is checked by hand before it is packed, because a good fig should give a little when you press it.",
+    "notes": {
+      "Taste": "Deep, jammy sweetness.",
+      "Texture": "Chewy skin, soft seeded centre.",
+      "Best with": "Warm milk, cheese, or a square of dark chocolate."
+    },
+    "enjoy": [
+      "Soak two overnight and have them in the morning.",
+      "Simmer in milk for anjeer doodh.",
+      "Slice onto toast, salads and cheese boards."
+    ],
+    "sizes": [
+      "200 g pouch"
+    ],
+    "storage": "Store in a cool, dry place. Refrigerate in humid weather.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Figs+Anjeer",
+    "color": "#AEBB6E",
+    "on": "ink"
+  },
+  {
+    "slug": "apricots",
+    "name": "Apricots",
+    "title": "DRIED *apricots*",
+    "category": "dried-fruit",
+    "origin": "Turkey",
+    "badge": "",
+    "image": "",
+    "imageAlt": "",
+    "photoBrief": "Zunera apricot pouch with a wicker basket of bright orange dried apricots, green leaves at the edge. Golden-hour light. Portrait 4:5.",
+    "short": "Bright, tangy-sweet and tender.",
+    "description": "Dried apricots selected for colour and softness. Sorted piece by piece so the pack holds whole, tender fruit with a clean, bright flavour.",
+    "notes": {
+      "Taste": "Tangy-sweet, like late summer.",
+      "Texture": "Tender and fleshy.",
+      "Best with": "Yoghurt, nuts, or a slow stew."
+    },
+    "enjoy": [
+      "Keep a few in your bag for the afternoon.",
+      "Stew into khubani ka meetha.",
+      "Chop into granola, cakes and couscous."
+    ],
+    "sizes": [
+      "200 g pouch"
+    ],
+    "storage": "Store in a cool, dry place. Reseal after opening.",
+    "amazon": "https://www.amazon.in/s?k=Zunera+Dried+Apricots",
+    "color": "#F0C9A8",
+    "on": "ink"
+  }
+]
