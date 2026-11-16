@@ -81,7 +81,7 @@ function footer(site, products, root) {
     </div>
     <div class="footer-top">
       <div class="footer-brand">
-        ${tagline(site.taglineItems, 'left')}
+        <h2 class="foot-h">Instagram</h2>
         ${followPill(site, 'follow-cream')}
       </div>
       <div>
@@ -111,7 +111,7 @@ function footer(site, products, root) {
     </div>
     <img class="footer-mark" src="${root}assets/brand/zunera-wordmark-cream.svg" alt="Zunera" width="2293" height="515" loading="lazy">
     <div class="footer-base">
-      <span>© <span data-year>2026</span> Zunera. Marketed by Zunera (${esc(site.social.instagramHandle)}).</span>
+      <span>© <span data-year>2026</span> Zunera</span>
       ${site.legal.fssai ? `<span>FSSAI No. ${esc(site.legal.fssai)}</span>` : ''}
       ${site.legal.gst ? `<span>GST ${esc(site.legal.gst)}</span>` : ''}
     </div>

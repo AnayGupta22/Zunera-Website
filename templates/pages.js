@@ -20,7 +20,7 @@ const card = (p, root, products) => `
 </a>`;
 
 const journey = (site, lead, extra = '') => `
-<section class="sec bg-olive journey scallop">
+<section class="sec bg-olive journey scallop" id="journey">
   <div class="wrap">
     <header class="journey-head">
       ${ruled('HOW IT COMES *together*', 'h2', 'on-dark reveal')}
@@ -68,7 +68,7 @@ const pageHero = ({ bg = 'bg-sand', eyebrow, title, lead, extra = '', art = '' }
 
 function home({ site, products, root }) {
   const bySlug = (s) => products.find((p) => p.slug === s);
-  const marquee = products.map((p) => `<span>${esc(p.name)}</span>${icon('diamond', 'dia')}`).join('');
+  const marquee = ['Sourced at origin', 'Sorted by hand', 'Packed in Jagadhri', 'Delivered by Amazon'].map((t) => `<span>${t}</span>${icon('diamond', 'dia')}`).join('');
   const momentColor = { morning: '#E2A93B', chai: '#A84E33', gifting: '#6E3B4E', kitchen: '#AEBB6E' };
   const momentOn = { morning: INK, chai: CREAM, gifting: CREAM, kitchen: INK };
   const hotspots = [[22, 30, '5 kg gift box'], [62, 22, '10 kg gift box'], [87, 60, '200 g pouch'], [30, 70, 'Hand-packed tray']];
@@ -83,11 +83,8 @@ function home({ site, products, root }) {
       <p class="lead reveal">We source dates and dry fruits where they grow best, bring them to India, then sort and pack every lot ourselves.</p>
       <div class="btn-row reveal">
         <a class="btn btn-primary btn-lg" href="${root}shop.html">Explore the range ${go}</a>
-        <a class="btn btn-cream btn-lg" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
+        <a class="btn btn-cream btn-lg" href="${root}trade.html">Trade &amp; bulk</a>
       </div>
-      <ul class="ticks reveal">
-        <li>Sourced at origin</li><li>Sorted by hand</li><li>Packed in Jagadhri</li>
-      </ul>
     </div>
     <div class="stage-wrap reveal">
       <div class="stage" data-stage>
@@ -109,7 +106,7 @@ function home({ site, products, root }) {
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="marquee-track">${marquee}${marquee}${marquee}</div></div>
+<div class="marquee" aria-hidden="true"><div class="marquee-track">${marquee}${marquee}${marquee}${marquee}${marquee}${marquee}</div></div>
 
 <section class="sec bg-cream range" id="range">
   <div class="wrap">
@@ -127,13 +124,6 @@ function home({ site, products, root }) {
   </div>
   <div class="shelf" data-shelf>
     ${products.map((p) => card(p, root, products)).join('')}
-    <a class="pc pc-amazon reveal" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">
-      <span class="pc-top"><span class="pc-origin">Where to buy</span></span>
-      <span class="pc-art">${burst('All on', 'Amazon', 'burst-saffron')}</span>
-      <span class="pc-name">${hl('ONE *store*')}</span>
-      <span class="pc-short">Checkout, delivery and support are handled by Amazon.</span>
-      <span class="pc-cta">Visit the store ${ext}</span>
-    </a>
   </div>
 </section>
 
@@ -143,7 +133,7 @@ function home({ site, products, root }) {
       <p class="eyebrow reveal">The packs</p>
       <h2 class="h1 reveal">${hl('BIG BOXES, SMALL *pouches.*')}</h2>
       <p class="lead reveal">Gift boxes in gold and green for the days that matter, and pouches for every other day. Every pack is designed in-house and filled by hand.</p>
-      <a class="btn btn-primary reveal" href="${root}shop.html">See what's inside ${go}</a>
+      <a class="btn btn-primary reveal" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
     </div>
     <figure class="hotshot reveal">
       <img src="${root}assets/img/range.jpg" alt="Zunera date gift boxes in gold and green, two pouches and an open tray of dates on a marble counter" width="1600" height="1073" loading="lazy">
@@ -178,37 +168,16 @@ ${journey(site, "Quality isn't just about what's inside the pack. It is every st
   </div>
 </section>
 
-<section class="sec bg-sand split-sec scallop">
-  <div class="wrap split">
-    <article class="split-card split-home reveal">
-      <div class="split-photo"><img src="${root}assets/img/gift-boxes.jpg" alt="Gold and green Zunera date gift boxes on travertine with linen drapes behind" loading="lazy" width="1600" height="1073">${burst('Now on', 'Amazon', 'burst-saffron split-burst')}</div>
-      <div class="split-body">
-        <p class="eyebrow">For your home</p>
-        <h2 class="h2">${hl('GOODNESS, *delivered.*')}</h2>
-        <p>Pouches for every day and gift boxes for the days that matter. Order on Amazon and we take it from there.</p>
-        <a class="btn btn-saffron" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
-      </div>
-    </article>
-    <article class="split-card split-trade reveal">
-      <div class="split-photo"><img src="${root}assets/carton/carton-front.jpg" alt="Front panel of the Zunera bulk carton" loading="lazy" width="2000" height="1359"></div>
-      <div class="split-body">
-        <p class="eyebrow">For your business</p>
-        <h2 class="h2">${hl('BULK PACK FOR *trade.*')}</h2>
-        <p>Bulk packs, retail-ready packs and gifting programmes for retailers, wholesalers and kitchens.</p>
-        <a class="btn btn-primary" href="${root}trade.html">Trade &amp; bulk ${go}</a>
-      </div>
-    </article>
-  </div>
-</section>
+${tradeBand(root)}
 
-<section class="sec bg-terra insta scallop">
+<section class="sec bg-cream insta scallop">
   <div class="wrap">
     <header class="sec-head">
       <div>
         <p class="eyebrow reveal">Follow along</p>
         <h2 class="h1 reveal">${hl('MEET THE *brand.*')}</h2>
       </div>
-      <div class="reveal">${followPill(site, 'follow-cream')}</div>
+      <div class="reveal">${followPill(site)}</div>
     </header>
   </div>
   <div class="insta-row">
@@ -234,8 +203,7 @@ ${pageHero({ eyebrow: 'The range', title: 'CHOSEN AT ORIGIN, PACKED FOR *you.*',
     </div>
     <p class="fineprint center">Zunera is sold online through Amazon. Prices, delivery and checkout are shown on each Amazon listing.</p>
   </div>
-</section>
-${tradeBand(root)}`;
+</section>`;
 }
 
 /* ---------- product ---------- */
@@ -285,8 +253,6 @@ function product({ site, products, root, p }) {
           ${p.enjoy.map((e, n) => `<li class="reveal"><em>${no(n + 1)}</em><span>${esc(e)}</span></li>`).join('')}
         </ol>
         <dl class="facts reveal">
-          <div><dt>Origin</dt><dd>${esc(p.origin)}</dd></div>
-          <div><dt>Pack sizes</dt><dd>${p.sizes.map(esc).join(' · ')}</dd></div>
           <div><dt>Storage</dt><dd>${esc(p.storage)}</dd></div>
           <div><dt>Packed at</dt><dd>${esc(site.contact.coordinates)}, ${esc(site.contact.city)}</dd></div>
         </dl>
@@ -305,7 +271,6 @@ function product({ site, products, root, p }) {
     <div class="grid three">${more.map((m) => card(m, root, products)).join('')}</div>
   </div>
 </section>
-${tradeBand(root)}
 <div class="buybar" data-buybar>
   <span><strong>${esc(p.name)}</strong><small>${esc(p.sizes[0])}${p.sizes.length > 1 ? ' and more' : ''}</small></span>
   <a class="btn btn-saffron btn-sm" href="${esc(p.amazon)}" target="_blank" rel="noopener">Buy on Amazon ${ext}</a>
@@ -321,13 +286,13 @@ function about({ site, root }) {
     ['Built for India.', 'Formats, sizes and packaging made for Indian homes, festivals and businesses.', '#F0C9A8', 'pack']
   ];
   return `
-${pageHero({ bg: 'bg-olive', eyebrow: 'Our story', title: 'WE BUILD PRODUCTS, NOT JUST *supply* THEM.', lead: 'From trusted origins to the Indian market, we carefully import, sort, pack and supply quality dry fruits and dates.', art: stamp('st-about', 'ROOTED IN SOURCING ◆ DRIVEN BY QUALITY ◆ ', root, 'phero-stamp') + pile(['ajwa-dates', 'pistachios']) })}
+${pageHero({ bg: 'bg-olive', eyebrow: 'Our story', title: 'WE BUILD PRODUCTS, NOT JUST *supply* THEM.', lead: 'From trusted origins to the Indian market, we carefully import, sort, pack and supply quality dry fruits and dates.', art: pile(['ajwa-dates', 'pistachios', 'raisins']) })}
 
 <section class="sec bg-sand scallop">
   <div class="wrap story">
     <div class="story-photos reveal">
       <figure class="polaroid pol-a"><img src="${root}assets/img/flatlay.jpg" alt="Bowls of almonds, pistachios, raisins, figs and dates beside a gold Zunera dates box" loading="lazy" width="1600" height="1073"><figcaption>Sorted lot by lot</figcaption></figure>
-      <figure class="polaroid pol-b"><img src="${root}assets/img/ajwa.jpg" alt="A bowl of Ajwa dates in front of Zunera gift boxes" loading="lazy" width="900" height="800"><figcaption>Ajwa, where we began</figcaption></figure>
+      <figure class="polaroid pol-b"><img src="${root}assets/img/gift-boxes.jpg" alt="Gold and green Zunera date gift boxes on travertine" loading="lazy" width="1400" height="939"><figcaption>Packed in-house</figcaption></figure>
     </div>
     <div class="story-copy">
       <p class="eyebrow reveal">Why we exist</p>
@@ -348,7 +313,6 @@ ${pageHero({ bg: 'bg-olive', eyebrow: 'Our story', title: 'WE BUILD PRODUCTS, NO
   </div>
 </section>
 
-${journey(site, 'Five steps, one team. Nothing is handed off, so nothing is left to chance.')}
 
 <section class="sec bg-cocoa coords scallop">
   <div class="wrap coords-grid">
@@ -358,10 +322,11 @@ ${journey(site, 'Five steps, one team. Nothing is handed off, so nothing is left
       <p class="lead reveal">${esc(site.contact.city)}. Every Zunera pack is sorted, packed and sealed here by Foodsy Exports.</p>
       <a class="btn btn-saffron reveal" href="${root}contact.html">Get in touch ${go}</a>
     </div>
-    <div class="reveal taped">${slot('The packing floor', 'Our sorting and packing floor at the Jagadhri unit: team hand-sorting dates at steel tables, Zunera cartons stacked behind. Warm daylight, no cool tones. Landscape 3:2.', 'slot-wide')}</div>
+    <div class="reveal">${site.hasFloorPhoto
+      ? `<figure class="taped taped-wide"><img src="${root}assets/img/packing-floor.jpg" alt="The Zunera sorting and packing floor in Jagadhri" loading="lazy"></figure>`
+      : `<div class="taped">${slot('The packing floor', 'A real photograph of the sorting and packing floor at the Jagadhri unit: the team hand-sorting dates, Zunera cartons stacked behind. Warm daylight. Landscape 3:2. Use a real photo here, not a generated one.', 'slot-wide')}</div>`}</div>
   </div>
-</section>
-${tradeBand(root)}`;
+</section>`;
 }
 
 /* ---------- trade ---------- */
@@ -379,7 +344,6 @@ function trade({ site, products, root }) {
     <div>
       <p class="eyebrow reveal">Trade &amp; bulk</p>
       <h1 class="mega reveal">${hl('BULK PACK FOR *trade.*')}</h1>
-      ${tagline(['Rooted in sourcing', 'Driven by quality', 'Built for businesses'], 'left reveal')}
       <p class="lead reveal">We import, sort and pack dates and dry fruits for partners who need consistent grades and dependable supply.</p>
       <div class="btn-row reveal">
         <a class="btn btn-primary btn-lg" href="${root}enquiry.html?type=trade">Send a trade enquiry ${go}</a>
@@ -406,11 +370,19 @@ function trade({ site, products, root }) {
   </div>
 </section>
 
-${journey(site, 'We build products, not just supply them. Each step is handled in-house, so the grade you approve is the grade you receive.', `
-    <div class="who reveal">
+<section class="sec bg-olive tight whoband scallop">
+  <div class="wrap whoband-grid">
+    <div class="reveal">
       <p class="eyebrow">Who we work with</p>
-      <ul>${who.map((w) => `<li>${esc(w)}</li>`).join('')}</ul>
-    </div>`)}
+      <ul class="who-list">${who.map((w) => `<li>${esc(w)}</li>`).join('')}</ul>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">One team, origin to dispatch</p>
+      ${processStrip(site.steps, 'strip-lg')}
+      <p class="lead">Each step is handled in-house, so the grade you approve is the grade you receive. <a class="inline-link" href="${root}index.html#journey">See how it comes together</a></p>
+    </div>
+  </div>
+</section>
 
 <section class="sec bg-sand scallop">
   <div class="wrap">
@@ -429,9 +401,11 @@ ${journey(site, 'We build products, not just supply them. Each step is handled i
         </tbody>
       </table>
     </div>
+    <div class="btn-row center-row reveal">
+      <a class="btn btn-primary btn-lg" href="${root}enquiry.html?type=trade">Send a trade enquiry ${go}</a>
+    </div>
   </div>
-</section>
-${tradeBand(root)}`;
+</section>`;
 }
 
 /* ---------- forms ---------- */

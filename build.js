@@ -12,6 +12,15 @@ const site = read('site.json');
 const products = read('products.json');
 const out = path.join(__dirname, 'site');
 
+/* Photos are picked up automatically when the file exists:
+   site/assets/img/products/<slug>.jpg  and  site/assets/img/packing-floor.jpg */
+const has = (rel) => fs.existsSync(path.join(out, rel));
+products.forEach((p) => {
+  const auto = 'assets/img/products/' + p.slug + '.jpg';
+  if (!p.image && has(auto)) { p.image = auto; p.imageAlt = p.imageAlt || 'Zunera ' + p.name; }
+});
+site.hasFloorPhoto = has('assets/img/packing-floor.jpg');
+
 function write(file, opts) {
   const dest = path.join(out, file);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
@@ -28,7 +37,7 @@ write('about.html', { active: 'about.html', title: 'Our story', description: 'Ho
 write('trade.html', { active: 'trade.html', title: 'Trade & bulk', description: 'Bulk cartons, retail-ready packs and gifting programmes from Zunera for retailers, wholesalers and kitchens.', bodyClass: 'page-trade', content: pages.trade(ctx) });
 write('contact.html', { active: 'contact.html', title: 'Contact us', description: 'Talk to Zunera on WhatsApp, email or Instagram.', content: pages.contact(ctx) });
 write('enquiry.html', { title: 'Enquiry form', description: 'Send Zunera a trade, bulk or gifting enquiry.', content: pages.enquiry(ctx) });
-write('404.html', { title: 'Page not found', content: pages.notFound(ctx) });
+write('404.html', { root: '/', title: 'Page not found', content: pages.notFound({ site, products, root: '/' }) });
 
 products.forEach((p) => {
   write('products/' + p.slug + '.html', {
