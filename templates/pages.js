@@ -13,7 +13,9 @@ const no = (n) => (n < 10 ? '0' : '') + n;
 const card = (p, root, products) => `
 <a class="pc reveal" href="${root}products/${p.slug}.html" data-cat="${p.category}" style="${tone(p)}">
   <span class="pc-top"><span class="pc-origin">${esc(p.origin)}</span><span class="pc-no">${no(products.indexOf(p) + 1)}</span></span>
-  <span class="pc-art">${fruit(p.slug)}</span>
+  ${products.every((x) => x.image)
+    ? `<span class="pc-photo"><img src="${root}${p.image}" alt="${esc(p.imageAlt)}" loading="lazy">${fruit(p.slug)}</span>`
+    : `<span class="pc-art">${fruit(p.slug)}</span>`}
   <span class="pc-name">${hl(p.title)}</span>
   <span class="pc-short">${esc(p.short)}</span>
   <span class="pc-cta">View ${go}</span>
@@ -212,6 +214,10 @@ function product({ site, products, root, p }) {
   const i = products.indexOf(p);
   const more = [1, 2, 3].map((n) => products[(i + n) % products.length]);
   const noteTones = ['#E2A93B', '#AEBB6E', '#F0C9A8'];
+  const facts = `<dl class="facts reveal">
+          <div><dt>Storage</dt><dd>${esc(p.storage)}</dd></div>
+          <div><dt>Packed at</dt><dd>${esc(site.contact.coordinates)}, ${esc(site.contact.city)}</dd></div>
+        </dl>`;
   const photo = p.image
     ? `<figure class="taped"><img src="${root}${p.image}" alt="${esc(p.imageAlt)}" width="900" height="800" loading="lazy"></figure>`
     : `<div class="taped">${slot(p.name + ' pack shot', p.photoBrief)}</div>`;
@@ -234,7 +240,9 @@ function product({ site, products, root, p }) {
     </div>
     <div class="pdp-art reveal">
       ${sparkle('sp sp-a')}${sparkle('sp sp-b')}
-      ${fruit(p.slug, 'float')}
+      ${p.image
+        ? `<figure class="pdp-photo"><img src="${root}${p.image}" alt="${esc(p.imageAlt)}" width="900" height="800"></figure>${fruit(p.slug, 'sticker')}`
+        : fruit(p.slug, 'float')}
       ${stamp('st-pdp', esc(`SOURCED FROM ${p.origin.toUpperCase()} ◆ PACKED IN JAGADHRI ◆ `), root, 'pdp-stamp')}
       ${p.badge ? burst(esc(p.badge.split(' ')[0]), esc(p.badge.split(' ').slice(1).join(' ')), 'burst-cream pdp-burst') : ''}
     </div>
@@ -246,19 +254,24 @@ function product({ site, products, root, p }) {
     <div class="notes">
       ${Object.keys(p.notes).map((k, n) => `<div class="note reveal" style="--c:${noteTones[n % 3]}"><p class="note-label">${esc(k)}</p><p>${esc(p.notes[k])}</p></div>`).join('')}
     </div>
-    <div class="enjoy-grid">
+    ${p.image ? `<div class="enjoy-grid solo">
       <div>
         ${ruled('HOW TO *enjoy*', 'h2', 'reveal')}
         <ol class="enjoy-list">
           ${p.enjoy.map((e, n) => `<li class="reveal"><em>${no(n + 1)}</em><span>${esc(e)}</span></li>`).join('')}
         </ol>
-        <dl class="facts reveal">
-          <div><dt>Storage</dt><dd>${esc(p.storage)}</dd></div>
-          <div><dt>Packed at</dt><dd>${esc(site.contact.coordinates)}, ${esc(site.contact.city)}</dd></div>
-        </dl>
       </div>
-      <div class="reveal">${photo}</div>
-    </div>
+      ${facts}
+    </div>` : `<div class="enjoy-grid">
+      <div>
+        ${ruled('HOW TO *enjoy*', 'h2', 'reveal')}
+        <ol class="enjoy-list">
+          ${p.enjoy.map((e, n) => `<li class="reveal"><em>${no(n + 1)}</em><span>${esc(e)}</span></li>`).join('')}
+        </ol>
+        ${facts}
+      </div>
+      <div class="reveal"><div class="taped">${slot(p.name + ' photo', p.photoBrief)}</div></div>
+    </div>`}
   </div>
 </section>
 
