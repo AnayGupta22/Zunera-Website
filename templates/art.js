@@ -32,9 +32,13 @@ const pistachio = (t) => `<g transform="${t}">${F(SHELL, '#EFDDB4')}${F(SHELL_SH
   ${F('M100 40c9 12 15 27 19 42-12-5-26-5-38 0 4-15 10-30 19-42z', '#8A5670')}${L('M100 92v52', '#7E9148')}${L('M90 104c-2 14-1 26 3 38', '#C3D38A', 4)}
   <path d="${KERNEL}" fill="none" ${S4}/>${L('M62 100c0-20 5-36 14-50', '#FFF6E2', 6)}${O(SHELL)}</g>`;
 
+/* Black raisin: deep purple-black body, darker shaded side, plum wrinkles and a glossy highlight */
 const raisin = (cx, cy, rx, ry, rot, fill, wr) => `<g transform="rotate(${rot} ${cx} ${cy})">
-  <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fill}" ${S}/>
-  ${L(`M${cx - rx * 0.38} ${cy - ry * 0.55}c-5 ${ry * 0.35} -4 ${ry * 0.75} 2 ${ry * 1.05}`, wr)}${L(`M${cx + rx * 0.3} ${cy - ry * 0.5}c5 ${ry * 0.3} 4 ${ry * 0.65} -1 ${ry * 0.95}`, wr)}</g>`;
+  <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fill}"/>
+  <path d="M${cx + rx * 0.15} ${cy - ry}a${rx} ${ry} 0 0 1 0 ${ry * 2}a${rx * 0.75} ${ry} 0 0 0 0 ${-ry * 2}z" fill="#21131C" opacity=".7"/>
+  ${L(`M${cx - rx * 0.38} ${cy - ry * 0.55}c-5 ${ry * 0.35} -4 ${ry * 0.75} 2 ${ry * 1.05}`, wr)}${L(`M${cx + rx * 0.3} ${cy - ry * 0.5}c5 ${ry * 0.3} 4 ${ry * 0.65} -1 ${ry * 0.95}`, wr)}
+  ${L(`M${cx - rx * 0.62} ${cy - ry * 0.18}c0 ${-ry * 0.25} ${rx * 0.12} ${-ry * 0.45} ${rx * 0.3} ${-ry * 0.58}`, '#C9A9BE', 4.5, .85)}
+  <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" ${S}/></g>`;
 
 const FIG = 'M100 26c4 20 46 40 46 86 0 36-20 60-46 60s-46-24-46-60c0-46 42-66 46-86z';
 const FIG_SHADE = 'M100 26c4 20 46 40 46 86 0 36-20 60-46 60 20-12 28-34 28-60 0-40-24-62-28-86z';
@@ -55,8 +59,8 @@ const FRUITS = {
   cashew: () => cashew('translate(96 96) scale(.5) rotate(160 100 100)') + cashew('translate(-12 -4) rotate(-8 100 100)'),
   pistachio: () => pistachio('translate(104 100) scale(.44) rotate(40 100 100)') + pistachio('translate(-10 -4) rotate(-12 100 100)'),
   raisin: () => [
-    raisin(66, 74, 27, 35, -22, '#DB9A32', '#9C5C1B'), raisin(132, 70, 25, 33, 20, '#B9702A', '#7A4212'),
-    raisin(100, 116, 29, 36, 6, '#E8AE44', '#A66A20'), raisin(54, 138, 23, 29, -32, '#B9702A', '#7A4212'), raisin(146, 134, 25, 31, 30, '#DB9A32', '#9C5C1B')
+    raisin(66, 74, 27, 35, -22, '#4A2C40', '#7A5270'), raisin(132, 70, 25, 33, 20, '#3B2333', '#6A4560'),
+    raisin(100, 116, 29, 36, 6, '#553248', '#835B79'), raisin(54, 138, 23, 29, -32, '#3B2333', '#6A4560'), raisin(146, 134, 25, 31, 30, '#4A2C40', '#7A5270')
   ].join(''),
   fig: () => figWhole('translate(-28 0) rotate(-10 100 100) scale(.94)') + figHalf('translate(58 46) rotate(16 100 100) scale(.7)'),
   apricot: () => `<circle cx="140" cy="140" r="42" fill="#F7B76F" ${S}/><ellipse cx="140" cy="140" rx="16" ry="22" fill="#7A4A2A" ${S4}/>${L('M134 128c-2 8-2 16 0 24', '#A26A42', 3)}
