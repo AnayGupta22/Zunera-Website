@@ -34,14 +34,14 @@ No text, no logos, no packaging, no people, no hands, no watermark.
 
 | Save as | Subject line |
 | --- | --- |
-| `date-and-nut-laddoos.jpg` | `Subject: a brass plate of small round dry fruit laddoos made from dates, figs and nuts, one broken in half to show chopped almonds and cashews inside; a few whole dates and dried figs beside the plate.` |
+| `date-and-nut-laddoos.jpg` | `Subject: a brass plate of small round dark-brown laddoos made only from dates, dried figs, almonds, cashews and black raisins, one broken in half to show chopped almonds and cashews inside; a few whole dates, dried figs and almonds beside the plate. No pistachios, no green nuts, no red fruit.` |
 | `dry-fruit-kheer.jpg` | `Subject: a clay bowl of creamy white rice kheer topped with sliced almonds, sliced green pistachios, cashews and plump black raisins, a few saffron strands on top, a brass spoon beside it.` |
 | `kesar-badam-milk.jpg` | `Subject: two glasses of warm pale-golden saffron almond milk with saffron strands floating on top, a small bowl of whole almonds and a few green cardamom pods beside them.` |
 | `sheer-khurma.jpg` | `Subject: a festive bowl of sheer khurma, fine vermicelli in thick creamy milk, topped with chopped dark dates, slivered almonds, pistachios and black raisins, a few rose petals on the cloth beside it.` |
 | `date-rolls.jpg` | `Subject: neat round slices of a dark date and nut roll on a brass plate, the cut faces showing green pistachio, almond and walnut pieces, a short uncut log behind them.` |
-| `imli-khajur-chutney.jpg` | `Subject: a small stoneware bowl of glossy dark-brown tamarind and date chutney with a spoon resting in it, beside a plate of two golden samosas and a few whole dates.` |
+| `imli-khajur-chutney.jpg` | `Subject: a small stoneware bowl of completely smooth, glossy, pourable dark-brown tamarind and date chutney, like a thick sauce with no chunks or lumps, a spoon resting in it, beside a plate of two golden samosas and a few whole dates.` |
 | `stuffed-medjool-dates.jpg` | `Subject: overhead view of a marble board of large Medjool dates, each slit open and filled with creamy walnut butter, topped with finely chopped walnuts.` |
-| `anjeer-milkshake.jpg` | `Subject: two tall glasses of thick, creamy beige fig and cashew milkshake, a few halved dried figs and whole cashews scattered on the surface beside them.` |
+| `anjeer-milkshake.jpg` | `Subject: two tall glasses of thick, creamy beige fig and cashew milkshake with tiny flecks of fig, plain on top with no cream, foam or garnish, a few halved dried figs and whole cashews scattered on the surface beside them.` |
 | `dry-fruits-milkshake.jpg` | `Subject: two tall glasses of creamy dry fruits milkshake topped with chopped pistachios and almonds, small bowls of dates, dried figs, black raisins and cashews around them.` |
 | `saudi-coffee-with-dates.jpg` | `Subject: a brass dallah coffee pot beside two small handleless finjan cups of pale golden Arabic coffee, and a plate of three date varieties: golden-brown Khalas, two-tone Sugai with crisp golden tips, and soft amber Sukkari.` |
 | `khubani-ka-meetha.jpg` | `Subject: a glass bowl of glossy amber apricot compote with soft chunks of dried apricot, topped with sliced almonds and a spoonful of fresh cream, a few whole dried apricots beside it.` |
