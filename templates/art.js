@@ -12,8 +12,11 @@ const F = (d, c, o = 1) => `<path d="${d}" fill="${c}" opacity="${o}"/>`;
 
 const DATE = 'M100 22c34 0 54 36 54 80s-22 78-54 78-54-34-54-78 20-80 54-80z';
 const DATE_SHADE = 'M100 22c34 0 54 36 54 80s-22 78-54 78c26-22 36-52 36-80s-12-58-36-78z';
-const date = (t, c) => `<g transform="${t}">${F(DATE, c.b)}${F(DATE_SHADE, c.s)}
-  ${L('M80 62c-8 26-8 54 0 80M102 52c6 30 6 68 0 104M122 70c5 20 5 44 0 66', c.w)}${L('M64 74c-5 16-6 34-3 50', c.h, 6)}${O(DATE)}
+/* Optional extras: c.tip draws a lighter, crisper cap (Sugai); c.sugar adds sugar crystals (Mufatal) */
+const DATE_TIP = 'M100 22C124 22 141 40 149 66c-12 6-22 3-32 8s-22 2-34-2-22 1-32-6C59 40 76 22 100 22z';
+const SUGAR = [[80, 66], [104, 84], [126, 100], [72, 108], [96, 124], [122, 136], [86, 156], [112, 162], [60, 140]];
+const date = (t, c) => `<g transform="${t}">${F(DATE, c.b)}${F(DATE_SHADE, c.s)}${c.tip ? F(DATE_TIP, c.tip) + L('M72 50c8-12 18-18 28-19', '#F6D9A0', 5) : ''}
+  ${L('M80 62c-8 26-8 54 0 80M102 52c6 30 6 68 0 104M122 70c5 20 5 44 0 66', c.w)}${L('M64 74c-5 16-6 34-3 50', c.h, 6)}${c.sugar ? SUGAR.map((p, n) => `<rect x="${p[0] - 3.5}" y="${p[1] - 3.5}" width="7" height="7" rx="1.5" fill="#FFF4DC" opacity=".9" transform="rotate(${n * 23} ${p[0]} ${p[1]})"/>`).join('') : ''}${O(DATE)}
   <path d="M82 30c2-12 34-12 36 0l-8 8H90z" fill="#E0B25A" ${S}/>${L('M100 20V7', INK, 5)}</g>`;
 
 const ALMOND = 'M100 20c30 30 52 66 52 100 0 34-22 58-52 58s-52-24-52-58c0-34 22-70 52-100z';
@@ -50,7 +53,43 @@ const figHalf = (t) => `<g transform="${t}">${F(FIG, '#F6DFB4')}
   ${[[84, 100], [116, 100], [74, 124], [126, 124], [86, 146], [114, 146], [100, 90], [100, 154], [90, 118], [110, 132]].map((p) => `<circle cx="${p[0]}" cy="${p[1]}" r="3.2" fill="#FBE9C4"/>`).join('')}
   ${O(FIG)}</g>`;
 
+/* Date varieties: colours, how slim the fruit is (sx), and one of three arrangements */
+const shadeOf = (hex, t) => '#' + [1, 3, 5].map((i) => Math.round(parseInt(hex.substr(i, 2), 16) * (1 - t)).toString(16).padStart(2, '0')).join('');
+const darker = (c) => Object.assign({}, c, { b: shadeOf(c.b, .14), s: shadeOf(c.s, .14), w: shadeOf(c.w, .1), tip: c.tip && shadeOf(c.tip, .1) });
+const LAYOUTS = {
+  big: ['translate(98 92) scale(.46) rotate(34 100 100)', 'translate(-8 -6) rotate(-14 100 100)'],
+  pair: ['translate(-34 12) rotate(-30 100 100) scale(.9)', 'translate(34 4) rotate(16 100 100) scale(.96)'],
+  trio: ['translate(-40 22) rotate(-34 100 100) scale(.7)', 'translate(42 20) rotate(30 100 100) scale(.7)', 'translate(0 -16) rotate(-4 100 100) scale(.8)']
+};
+const VARIETIES = {
+  'amber-dates': { b: '#6E3A22', s: '#4E2414', w: '#8F5636', h: '#BA8058', lay: 'pair' },
+  'sugai-dates': { b: '#5A3220', s: '#3E2014', w: '#7A4A30', h: '#A0714E', tip: '#D9A14E', lay: 'big' },
+  'mabroom-dates': { b: '#7C3A22', s: '#5A2814', w: '#9C5638', h: '#C07C58', sx: .72, lay: 'pair' },
+  'kalmi-dates': { b: '#3A2117', s: '#22120B', w: '#5A3A2C', h: '#8A6654', sx: .82, lay: 'big' },
+  'khalas-dates': { b: '#B06A2C', s: '#8C4E1C', w: '#CF8C4A', h: '#EDB57A', lay: 'big' },
+  'fard-dates': { b: '#4A2A1C', s: '#2F1A10', w: '#6A4433', h: '#94705A', sx: .86, lay: 'trio' },
+  'sufri-dates': { b: '#94592F', s: '#73411E', w: '#B4774B', h: '#D8A273', sx: .9, lay: 'pair' },
+  'mashrook-dates': { b: '#5E3424', s: '#40200F', w: '#7E5038', h: '#A6785A', sx: .84, lay: 'trio' },
+  'khudri-dates': { b: '#553022', s: '#381C12', w: '#754A36', h: '#9E7258', sx: .8, lay: 'big' },
+  'rabia-dates': { b: '#4B2A1F', s: '#311810', w: '#6C4534', h: '#97705C', sx: .74, lay: 'pair' },
+  'mazafati-dates': { b: '#2E1A14', s: '#1A0D09', w: '#4A3026', h: '#9A7A6A', lay: 'trio' },
+  'rabbi-dates': { b: '#3E2219', s: '#26130C', w: '#5E3E30', h: '#8C6A58', sx: .7, lay: 'big' },
+  'deglet-nour-dates': { b: '#C98A45', s: '#A86C2E', w: '#E0A866', h: '#F8DBAA', sx: .76, lay: 'pair' },
+  'sukkari-rutab-dates': { b: '#C98B3A', s: '#A66C22', w: '#E2A85A', h: '#F6D08E', lay: 'big' },
+  'sukkari-mufatal-dates': { b: '#C29043', s: '#9E7030', w: '#DDAE66', h: '#F2D49A', sugar: true, lay: 'trio' }
+};
+const variety = (v) => LAYOUTS[v.lay].map((t, n, all) => date(
+  t + (v.sx ? ` translate(100 100) scale(${v.sx} 1) translate(-100 -100)` : ''),
+  n < all.length - 1 ? darker(v) : v)).join('');
+
+/* Seeded black raisins: bigger fruit, with two loose seeds */
+const seed = (x, y, r) => `<path d="M0 -10c5 0 8 6 8 11s-3 9-8 9-8-4-8-9 3-11 8-11z" transform="translate(${x} ${y}) rotate(${r})" fill="#E3C48C" ${S4}/>`;
+
 const FRUITS = {
+  raisinSeeded: () => [
+    raisin(70, 80, 34, 42, -20, '#4A2C40', '#7A5270'), raisin(136, 88, 32, 40, 22, '#3B2333', '#6A4560'),
+    raisin(96, 138, 34, 38, 4, '#553248', '#835B79')
+  ].join('') + seed(152, 164, 30) + seed(170, 146, -18),
   ajwa: () => date('translate(98 92) scale(.46) rotate(34 100 100)', { b: '#5B3423', s: '#3F2216', w: '#7E5038', h: '#A9795A' }) +
     date('translate(-8 -6) rotate(-14 100 100)', { b: '#4A2A1D', s: '#301810', w: '#6E4630', h: '#9A6A48' }),
   medjool: () => date('translate(-34 12) rotate(-30 100 100) scale(.9)', { b: '#C07C3C', s: '#9E5F28', w: '#DDA468', h: '#F0C594' }) +
@@ -92,7 +131,9 @@ const ICONS = {
   camera: `<path d="M22 44h18l8-12h24l8 12h18v48H22z" fill="none" ${S4}/><circle cx="60" cy="66" r="15" fill="none" ${S4}/>`
 };
 
-const NAME = { 'ajwa-dates': 'ajwa', 'medjool-dates': 'medjool', almonds: 'almond', cashews: 'cashew', pistachios: 'pistachio', raisins: 'raisin', figs: 'fig', apricots: 'apricot' };
+Object.keys(VARIETIES).forEach((k) => { FRUITS[k] = () => variety(VARIETIES[k]); });
+
+const NAME = { 'ajwa-dates': 'ajwa', 'medjool-dates': 'medjool', almonds: 'almond', cashews: 'cashew', pistachios: 'pistachio', raisins: 'raisin', 'black-raisins-seedless': 'raisin', 'black-raisins-seeded': 'raisinSeeded', figs: 'fig', apricots: 'apricot' };
 const fruit = (slug, cls = '') => `<svg class="ill ${cls}" viewBox="0 0 200 200" aria-hidden="true">${(FRUITS[NAME[slug] || slug] || FRUITS.ajwa)()}</svg>`;
 const icon2 = (name, cls = '') => `<svg class="ico ${cls}" viewBox="0 0 120 120" aria-hidden="true">${ICONS[name] || ''}</svg>`;
 

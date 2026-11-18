@@ -70,7 +70,7 @@ const pageHero = ({ bg = 'bg-sand', eyebrow, title, lead, extra = '', art = '' }
 
 function home({ site, products, root }) {
   const bySlug = (s) => products.find((p) => p.slug === s);
-  const marquee = ['Sourced at origin', 'Sorted by hand', 'Packed in Jagadhri', 'Delivered by Amazon'].map((t) => `<span>${t}</span>${icon('diamond', 'dia')}`).join('');
+  const marquee = ['Sourced at origin', 'Sorted by hand', 'Packed with care', 'Delivered by Amazon'].map((t) => `<span>${t}</span>${icon('diamond', 'dia')}`).join('');
   const momentColor = { morning: '#E2A93B', chai: '#A84E33', gifting: '#6E3B4E', kitchen: '#AEBB6E' };
   const momentOn = { morning: INK, chai: CREAM, gifting: CREAM, kitchen: INK };
   const hotspots = [[22, 30, '5 kg gift box'], [62, 22, '10 kg gift box'], [87, 60, '200 g pouch'], [30, 70, 'Hand-packed tray']];
@@ -115,7 +115,7 @@ function home({ site, products, root }) {
     <header class="sec-head">
       <div>
         <p class="eyebrow reveal">The range</p>
-        <h2 class="h1 reveal">${hl('EIGHT STAPLES, ONE *standard.*')}</h2>
+        <h2 class="h1 reveal">${hl('THE WHOLE RANGE, ONE *standard.*')}</h2>
       </div>
       <div class="shelf-nav reveal">
         <p class="lead">Each one chosen at origin, checked by hand and packed fresh.</p>
@@ -183,7 +183,10 @@ ${tradeBand(root)}
     </header>
   </div>
   <div class="insta-row">
-    ${[1, 2, 3, 4, 5].map((n) => `<a class="post reveal" href="${esc(site.social.instagram)}" target="_blank" rel="noopener"><img src="${root}assets/social/post-${n}.jpg" alt="Zunera Instagram post ${n} of 5" loading="lazy" width="808" height="1080"></a>`).join('')}
+    ${(site.instagramPosts && site.instagramPosts.length
+      ? site.instagramPosts
+      : [1, 2, 3, 4, 5].map((n) => ({ src: `assets/social/post-${n}.jpg`, link: site.social.instagram, alt: `Zunera Instagram post ${n} of 5` }))
+    ).map((p) => `<a class="post reveal" href="${esc(p.link)}" target="_blank" rel="noopener"><img src="${root}${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" width="808" height="1080">${p.video ? '<span class="post-play" aria-label="Video"></span>' : ''}</a>`).join('')}
   </div>
 </section>`;
 }
@@ -197,7 +200,7 @@ function shop({ site, products, root }) {
       ${site.categories.map((c) => `<button type="button" class="chip-btn" aria-pressed="false" data-filter="${c.id}">${esc(c.label)}</button>`).join('')}
     </div>`;
   return `
-${pageHero({ eyebrow: 'The range', title: 'CHOSEN AT ORIGIN, PACKED FOR *you.*', lead: 'Eight staples, each sorted and checked by hand. Pick one to see tasting notes and pack sizes, then buy it on Amazon.', extra: filters, art: pile(['almonds', 'figs', 'apricots']) })}
+${pageHero({ eyebrow: 'The range', title: 'CHOSEN AT ORIGIN, PACKED FOR *you.*', lead: 'Dates from across the Gulf, Iran and Tunisia, and dry fruits for every day, each sorted and checked by hand. Pick one to see tasting notes and pack sizes, then buy it on Amazon.', extra: filters, art: pile(['almonds', 'figs', 'apricots']) })}
 <section class="sec bg-cream tight scallop">
   <div class="wrap">
     <div class="grid" data-shop-grid>
@@ -216,7 +219,6 @@ function product({ site, products, root, p }) {
   const noteTones = ['#E2A93B', '#AEBB6E', '#F0C9A8'];
   const facts = `<dl class="facts reveal">
           <div><dt>Storage</dt><dd>${esc(p.storage)}</dd></div>
-          <div><dt>Packed at</dt><dd>${esc(site.contact.coordinates)}, ${esc(site.contact.city)}</dd></div>
         </dl>`;
   const photo = p.image
     ? `<figure class="taped"><img src="${root}${p.image}" alt="${esc(p.imageAlt)}" width="900" height="800" loading="lazy"></figure>`
@@ -243,7 +245,7 @@ function product({ site, products, root, p }) {
       ${p.image
         ? `<figure class="pdp-photo"><img src="${root}${p.image}" alt="${esc(p.imageAlt)}" width="900" height="800"></figure>${fruit(p.slug, 'sticker')}`
         : fruit(p.slug, 'float')}
-      ${stamp('st-pdp', esc(`SOURCED FROM ${p.origin.toUpperCase()} ◆ PACKED IN JAGADHRI ◆ `), root, 'pdp-stamp')}
+      ${stamp('st-pdp', esc(`SOURCED FROM ${p.origin.toUpperCase()} ◆ PACKED WITH CARE ◆ `), root, 'pdp-stamp')}
       ${p.badge ? burst(esc(p.badge.split(' ')[0]), esc(p.badge.split(' ').slice(1).join(' ')), 'burst-cream pdp-burst') : ''}
     </div>
   </div>
@@ -311,7 +313,7 @@ ${pageHero({ bg: 'bg-olive', eyebrow: 'Our story', title: 'WE BUILD PRODUCTS, NO
       <p class="eyebrow reveal">Why we exist</p>
       <h2 class="h1 reveal">${hl('WE BRING THE SOURCE *closer.*')}</h2>
       <p class="reveal">Good dates and dry fruits are decided long before they are packed. They are decided at the source: which orchard, which harvest, which grade.</p>
-      <p class="reveal">So that is where we start. We select at origin, import directly, and bring every lot to our own unit in ${esc(site.contact.city)}, where it is sorted, graded and packed by our team.</p>
+      <p class="reveal">So that is where we start. We select at origin, import directly, and every lot is sorted, graded and packed before it reaches you.</p>
       <p class="reveal">The packaging is designed in-house too, because quality isn't just about what's inside the pack.</p>
     </div>
   </div>
@@ -330,14 +332,14 @@ ${pageHero({ bg: 'bg-olive', eyebrow: 'Our story', title: 'WE BUILD PRODUCTS, NO
 <section class="sec bg-cocoa coords scallop">
   <div class="wrap coords-grid">
     <div>
-      <p class="eyebrow reveal">Where it is packed</p>
-      <p class="coords-num reveal">${esc(site.contact.coordinates)}</p>
-      <p class="lead reveal">${esc(site.contact.city)}. Every Zunera pack is sorted, packed and sealed here by Foodsy Exports.</p>
+      <p class="eyebrow reveal">How it is packed</p>
+      <p class="coords-num reveal">Sorted. Graded. Sealed.</p>
+      <p class="lead reveal">Zunera is packed at units across India, and every pack is sorted, graded and sealed to the same standard.</p>
       <a class="btn btn-saffron reveal" href="${root}contact.html">Get in touch ${go}</a>
     </div>
     <div class="reveal">${site.hasFloorPhoto
-      ? `<figure class="taped taped-wide"><img src="${root}assets/img/packing-floor.jpg" alt="The Zunera sorting and packing floor in Jagadhri" loading="lazy"></figure>`
-      : `<div class="taped">${slot('The packing floor', 'A real photograph of the sorting and packing floor at the Jagadhri unit: the team hand-sorting dates, Zunera cartons stacked behind. Warm daylight. Landscape 3:2. Use a real photo here, not a generated one.', 'slot-wide')}</div>`}</div>
+      ? `<figure class="taped taped-wide"><img src="${root}assets/img/packing-floor.jpg" alt="A Zunera sorting and packing floor" loading="lazy"></figure>`
+      : `<div class="taped">${slot('The packing floor', 'A real photograph of a Zunera sorting and packing floor: the team hand-sorting dates, Zunera cartons stacked behind. Warm daylight. Landscape 3:2. Use a real photo here, not a generated one.', 'slot-wide')}</div>`}</div>
   </div>
 </section>`;
 }

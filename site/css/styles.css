@@ -360,7 +360,11 @@ figure.taped-wide img { aspect-ratio: 3 / 2; }
 .insta-row { display: flex; gap: clamp(16px, 2.2vw, 28px); overflow-x: auto; padding: 16px var(--pad) 30px; scroll-snap-type: x proximity; scrollbar-width: none; }
 .insta-row::-webkit-scrollbar { display: none; }
 .insta-row .post { flex: none; width: clamp(200px, 17vw, 244px); padding: 8px; background: var(--cream); border: var(--line); border-radius: 16px; box-shadow: var(--hard); scroll-snap-align: center; transition: transform 320ms var(--spring); }
-.insta-row .post img { border-radius: 8px; }
+.insta-row .post { position: relative; }
+.insta-row .post img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; }
+/* Video posts get a small play badge */
+.post-play { position: absolute; top: 18px; right: 18px; width: 34px; height: 34px; border-radius: 50%; background: var(--saffron); border: var(--line); }
+.post-play::after { content: ""; position: absolute; left: 12px; top: 9px; border-left: 11px solid var(--ink); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
 .insta-row .post:nth-child(odd) { transform: rotate(-2.5deg); }
 .insta-row .post:nth-child(even) { transform: rotate(2deg) translateY(14px); }
 .insta-row .post:first-child { margin-left: auto; }
@@ -477,7 +481,7 @@ figure.taped-wide img { aspect-ratio: 3 / 2; }
 .vcard h3 { font: 700 23px/1.1 var(--font-sans); text-transform: uppercase; margin-bottom: 10px; }
 .vcard p { margin: 0; color: var(--ink-soft); }
 .coords-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
-.coords-num { font: italic 500 clamp(40px, 5.8vw, 80px)/1 var(--font-serif); color: var(--saffron); margin: 0 0 22px; white-space: nowrap; }
+.coords-num { font: italic 500 clamp(40px, 5.8vw, 80px)/1 var(--font-serif); color: var(--saffron); margin: 0 0 22px; }
 .coords .btn { margin-top: 14px; }
 
 /* ---------- 21. Trade ---------- */

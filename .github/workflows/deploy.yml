@@ -35,6 +35,9 @@ jobs:
 
       - name: Build Zunera website
         run: node build.js
+        env:
+          INSTAGRAM_FEED_URL: ${{ secrets.INSTAGRAM_FEED_URL }}
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
 
       - name: Preserve custom domain
         run: cp CNAME site/CNAME
