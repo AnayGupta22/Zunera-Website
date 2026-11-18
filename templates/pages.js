@@ -248,8 +248,9 @@ ${pageHero({ eyebrow: 'The range', title: 'CHOSEN AT ORIGIN, PACKED FOR *you.*',
 
 /* ---------- product ---------- */
 
-function product({ site, products, root, p }) {
+function product({ site, products, recipes = [], root, p }) {
   const i = products.indexOf(p);
+  const cookWith = recipes.filter((r) => r.products.includes(p.slug));
   const more = [1, 2, 3].map((n) => products[(i + n) % products.length]);
   const noteTones = ['#E2A93B', '#AEBB6E', '#F0C9A8'];
   const facts = `<dl class="facts reveal">
@@ -311,6 +312,16 @@ function product({ site, products, root, p }) {
     </div>`}
   </div>
 </section>
+${cookWith.length ? `
+<section class="sec bg-peach scallop">
+  <div class="wrap">
+    <header class="sec-head">
+      <div><p class="eyebrow reveal">Recipes</p><h2 class="h1 reveal">${hl('COOK WITH *it.*')}</h2></div>
+      <a class="btn btn-cream reveal" href="${root}recipes.html">All recipes ${go}</a>
+    </header>
+    <div class="grid three">${cookWith.map((r) => recipeCard(r, root)).join('')}</div>
+  </div>
+</section>` : ''}
 
 <section class="sec bg-sand tight more scallop">
   <div class="wrap">

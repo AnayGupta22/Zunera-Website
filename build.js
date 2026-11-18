@@ -105,8 +105,20 @@ function write(file, opts) {
 /* Old addresses that should send visitors on to a new page */
 const redirects = { 'products/raisins.html': 'products/black-raisins-seedless.html' };
 
+/* House rule: every product is used in at least one recipe, and recipes only name real products.
+   The build still runs, but prints a loud warning so a new product is never left without one. */
+function checkRecipes() {
+  const slugs = new Set(products.map((p) => p.slug));
+  const used = new Set(recipes.flatMap((r) => r.products));
+  const lonely = products.filter((p) => !used.has(p.slug)).map((p) => p.slug);
+  const unknown = [...used].filter((s) => !slugs.has(s));
+  if (lonely.length) console.warn('\n  WARNING: these products are not in any recipe yet: ' + lonely.join(', ') + '\n  Add them to a recipe in content/recipes.json.\n');
+  if (unknown.length) console.warn('\n  WARNING: recipes name products that do not exist: ' + unknown.join(', ') + '\n');
+}
+
 async function main() {
   console.log('Building Zunera site:');
+  checkRecipes();
   site.instagramPosts = await instagram();
   const ctx = { site, products, recipes, root: '' };
 
@@ -138,7 +150,7 @@ async function main() {
       description: p.short + ' ' + p.description,
       bodyClass: 'page-product',
       themeColor: p.color,
-      content: pages.product({ site, products, root: '../', p })
+      content: pages.product({ site, products, recipes, root: '../', p })
     });
   });
 

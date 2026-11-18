@@ -8,7 +8,14 @@
     "prep": "15 min",
     "cook": "5 min",
     "serves": "Makes 14 to 16",
-    "products": ["medjool-dates", "almonds", "cashews", "walnut-kernels", "pistachios"],
+    "products": [
+      "medjool-dates",
+      "kalmi-dates",
+      "almonds",
+      "cashews",
+      "walnut-kernels",
+      "pistachios"
+    ],
     "ingredients": [
       "250 g Zunera Medjool or Kalmi dates, pitted",
       "¼ cup Zunera almonds",
@@ -41,7 +48,10 @@
     "prep": "10 min, plus overnight soaking",
     "cook": "10 min",
     "serves": "Serves 2",
-    "products": ["almonds", "pistachios"],
+    "products": [
+      "almonds",
+      "pistachios"
+    ],
     "ingredients": [
       "20 Zunera almonds, soaked overnight",
       "500 ml full-fat milk",
@@ -72,7 +82,12 @@
     "prep": "10 min",
     "cook": "45 min",
     "serves": "Serves 4",
-    "products": ["cashews", "black-raisins-seedless", "almonds", "pistachios"],
+    "products": [
+      "cashews",
+      "black-raisins-seedless",
+      "almonds",
+      "pistachios"
+    ],
     "ingredients": [
       "¼ cup basmati rice, washed and soaked for 20 minutes",
       "1 litre full-fat milk",
@@ -107,7 +122,11 @@
     "prep": "10 min",
     "cook": "No cooking",
     "serves": "Makes 12",
-    "products": ["medjool-dates", "walnut-kernels", "pistachios"],
+    "products": [
+      "medjool-dates",
+      "walnut-kernels",
+      "pistachios"
+    ],
     "ingredients": [
       "12 Zunera Medjool dates",
       "12 Zunera walnut kernel halves",
@@ -137,7 +156,11 @@
     "prep": "10 min, plus 2 hours soaking",
     "cook": "No cooking",
     "serves": "Serves 2",
-    "products": ["figs", "almonds", "ajwa-dates"],
+    "products": [
+      "figs",
+      "almonds",
+      "ajwa-dates"
+    ],
     "ingredients": [
       "6 Zunera dried figs",
       "10 Zunera almonds",
@@ -167,7 +190,11 @@
     "prep": "5 min, plus overnight",
     "cook": "No cooking",
     "serves": "Serves 1",
-    "products": ["figs", "apricots", "walnut-kernels"],
+    "products": [
+      "figs",
+      "apricots",
+      "walnut-kernels"
+    ],
     "ingredients": [
       "½ cup rolled oats",
       "½ cup milk, or any plant milk",
@@ -188,5 +215,221 @@
     "photoBrief": "A glass jar of overnight oats layered with chopped figs and apricots, walnuts and a drizzle of honey on top, spoon resting on the rim. Morning light. Landscape 3:2.",
     "color": "#4C5A31",
     "on": "cream"
+  },
+  {
+    "slug": "date-tasting-board",
+    "title": "A DATE TASTING *board*",
+    "name": "A date tasting board",
+    "category": "Snacks",
+    "intro": "The way dates are served across the Gulf: a few varieties side by side, a pot of coffee, and time to taste the difference.",
+    "prep": "10 min",
+    "cook": "No cooking",
+    "serves": "Serves 4 to 6",
+    "products": [
+      "sukkari-rutab-dates",
+      "sugai-dates",
+      "khalas-dates",
+      "amber-dates",
+      "mabroom-dates",
+      "deglet-nour-dates",
+      "sukkari-mufatal-dates",
+      "walnuts-in-shell"
+    ],
+    "ingredients": [
+      "4 to 5 each of three to five Zunera date varieties, for example:",
+      "Zunera Deglet Nour or Mabroom dates, for something lighter and semi-dry",
+      "Zunera Sugai or Amber dates, for a mild sweetness",
+      "Zunera Khalas dates, for caramel notes",
+      "Zunera Sukkari Rutab or Sukkari Mufatal dates, to finish sweet",
+      "A small bowl of Zunera in-shell walnuts and a nutcracker",
+      "Black coffee or cardamom tea, to serve"
+    ],
+    "steps": [
+      "Pick three to five varieties. More than five and the differences start to blur.",
+      "Arrange them in rows on a board or a large plate, from the lightest and least sweet to the softest and sweetest.",
+      "Add the walnuts and nutcracker at one side. A cracked walnut between dates resets the palate.",
+      "Brew the coffee or tea and pour small cups.",
+      "Taste along the row, one of each, with a sip in between."
+    ],
+    "tip": "Label each row with a small card so guests know what they are tasting. They will want to know which one to buy.",
+    "photoBrief": "Overhead shot of a wooden board with neat rows of five different dates, from golden to near-black, a bowl of in-shell walnuts and two small cups of coffee. Natural light. Landscape 3:2.",
+    "color": "#5A3A2A",
+    "on": "cream"
+  },
+  {
+    "slug": "chocolate-date-truffles",
+    "title": "CHOCOLATE DATE *truffles*",
+    "name": "Chocolate date truffles",
+    "category": "Sweets",
+    "intro": "Three ingredients and a food processor. Soft, dark dates turn into something that tastes far richer than it has any right to.",
+    "prep": "15 min, plus 30 min chilling",
+    "cook": "No cooking",
+    "serves": "Makes 16 to 18",
+    "products": [
+      "mazafati-dates",
+      "rabia-dates",
+      "almonds",
+      "pistachios"
+    ],
+    "ingredients": [
+      "200 g Zunera Mazafati or Rabia dates, pitted",
+      "½ cup Zunera almonds",
+      "2 tbsp unsweetened cocoa powder, plus extra for rolling",
+      "A pinch of salt",
+      "1 tbsp nut butter (optional)",
+      "2 tbsp Zunera pistachios, finely chopped, for rolling"
+    ],
+    "steps": [
+      "Blitz the almonds in a food processor to coarse crumbs.",
+      "Add the dates, cocoa, salt and nut butter, and blitz until it clumps into a dough.",
+      "If it feels too dry to hold together, add a teaspoon of water and blitz again.",
+      "Roll into small balls with lightly damp hands.",
+      "Roll half in cocoa and half in chopped pistachios.",
+      "Chill for 30 minutes to firm up. They keep in the fridge for a week."
+    ],
+    "tip": "Mazafati dates are soft and moist, so they bind on their own. With semi-dry dates, soak them in warm water for 10 minutes first.",
+    "photoBrief": "Chocolate truffles on a small plate, some dusted in cocoa and some rolled in green pistachio, one bitten in half. Dark background, warm light. Landscape 3:2.",
+    "color": "#3A2530",
+    "on": "cream"
+  },
+  {
+    "slug": "eggless-date-and-walnut-cake",
+    "title": "DATE & WALNUT *cake*",
+    "name": "Eggless date & walnut cake",
+    "category": "Baking",
+    "intro": "The bakery classic, at home. Dates soaked in warm milk give it a soft, toffee-like crumb, and the walnuts give it crunch.",
+    "prep": "20 min, plus 30 min soaking",
+    "cook": "35 to 40 min",
+    "serves": "Serves 8",
+    "products": [
+      "mashrook-dates",
+      "kalmi-dates",
+      "walnuts-in-shell",
+      "walnut-kernels"
+    ],
+    "ingredients": [
+      "1 cup Zunera Mashrook or Kalmi dates (about 150 g), pitted and chopped",
+      "¾ cup warm milk",
+      "½ cup sugar or brown sugar",
+      "½ cup neutral oil",
+      "1¼ cups whole wheat flour or maida (about 150 g)",
+      "1 tsp baking powder",
+      "½ tsp baking soda",
+      "½ tsp cinnamon powder",
+      "A pinch of salt",
+      "½ cup walnuts, roughly chopped (crack Zunera in-shell walnuts, or use Zunera walnut kernels)"
+    ],
+    "steps": [
+      "Soak the chopped dates in the warm milk for 30 minutes.",
+      "Heat the oven to 180°C and grease and line an 8-inch loaf tin.",
+      "Blend the dates and milk with the sugar and oil until smooth.",
+      "In a large bowl, whisk together the flour, baking powder, baking soda, cinnamon and salt.",
+      "Pour in the date mixture and fold gently until just combined. Fold in most of the walnuts.",
+      "Pour into the tin, scatter the rest of the walnuts on top, and bake for 35 to 40 minutes, until a skewer comes out clean.",
+      "Cool in the tin for 10 minutes, then turn out and cool fully before slicing."
+    ],
+    "tip": "Toast the walnuts in a dry pan for a few minutes before chopping. It makes a big difference to the flavour.",
+    "photoBrief": "A loaf of date and walnut cake on a wooden board, two slices cut to show the crumb, walnut halves on top, a cup of chai beside it. Warm light. Landscape 3:2.",
+    "color": "#C98B6B",
+    "on": "ink"
+  },
+  {
+    "slug": "munakka-milk",
+    "title": "MUNAKKA *milk*",
+    "name": "Munakka milk",
+    "category": "Drinks",
+    "intro": "Seeded black raisins, soaked and simmered in milk. A warm, gently sweet cup that needs no added sugar.",
+    "prep": "5 min, plus 2 hours soaking",
+    "cook": "10 min",
+    "serves": "Serves 1",
+    "products": [
+      "black-raisins-seeded",
+      "almonds"
+    ],
+    "ingredients": [
+      "8 to 10 Zunera seeded black raisins",
+      "1 cup milk",
+      "4 Zunera almonds, soaked and peeled (optional)",
+      "A pinch of cardamom powder",
+      "2 to 3 strands of saffron (optional)"
+    ],
+    "steps": [
+      "Soak the raisins in a little water for 2 hours, or overnight.",
+      "Drain, then slit each raisin and pick out the seeds.",
+      "Bring the milk to a simmer with the raisins, almonds, cardamom and saffron.",
+      "Simmer on low for 5 minutes, pressing a few raisins against the side of the pan to release their sweetness.",
+      "Pour into a cup and drink warm, raisins and all."
+    ],
+    "tip": "Soaking makes the seeds easy to remove and plumps the raisins up so they flavour the milk.",
+    "photoBrief": "A cup of warm milk with plump black raisins and a few saffron strands, on a wooden table with a small bowl of raisins beside it. Soft evening light. Landscape 3:2.",
+    "color": "#7A4A5C",
+    "on": "cream"
+  },
+  {
+    "slug": "deglet-nour-orange-salad",
+    "title": "DATE & ORANGE *salad*",
+    "name": "Date, orange & walnut salad",
+    "category": "Salads",
+    "intro": "Sweet, sharp and crunchy. Slices of golden Deglet Nour with orange, toasted walnuts and a honey-lemon dressing.",
+    "prep": "15 min",
+    "cook": "No cooking",
+    "serves": "Serves 2",
+    "products": [
+      "deglet-nour-dates",
+      "walnut-kernels"
+    ],
+    "ingredients": [
+      "2 oranges, peeled and cut into segments",
+      "2 cups rocket or crisp lettuce",
+      "8 Zunera Deglet Nour dates, pitted and sliced",
+      "¼ cup Zunera walnut kernels, lightly toasted",
+      "50 g paneer or feta, crumbled",
+      "2 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "1 tsp honey",
+      "Salt and black pepper, to taste"
+    ],
+    "steps": [
+      "Whisk the olive oil, lemon juice, honey, salt and pepper in a small bowl.",
+      "Spread the leaves on a plate and arrange the orange segments on top.",
+      "Scatter over the sliced dates, the walnuts and the crumbled cheese.",
+      "Spoon over the dressing just before serving."
+    ],
+    "tip": "Deglet Nour dates are firm enough to slice neatly, which is why they work so well in salads.",
+    "photoBrief": "A plate of green leaves with orange segments, sliced golden dates, walnuts and crumbled white cheese, dressing being drizzled on. Bright daylight. Landscape 3:2.",
+    "color": "#F0D3A8",
+    "on": "ink"
+  },
+  {
+    "slug": "homemade-date-paste",
+    "title": "HOMEMADE DATE *paste*",
+    "name": "Homemade date paste",
+    "category": "Basics",
+    "intro": "A jar of date paste in the fridge is the easiest swap for sugar. Stir it into chai, oats, smoothies and cake batter.",
+    "prep": "10 min, plus 30 min soaking",
+    "cook": "No cooking",
+    "serves": "Makes about 1 cup",
+    "products": [
+      "khudri-dates",
+      "fard-dates",
+      "rabbi-dates",
+      "sufri-dates"
+    ],
+    "ingredients": [
+      "250 g Zunera Khudri, Fard, Rabbi or Sufri dates, pitted",
+      "1 cup hot water",
+      "A squeeze of lemon juice (optional)"
+    ],
+    "steps": [
+      "Put the pitted dates in a bowl and pour over the hot water. Leave for 30 minutes, until soft.",
+      "Tip the dates and about half the soaking water into a blender.",
+      "Blend until smooth, adding more of the water a spoonful at a time until it is thick but spreadable.",
+      "Stir in the lemon juice and spoon into a clean jar.",
+      "Keep it in the fridge and use within a week."
+    ],
+    "tip": "Semi-dry dates like Khudri, Fard and Rabbi are ideal here: they soften well and give a thick, rich paste.",
+    "photoBrief": "A glass jar of smooth, glossy date paste with a spoon in it, a few whole dates beside it on a linen cloth. Soft natural light. Landscape 3:2.",
+    "color": "#D9A35B",
+    "on": "ink"
   }
 ]
