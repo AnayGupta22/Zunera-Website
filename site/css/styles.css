@@ -706,3 +706,5 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
   .gsteps li:nth-child(even) { transform: none; }
   .phero-art .gift-burst { width: 104px; right: -2%; }
 }
+.source { margin: -22px 0 36px; font-size: 14px; color: var(--ink-soft); }
+.source a, .recipe-hero .fineprint a { text-decoration: underline; text-underline-offset: 3px; }

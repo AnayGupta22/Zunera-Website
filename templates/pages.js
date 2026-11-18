@@ -582,8 +582,11 @@ ${pageHero({ bg: 'bg-peach', eyebrow: 'Recipes', title: 'COOK WITH *Zunera.*', l
 <section class="sec bg-cream tight scallop">
   <div class="wrap">
     <div class="grid three rc-grid" data-shop-grid>
-      ${recipes.map((r, i) => recipeCard(r, root, i === 0 ? ' rc-feature'
-        : i === recipes.length - 1 && (recipes.length + 1) % 3 === 1 ? ' rc-feature rc-wide' : '')).join('')}
+      ${recipes.map((r, i) => {
+        /* The first card is large (2 columns). The last card stretches so the final row has no gap. */
+        const rem = (recipes.length + 1) % 3, last = i === recipes.length - 1 && i > 0;
+        return recipeCard(r, root, i === 0 ? ' rc-feature' : last && rem === 1 ? ' rc-feature rc-wide' : last && rem === 2 ? ' rc-feature' : '');
+      }).join('')}
     </div>
   </div>
 </section>`;
@@ -606,6 +609,7 @@ function recipe({ recipes, products, root, r }) {
       <div class="sizes reveal">
         <span class="tag">Prep: ${esc(r.prep)}</span><span class="tag">Cook: ${esc(r.cook)}</span><span class="tag">${esc(r.serves)}</span>
       </div>
+      ${(r.sources || []).length ? `<p class="fineprint reveal">Recipe adapted from ${r.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(' and ')}.</p>` : ''}
     </div>
     <div class="pdp-art reveal">
       ${sparkle('sp sp-a')}${sparkle('sp sp-b')}
@@ -627,6 +631,7 @@ function recipe({ recipes, products, root, r }) {
         ${r.steps.map((s, n) => `<li class="reveal"><em>${no(n + 1)}</em><span>${esc(s)}</span></li>`).join('')}
       </ol>
       <div class="tipbox reveal"><strong>Good to know</strong><p>${esc(r.tip)}</p></div>
+      ${(r.sources || []).length ? `<p class="source reveal">Adapted from ${r.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(' and ')}.</p>` : ''}
       <div class="reveal"><div class="taped">${slot(r.name + ' photo', r.photoBrief)}</div></div>
     </div>
   </div>

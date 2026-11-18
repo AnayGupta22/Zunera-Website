@@ -103,7 +103,11 @@ function write(file, opts) {
 }
 
 /* Old addresses that should send visitors on to a new page */
-const redirects = { 'products/raisins.html': 'products/black-raisins-seedless.html' };
+const redirects = {
+  'products/raisins.html': 'products/black-raisins-seedless.html',
+  'recipes/date-tasting-board.html': 'recipes/saudi-coffee-with-dates.html',
+  'recipes/munakka-milk.html': 'recipes/sheer-khurma.html'
+};
 
 /* House rule: every product is used in at least one recipe, and recipes only name real products.
    The build still runs, but prints a loud warning so a new product is never left without one. */

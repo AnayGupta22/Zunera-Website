@@ -1,42 +1,93 @@
 [
   {
     "slug": "date-and-nut-laddoos",
-    "title": "DATE & NUT *laddoos*",
-    "name": "Date & nut laddoos",
+    "title": "DRY FRUIT *laddoos*",
+    "name": "Dry fruit laddoos",
     "category": "Sweets",
-    "intro": "No sugar, no fuss. Soft dates hold a handful of toasted nuts together, and ten minutes later you have a box of laddoos for the week.",
+    "intro": "No added sugar, ghee or oil. Dates and figs bind and sweeten, and the nuts bring the crunch.",
     "prep": "15 min",
     "cook": "5 min",
-    "serves": "Makes 14 to 16",
+    "serves": "Makes about 10",
     "products": [
       "medjool-dates",
       "kalmi-dates",
+      "figs",
       "almonds",
       "cashews",
-      "walnut-kernels",
-      "pistachios"
+      "black-raisins-seedless"
     ],
     "ingredients": [
-      "250 g Zunera Medjool or Kalmi dates, pitted",
-      "¼ cup Zunera almonds",
-      "¼ cup Zunera cashews",
-      "¼ cup Zunera walnut kernels",
-      "2 tbsp Zunera pistachios, finely chopped, for rolling",
-      "1 tbsp ghee",
-      "½ tsp cardamom powder",
-      "2 tbsp desiccated coconut (optional)"
+      "1 cup chopped Zunera Medjool or Kalmi dates, pitted",
+      "8 Zunera dried figs",
+      "3 tbsp Zunera almonds",
+      "2 tbsp Zunera cashews",
+      "2 tbsp Zunera seedless black raisins",
+      "1 tbsp desiccated coconut (optional)",
+      "2 green cardamoms"
     ],
     "steps": [
-      "Dry-roast the almonds, cashews and walnuts in a pan over low heat for 4 to 5 minutes, until they smell toasty. Let them cool, then chop them coarsely.",
-      "Blitz the pitted dates in a food processor to a sticky paste, or chop them very finely by hand.",
-      "Warm the ghee in the same pan, add the date paste and stir over low heat for 2 to 3 minutes, until it softens and comes together.",
-      "Take the pan off the heat and mix in the chopped nuts and the cardamom.",
-      "When it is cool enough to handle, grease your palms with a little ghee and roll the mixture into small balls.",
-      "Roll each laddoo in chopped pistachios or coconut. They keep in an airtight box for up to a week."
+      "Dry-roast the almonds in a pan, stirring every so often, until they brown lightly. Set them aside.",
+      "Roughly chop the dates and the figs, and measure out 1 cup of chopped dates.",
+      "Lightly crush the cardamom pods, discard the skins and coarsely crush the seeds.",
+      "Put the dates, figs, cashews, raisins, coconut, cardamom and roasted almonds into a grinder or food processor and grind to a coarse mixture.",
+      "Shape the mixture into small balls with your hands.",
+      "Serve straight away, or store in an airtight box: a few days at room temperature, or a couple of weeks in the fridge."
     ],
-    "tip": "Soft dates like Medjool and Kalmi bind best. If yours feel dry, soak them in warm water for 10 minutes and pat them dry first.",
-    "photoBrief": "A plate of date and nut laddoos rolled in green pistachio, a few broken open, on a brass thali with a Zunera pouch behind. Warm side light. Landscape 3:2.",
+    "tip": "Keep the dates and figs: their stickiness is what holds the laddoos together. If your figs are very dry, soak them in hot water for a couple of hours, then drain and pat them dry before chopping.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/dry-fruits-ladoo-recipe/"
+      }
+    ],
+    "photoBrief": "A plate of dry fruit laddoos, a few broken open to show dates, figs and nuts, on a brass thali with a Zunera pouch behind. Warm side light. Landscape 3:2.",
     "color": "#E2A93B",
+    "on": "ink"
+  },
+  {
+    "slug": "dry-fruit-kheer",
+    "title": "RICE *kheer*",
+    "name": "Rice kheer",
+    "category": "Sweets",
+    "intro": "Basmati rice slow-cooked in milk until thick and creamy, with cardamom, saffron and a handful of nuts and raisins.",
+    "prep": "20 min",
+    "cook": "30 min",
+    "serves": "Serves 5",
+    "products": [
+      "almonds",
+      "cashews",
+      "pistachios",
+      "black-raisins-seedless"
+    ],
+    "ingredients": [
+      "¼ cup basmati rice",
+      "1 litre whole milk (4 cups)",
+      "6 tbsp sugar, or to taste",
+      "½ tsp green cardamom powder",
+      "1 pinch saffron (14 to 16 strands)",
+      "1 tbsp Zunera almonds, sliced",
+      "1 tbsp Zunera cashews, chopped",
+      "1 tbsp Zunera pistachios, sliced",
+      "1 tbsp Zunera seedless black raisins"
+    ],
+    "steps": [
+      "Rinse the rice a few times until the water runs clear, then soak it in water for 15 to 20 minutes.",
+      "Meanwhile, bring the milk to a boil in a heavy, wide pan over low to medium-low heat, stirring now and then so it does not stick.",
+      "Spoon 1 tbsp of the hot milk into a small bowl, let it cool until warm, and add the saffron.",
+      "Drain the rice and stir it into the boiling milk. Simmer uncovered on low heat, stirring at intervals, until the rice is about half cooked.",
+      "Stir in the sugar and keep simmering until the rice is almost cooked.",
+      "Add the cardamom, almonds, cashews, pistachios and the saffron milk. Cook on low heat until the rice is completely soft and the kheer has thickened, scraping the milk solids from the sides back in.",
+      "Turn off the heat and stir in the raisins. Serve hot, warm or chilled."
+    ],
+    "tip": "Kheer thickens further as it cools. Keep leftovers in the fridge and eat within 1 to 2 days, loosening with a splash of milk when you reheat. The original recipe uses golden raisins; black raisins work the same way.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/rice-kheer-recipe-chawal-ki-kheer/"
+      }
+    ],
+    "photoBrief": "A clay bowl of creamy rice kheer topped with sliced almonds, pistachios and black raisins, a few saffron strands, a brass spoon beside it. Warm light. Landscape 3:2.",
+    "color": "#F0C9A8",
     "on": "ink"
   },
   {
@@ -44,251 +95,289 @@
     "title": "KESAR BADAM *milk*",
     "name": "Kesar badam milk",
     "category": "Drinks",
-    "intro": "Warm saffron milk thickened with almond paste. A cup at bedtime in winter, or chilled on a summer afternoon.",
-    "prep": "10 min, plus overnight soaking",
-    "cook": "10 min",
-    "serves": "Serves 2",
+    "intro": "Soaked almonds ground with sugar, cardamom and saffron, then warmed through in milk. Good hot, warm or chilled.",
+    "prep": "35 min, including soaking",
+    "cook": "5 min",
+    "serves": "Serves 3",
     "products": [
-      "almonds",
-      "pistachios"
+      "almonds"
     ],
     "ingredients": [
-      "20 Zunera almonds, soaked overnight",
-      "500 ml full-fat milk",
-      "A pinch of saffron (8 to 10 strands)",
-      "¼ tsp cardamom powder",
-      "1 to 2 tbsp sugar or jaggery, to taste",
-      "1 tbsp Zunera pistachios, slivered"
+      "35 Zunera almonds (about ¼ cup)",
+      "⅓ cup hot water, for soaking",
+      "2¼ cups milk",
+      "4 tbsp sugar, or to taste",
+      "4 green cardamoms, seeds only",
+      "1 light pinch of saffron (optional)"
     ],
     "steps": [
-      "Peel the soaked almonds and blend them with 3 to 4 tbsp of the milk to a smooth paste.",
-      "Soak the saffron in 1 tbsp of warm milk.",
-      "Bring the rest of the milk to a boil, then lower the heat and stir in the almond paste.",
-      "Simmer for 5 to 6 minutes, stirring so nothing catches at the bottom.",
-      "Add the saffron milk, cardamom and sugar, and simmer for one more minute.",
-      "Serve warm, or chill it first, with slivered pistachios on top."
+      "Rinse the almonds, cover them with ⅓ cup just-boiled water, and leave covered for 30 to 40 minutes.",
+      "Drain and peel the almonds. The skins slip off when you press them.",
+      "Put the almonds in a blender with the sugar, cardamom seeds, saffron and ¼ to ⅓ cup of the milk. Grind until very fine and smooth.",
+      "Scrape the paste into a saucepan. Swirl ½ cup of the milk around the blender jar to pick up what is left and add it to the pan, then pour in the remaining milk (about 1½ cups).",
+      "Warm on low heat, stirring now and then so it does not catch. Turn off the heat once it is hot; it does not need a hard boil.",
+      "Serve hot or warm, or chill it first. Garnish with sliced almonds or a few saffron strands if you like."
     ],
-    "tip": "For a silky-smooth drink, pour it through a fine sieve after adding the almond paste.",
-    "photoBrief": "Two glasses of pale-golden saffron almond milk topped with slivered pistachios and saffron strands, a small bowl of almonds beside. Warm light. Landscape 3:2.",
+    "tip": "Grind the almonds as fine as you can: coarse bits can irritate the throat. Instead of hot water, you can soak the almonds in room-temperature water for 8 hours.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/badam-milk-recipe/"
+      }
+    ],
+    "photoBrief": "Two glasses of pale-golden saffron almond milk with saffron strands on top, a small bowl of almonds beside them. Warm light. Landscape 3:2.",
     "color": "#AEBB6E",
     "on": "ink"
   },
   {
-    "slug": "dry-fruit-kheer",
-    "title": "DRY FRUIT *kheer*",
-    "name": "Dry fruit kheer",
+    "slug": "sheer-khurma",
+    "title": "SHEER *khurma*",
+    "name": "Sheer khurma",
     "category": "Sweets",
-    "intro": "Slow-cooked rice pudding for festivals and Sunday lunches, finished with cashews and raisins fried golden in ghee.",
+    "intro": "The Eid classic: fine vermicelli simmered in milk with dates, nuts and raisins sautéed in ghee. Sheer means milk, and khurma means dates.",
     "prep": "10 min",
-    "cook": "45 min",
-    "serves": "Serves 4",
+    "cook": "20 min",
+    "serves": "Serves 5",
     "products": [
-      "cashews",
-      "black-raisins-seedless",
+      "ajwa-dates",
+      "kalmi-dates",
+      "pistachios",
       "almonds",
-      "pistachios"
+      "cashews",
+      "black-raisins-seeded"
     ],
     "ingredients": [
-      "¼ cup basmati rice, washed and soaked for 20 minutes",
-      "1 litre full-fat milk",
-      "⅓ cup sugar",
-      "1 tbsp ghee",
-      "10 Zunera cashews",
-      "1 tbsp Zunera seedless black raisins",
-      "10 Zunera almonds, sliced",
-      "1 tbsp Zunera pistachios, sliced",
-      "½ tsp cardamom powder",
-      "A pinch of saffron (optional)"
+      "1 cup thin vermicelli (seviyan), broken (about 40 g)",
+      "3 tbsp ghee",
+      "3 tbsp Zunera pistachios, chopped (about 20 g)",
+      "20 Zunera almonds, chopped (about 20 g)",
+      "16 to 18 Zunera cashews, chopped (about 20 g)",
+      "2 tbsp Zunera seeded black raisins, seeds removed",
+      "½ cup Zunera Ajwa or Kalmi dates, pitted and chopped (about 100 g)",
+      "2 tbsp chironji (optional)",
+      "1 litre whole milk",
+      "4 tbsp sugar, or to taste",
+      "1 tsp cardamom powder",
+      "1 tbsp rose water or kewra water",
+      "15 to 18 saffron strands (optional)"
     ],
     "steps": [
-      "Bring the milk to a boil in a heavy-bottomed pan.",
-      "Add the drained rice and simmer on low heat for 30 to 35 minutes, stirring often, until the rice is soft and the milk has thickened.",
-      "Meanwhile, heat the ghee in a small pan. Fry the cashews until golden, add the raisins for a few seconds until they puff up, then set aside.",
-      "Stir the sugar, cardamom and saffron into the kheer and simmer for 5 more minutes.",
-      "Add the fried cashews and raisins, and the sliced almonds.",
-      "Serve warm or chilled, with sliced pistachios on top."
+      "Dry-roast the vermicelli in a pan on low heat, stirring often, until golden. Set aside.",
+      "In the same pan, heat the ghee and add the pistachios, almonds, cashews, raisins, dates and chironji. Sauté on low heat for 3 to 4 minutes, stirring often.",
+      "Bring the milk to a boil in a heavy pan over medium-low to medium heat, stirring a few times. Lower the heat and simmer for 8 to 10 minutes, stirring often, until it thickens slightly.",
+      "Add the roasted vermicelli and the sugar. Simmer on low to medium-low heat for 8 to 10 minutes, until the vermicelli is soft and the milk has reduced.",
+      "Add the cardamom, saffron, and all of the ghee, nut and date mixture. Turn off the heat and stir well. Taste and add more sugar if needed.",
+      "Stir in the rose water. Serve hot, warm or cold."
     ],
-    "tip": "Kheer thickens as it cools. If you are serving it cold, take it off the heat while it still looks a little loose.",
-    "photoBrief": "A clay bowl of creamy kheer topped with golden cashews, black raisins and sliced pistachios, a brass spoon beside it. Warm light. Landscape 3:2.",
-    "color": "#F0C9A8",
-    "on": "ink"
+    "tip": "The dates and raisins add plenty of sweetness, so taste before adding more sugar. The original recipe uses golden raisins; with seeded black raisins, slit each one and pick out the seeds first. Sheer khurma thickens as it cools.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/sheer-khurma-recipe-sheer-korma-recipe/"
+      }
+    ],
+    "photoBrief": "A bowl of sheer khurma with vermicelli, slivered nuts and chopped dates on top, rose petals scattered on a festive tablecloth. Warm light. Landscape 3:2.",
+    "color": "#7A4A5C",
+    "on": "cream"
   },
   {
     "slug": "stuffed-medjool-dates",
-    "title": "STUFFED MEDJOOL *dates*",
-    "name": "Stuffed Medjool dates",
+    "title": "WALNUT BUTTER STUFFED *dates*",
+    "name": "Walnut butter stuffed dates",
     "category": "Snacks",
-    "intro": "The easiest party plate there is. Big, soft dates filled with nut butter, a walnut pressed in and a little chocolate on top.",
+    "intro": "Three ingredients and five minutes. Soft Medjool dates filled with walnut butter and finished with chopped walnuts.",
     "prep": "10 min",
     "cook": "No cooking",
     "serves": "Makes 12",
     "products": [
       "medjool-dates",
-      "walnut-kernels",
-      "pistachios"
+      "walnut-kernels"
     ],
     "ingredients": [
       "12 Zunera Medjool dates",
-      "12 Zunera walnut kernel halves",
-      "4 tbsp peanut butter, almond butter or cream cheese",
-      "1 tbsp Zunera pistachios, finely chopped",
-      "A pinch of flaky salt",
-      "30 g dark chocolate, melted (optional)"
+      "⅓ cup walnut butter (about 85 g)",
+      "2 tbsp Zunera walnut kernels, finely chopped"
     ],
     "steps": [
-      "Slit each date lengthwise down one side and take out the seed.",
-      "Fill each date with about a teaspoon of nut butter or cream cheese.",
-      "Press a walnut half into the filling.",
-      "Drizzle with melted chocolate if you are using it, then sprinkle with pistachios and a few flakes of salt.",
-      "Chill for 15 minutes to set the chocolate, or serve straight away."
+      "Cut each date lengthwise with a small, sharp knife and pull out the seed.",
+      "Spoon about 1 tsp of walnut butter into each date.",
+      "Sprinkle about ¼ tsp of chopped walnuts over each one.",
+      "Serve straight away, or keep in an airtight container in the fridge for up to 5 days."
     ],
-    "tip": "Any soft date works. Try Ajwa or Sukkari Rutab for a smaller, sweeter bite.",
-    "photoBrief": "Stuffed Medjool dates on a marble board, walnut halves pressed in, chocolate drizzle and green pistachio crumbs. Overhead, natural light. Landscape 3:2.",
+    "tip": "Shop-bought walnut butter works well. Give it a good stir before you use it.",
+    "sources": [
+      {
+        "name": "California Walnuts",
+        "url": "https://walnuts.org/recipe/walnut-butter-stuffed-dates/"
+      }
+    ],
+    "photoBrief": "Stuffed Medjool dates on a marble board, walnut butter filling and chopped walnuts on top. Overhead, natural light. Landscape 3:2.",
     "color": "#A84E33",
     "on": "cream"
   },
   {
     "slug": "anjeer-milkshake",
-    "title": "ANJEER *milkshake*",
-    "name": "Anjeer milkshake",
+    "title": "KAJU ANJEER *milkshake*",
+    "name": "Kaju anjeer milkshake",
     "category": "Drinks",
-    "intro": "Figs, almonds and a couple of Ajwa dates blended with cold milk. Thick, naturally sweet, and no sugar needed.",
-    "prep": "10 min, plus 2 hours soaking",
+    "intro": "Dried figs and cashews, soaked until soft and blended with cold milk. Thick, creamy and naturally sweet.",
+    "prep": "15 min, plus 30 min soaking",
     "cook": "No cooking",
     "serves": "Serves 2",
     "products": [
       "figs",
-      "almonds",
-      "ajwa-dates"
+      "cashews"
     ],
     "ingredients": [
-      "6 Zunera dried figs",
-      "10 Zunera almonds",
-      "2 Zunera Ajwa dates, pitted",
-      "400 ml chilled milk",
-      "¼ tsp cardamom powder",
-      "A few ice cubes"
+      "12 to 15 Zunera cashews, whole",
+      "10 to 12 Zunera dried figs",
+      "2½ cups chilled milk",
+      "1 to 2 tsp raw sugar, jaggery powder or sugar (optional)"
     ],
     "steps": [
-      "Soak the figs and almonds in warm water for 2 hours, or overnight in the fridge.",
-      "Drain them, peel the almonds, and chop the figs, cutting off any hard stems.",
-      "Blend the figs, almonds and dates with half the milk until smooth.",
-      "Add the rest of the milk, the cardamom and the ice, and blend again.",
-      "Pour into glasses and top with a little chopped almond."
+      "Rinse the cashews and figs, then soak them in hot water for 30 to 45 minutes. Check the figs: if they are not soft yet, soak them a little longer.",
+      "Drain and put the cashews and figs in a blender (chop the figs if they are large) with ½ cup of the chilled milk. Blend to a smooth purée, or leave a few bits of fig for texture.",
+      "Add the remaining 2 cups of milk and blend again. If your blender jar is small, stir the purée into the milk in a bowl instead.",
+      "Taste, and add a little sugar or jaggery only if it needs it.",
+      "Pour into glasses and serve straight away."
     ],
-    "tip": "The dates do the sweetening. Taste before serving and add a third date if you like it sweeter.",
-    "photoBrief": "Two tall glasses of thick, blush-beige fig milkshake, halved dried figs and a few almonds scattered around. Bright natural light. Landscape 3:2.",
+    "tip": "This makes a fairly thick shake. Add more milk if you prefer it thinner.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/kaju-shake/"
+      }
+    ],
+    "photoBrief": "Two tall glasses of thick, beige fig and cashew milkshake, halved dried figs and a few cashews scattered around. Bright natural light. Landscape 3:2.",
     "color": "#6E3B4E",
     "on": "cream"
   },
   {
-    "slug": "fig-and-walnut-overnight-oats",
-    "title": "FIG & WALNUT OVERNIGHT *oats*",
-    "name": "Fig & walnut overnight oats",
-    "category": "Breakfast",
-    "intro": "Five minutes the night before, and breakfast is waiting in the fridge. Chewy figs and apricots, crunchy walnuts.",
-    "prep": "5 min, plus overnight",
-    "cook": "No cooking",
-    "serves": "Serves 1",
+    "slug": "saudi-coffee-with-dates",
+    "title": "SAUDI COFFEE WITH *dates*",
+    "name": "Saudi coffee with dates",
+    "category": "Drinks",
+    "intro": "Gahwa, the cardamom coffee offered to every guest in Saudi Arabia. It is served unsweetened, because the dates on the side bring the sweetness.",
+    "prep": "5 min",
+    "cook": "About 20 min",
+    "serves": "Makes about 800 ml",
     "products": [
-      "figs",
-      "apricots",
-      "walnut-kernels"
+      "khalas-dates",
+      "sukkari-rutab-dates",
+      "sukkari-mufatal-dates",
+      "sugai-dates",
+      "amber-dates",
+      "mabroom-dates",
+      "ajwa-dates"
     ],
     "ingredients": [
-      "½ cup rolled oats",
-      "½ cup milk, or any plant milk",
-      "¼ cup thick curd",
-      "1 tsp chia seeds (optional)",
-      "2 Zunera dried figs, chopped",
-      "2 Zunera dried apricots, chopped",
-      "4 Zunera walnut kernels, broken",
-      "1 tsp honey"
+      "800 ml water",
+      "40 g lightly roasted Arabic coffee, ground",
+      "30 g ground cardamom",
+      "A pinch of saffron (optional)",
+      "A plate of Zunera dates, to serve: Khalas, Sukkari Rutab, Sukkari Mufatal, Sugai, Amber, Mabroom or Ajwa"
     ],
     "steps": [
-      "In a jar, stir together the oats, milk, curd and chia seeds.",
-      "Fold in half the chopped figs and apricots.",
-      "Cover and refrigerate overnight, or for at least 6 hours.",
-      "In the morning, give it a stir and top with the rest of the fruit, the walnuts and the honey."
+      "Bring the water to a boil in a coffee pot.",
+      "Add the coffee and let it boil over medium heat without stirring, for about 15 minutes. Boiling it much longer makes it darker, thicker and more bitter.",
+      "Add the cardamom 2 to 3 minutes before you take the pot off the heat. If you are using saffron, add it 3 to 4 minutes before the end.",
+      "Strain the coffee into a serving pot or a flask.",
+      "Pour a little at a time into small cups, and serve with a plate of dates."
     ],
-    "tip": "The jars keep for 2 days in the fridge, so make a few at once.",
-    "photoBrief": "A glass jar of overnight oats layered with chopped figs and apricots, walnuts and a drizzle of honey on top, spoon resting on the rim. Morning light. Landscape 3:2.",
-    "color": "#4C5A31",
+    "tip": "Do not sweeten the coffee. Put out two or three date varieties side by side so guests can taste the difference.",
+    "sources": [
+      {
+        "name": "Saudipedia",
+        "url": "https://saudipedia.com/en/article/694/society/food-and-drinks/coffee-recipes-in-the-kingdom"
+      },
+      {
+        "name": "Gulf News",
+        "url": "https://gulfnews.com/food/a-quick-guide-to-making-the-perfect-cup-of-saudi-gahwa-at-home-1.1643633219533"
+      }
+    ],
+    "photoBrief": "A brass dallah pouring pale gahwa into a small finjan cup, a plate of three date varieties beside it. Warm light. Landscape 3:2.",
+    "color": "#5A3A2A",
     "on": "cream"
   },
   {
-    "slug": "date-tasting-board",
-    "title": "A DATE TASTING *board*",
-    "name": "A date tasting board",
-    "category": "Snacks",
-    "intro": "The way dates are served across the Gulf: a few varieties side by side, a pot of coffee, and time to taste the difference.",
-    "prep": "10 min",
-    "cook": "No cooking",
-    "serves": "Serves 4 to 6",
+    "slug": "khubani-ka-meetha",
+    "title": "KHUBANI KA *meetha*",
+    "name": "Khubani ka meetha",
+    "category": "Sweets",
+    "intro": "The Hyderabadi wedding dessert. Dried apricots soaked, then cooked down to a thick, tangy-sweet compote.",
+    "prep": "10 min, plus 5 hours soaking",
+    "cook": "30 min",
+    "serves": "Serves 4",
     "products": [
-      "sukkari-rutab-dates",
-      "sugai-dates",
-      "khalas-dates",
-      "amber-dates",
-      "mabroom-dates",
-      "deglet-nour-dates",
-      "sukkari-mufatal-dates",
-      "walnuts-in-shell"
+      "apricots",
+      "almonds"
     ],
     "ingredients": [
-      "4 to 5 each of three to five Zunera date varieties, for example:",
-      "Zunera Deglet Nour or Mabroom dates, for something lighter and semi-dry",
-      "Zunera Sugai or Amber dates, for a mild sweetness",
-      "Zunera Khalas dates, for caramel notes",
-      "Zunera Sukkari Rutab or Sukkari Mufatal dates, to finish sweet",
-      "A small bowl of Zunera in-shell walnuts and a nutcracker",
-      "Black coffee or cardamom tea, to serve"
+      "25 to 28 Zunera dried apricots",
+      "2 to 2½ cups water, for soaking",
+      "2 to 3 tsp sugar, or to taste (optional)",
+      "Sliced Zunera almonds, to garnish (optional)"
     ],
     "steps": [
-      "Pick three to five varieties. More than five and the differences start to blur.",
-      "Arrange them in rows on a board or a large plate, from the lightest and least sweet to the softest and sweetest.",
-      "Add the walnuts and nutcracker at one side. A cracked walnut between dates resets the palate.",
-      "Brew the coffee or tea and pour small cups.",
-      "Taste along the row, one of each, with a sip in between."
+      "Rinse the apricots well. Soak them overnight in 2 to 2½ cups of water, or for 4 to 5 hours in warm water.",
+      "Lift the apricots out and keep the soaking water.",
+      "If your apricots have stones, press them out with your fingers. Mash or chop the apricots.",
+      "Put the apricots in a pan with 1 cup of the strained soaking water. Cook on low heat for 22 to 25 minutes, stirring now and then and mashing them with a spoon. Add a little more soaking water if it looks dry.",
+      "Add sugar to taste and cook for 5 to 6 minutes more.",
+      "Stir in the almonds and serve hot, warm or cold, on its own or with cream, custard or ice cream."
     ],
-    "tip": "Label each row with a small card so guests know what they are tasting. They will want to know which one to buy.",
-    "photoBrief": "Overhead shot of a wooden board with neat rows of five different dates, from golden to near-black, a bowl of in-shell walnuts and two small cups of coffee. Natural light. Landscape 3:2.",
-    "color": "#5A3A2A",
-    "on": "cream"
+    "tip": "Traditionally the kernels from inside the apricot stones go in at the end. Almonds are a good stand-in and taste much the same.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/hyderabadi-khubani-ka-meetha/"
+      }
+    ],
+    "photoBrief": "A glass bowl of glossy amber apricot compote topped with sliced almonds and a spoon of cream, dried apricots beside it. Warm light. Landscape 3:2.",
+    "color": "#E8B07A",
+    "on": "ink"
   },
   {
     "slug": "chocolate-date-truffles",
     "title": "CHOCOLATE DATE *truffles*",
     "name": "Chocolate date truffles",
     "category": "Sweets",
-    "intro": "Three ingredients and a food processor. Soft, dark dates turn into something that tastes far richer than it has any right to.",
-    "prep": "15 min, plus 30 min chilling",
+    "intro": "Fudgy chocolate truffles sweetened only with dates. Ten minutes in a food processor, no baking.",
+    "prep": "10 min",
     "cook": "No cooking",
-    "serves": "Makes 16 to 18",
+    "serves": "Makes about 16",
     "products": [
       "mazafati-dates",
       "rabia-dates",
-      "almonds",
-      "pistachios"
+      "medjool-dates",
+      "almonds"
     ],
     "ingredients": [
-      "200 g Zunera Mazafati or Rabia dates, pitted",
-      "½ cup Zunera almonds",
-      "2 tbsp unsweetened cocoa powder, plus extra for rolling",
-      "A pinch of salt",
-      "1 tbsp nut butter (optional)",
-      "2 tbsp Zunera pistachios, finely chopped, for rolling"
+      "180 g soft Zunera dates, pitted (about 10 Medjool, or Mazafati or Rabia), packed",
+      "1 tbsp coconut oil, melted",
+      "2 tbsp water",
+      "¼ cup unsweetened cocoa powder, plus extra for rolling",
+      "¾ tsp vanilla extract",
+      "1½ tbsp cashew butter, or any nut butter",
+      "A pinch of sea salt",
+      "½ to ¾ cup almond flour (finely ground Zunera almonds)"
     ],
     "steps": [
-      "Blitz the almonds in a food processor to coarse crumbs.",
-      "Add the dates, cocoa, salt and nut butter, and blitz until it clumps into a dough.",
-      "If it feels too dry to hold together, add a teaspoon of water and blitz again.",
-      "Roll into small balls with lightly damp hands.",
-      "Roll half in cocoa and half in chopped pistachios.",
-      "Chill for 30 minutes to firm up. They keep in the fridge for a week."
+      "Line a small plate with baking paper.",
+      "Put the dates, melted coconut oil and water in a food processor and blend until only small bits remain, or a paste forms.",
+      "Add the cocoa, vanilla, nut butter and salt, and blend again.",
+      "Add the almond flour ¼ cup at a time, blending and scraping down the sides, until the mixture comes together in a sticky ball.",
+      "Scoop out 1 tbsp portions and roll them into balls between your palms. Dust your hands with a little cocoa if it sticks.",
+      "Roll the truffles in cocoa if you like. Eat them as they are, or freeze for 30 minutes for a firmer truffle. They keep in the fridge for a week, or the freezer for a month."
     ],
-    "tip": "Mazafati dates are soft and moist, so they bind on their own. With semi-dry dates, soak them in warm water for 10 minutes first.",
-    "photoBrief": "Chocolate truffles on a small plate, some dusted in cocoa and some rolled in green pistachio, one bitten in half. Dark background, warm light. Landscape 3:2.",
+    "tip": "A food processor works best; a blender struggles with the thick mixture. Shop-bought almond flour works too.",
+    "sources": [
+      {
+        "name": "Minimalist Baker",
+        "url": "https://minimalistbaker.com/10-minute-chocolate-truffles-date-sweetened/"
+      }
+    ],
+    "photoBrief": "Dark chocolate truffles dusted in cocoa on a small plate, one bitten in half to show the fudgy centre. Dark background, warm light. Landscape 3:2.",
     "color": "#3A2530",
     "on": "cream"
   },
@@ -297,137 +386,162 @@
     "title": "DATE & WALNUT *cake*",
     "name": "Eggless date & walnut cake",
     "category": "Baking",
-    "intro": "The bakery classic, at home. Dates soaked in warm milk give it a soft, toffee-like crumb, and the walnuts give it crunch.",
-    "prep": "20 min, plus 30 min soaking",
-    "cook": "35 to 40 min",
-    "serves": "Serves 8",
+    "intro": "A soft, moist, eggless cake with chopped dates, walnuts and a hint of coffee, made with whole wheat flour.",
+    "prep": "20 min",
+    "cook": "40 min",
+    "serves": "Makes one 8-inch cake",
     "products": [
-      "mashrook-dates",
       "kalmi-dates",
+      "mashrook-dates",
       "walnuts-in-shell",
       "walnut-kernels"
     ],
     "ingredients": [
-      "1 cup Zunera Mashrook or Kalmi dates (about 150 g), pitted and chopped",
-      "¾ cup warm milk",
-      "½ cup sugar or brown sugar",
-      "½ cup neutral oil",
-      "1¼ cups whole wheat flour or maida (about 150 g)",
+      "½ cup finely chopped Zunera Kalmi or Mashrook dates, tightly packed (100 g)",
+      "¼ cup finely chopped walnuts (25 g): crack Zunera in-shell walnuts, or use Zunera walnut kernels",
+      "2 tsp instant coffee (optional)",
+      "1 cup almond milk, or any milk",
+      "½ cup raw sugar or regular sugar (110 g)",
+      "1 tbsp cacao nibs or small chocolate chips (optional)",
+      "1 tsp vanilla extract",
+      "¼ cup sunflower oil, or another neutral oil",
+      "¼ cup water",
+      "1½ cups whole wheat flour (180 g)",
       "1 tsp baking powder",
       "½ tsp baking soda",
-      "½ tsp cinnamon powder",
-      "A pinch of salt",
-      "½ cup walnuts, roughly chopped (crack Zunera in-shell walnuts, or use Zunera walnut kernels)"
+      "A pinch of salt"
     ],
     "steps": [
-      "Soak the chopped dates in the warm milk for 30 minutes.",
-      "Heat the oven to 180°C and grease and line an 8-inch loaf tin.",
-      "Blend the dates and milk with the sugar and oil until smooth.",
-      "In a large bowl, whisk together the flour, baking powder, baking soda, cinnamon and salt.",
-      "Pour in the date mixture and fold gently until just combined. Fold in most of the walnuts.",
-      "Pour into the tin, scatter the rest of the walnuts on top, and bake for 35 to 40 minutes, until a skewer comes out clean.",
-      "Cool in the tin for 10 minutes, then turn out and cool fully before slicing."
+      "Finely chop the dates and walnuts. Grease a 7.5 to 8-inch cake pan, or line it with baking paper.",
+      "Warm the milk gently in a small pan; do not let it boil. Take it off the heat and stir in the coffee, dates, walnuts and sugar until the sugar and coffee dissolve. Leave to cool for 15 minutes.",
+      "Meanwhile, preheat the oven to 200°C for 15 minutes.",
+      "Sift the flour, baking powder, baking soda and salt into a mixing bowl. Add the date and milk mixture, the cacao nibs if using, then the oil, water and vanilla.",
+      "Whisk or fold just until the batter is even. Do not overmix.",
+      "Pour into the pan, scrape in the rest from the bowl, and tap the pan on the counter to level it.",
+      "Bake at 190°C for 35 to 40 minutes, until a skewer pushed into the centre and near the edges comes out clean.",
+      "Cool on a rack, then slice. Keep leftovers in an airtight box in the fridge for about a week."
     ],
-    "tip": "Toast the walnuts in a dry pan for a few minutes before chopping. It makes a big difference to the flavour.",
-    "photoBrief": "A loaf of date and walnut cake on a wooden board, two slices cut to show the crumb, walnut halves on top, a cup of chai beside it. Warm light. Landscape 3:2.",
+    "tip": "Every oven runs differently, so start checking at 35 minutes. All-purpose flour, or half whole wheat and half all-purpose, works in place of whole wheat flour.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/eggless-dates-walnut-coffee-cake/"
+      }
+    ],
+    "photoBrief": "A round date and walnut cake on a wooden board, two slices cut to show the crumb, walnut halves beside it and a cup of chai. Warm light. Landscape 3:2.",
     "color": "#C98B6B",
     "on": "ink"
   },
   {
-    "slug": "munakka-milk",
-    "title": "MUNAKKA *milk*",
-    "name": "Munakka milk",
-    "category": "Drinks",
-    "intro": "Seeded black raisins, soaked and simmered in milk. A warm, gently sweet cup that needs no added sugar.",
-    "prep": "5 min, plus 2 hours soaking",
-    "cook": "10 min",
-    "serves": "Serves 1",
+    "slug": "deglet-nour-orange-salad",
+    "title": "SPICED ORANGE & DATE *salad*",
+    "name": "Spiced orange & date salad",
+    "category": "Salads",
+    "intro": "A classic Moroccan pairing: juicy orange, chopped dates, toasted almonds and a dusting of cinnamon. Ready in 15 minutes.",
+    "prep": "15 min",
+    "cook": "No cooking",
+    "serves": "Makes 1 large bowl",
     "products": [
-      "black-raisins-seeded",
+      "deglet-nour-dates",
       "almonds"
     ],
     "ingredients": [
-      "8 to 10 Zunera seeded black raisins",
-      "1 cup milk",
-      "4 Zunera almonds, soaked and peeled (optional)",
-      "A pinch of cardamom powder",
-      "2 to 3 strands of saffron (optional)"
+      "5 oranges",
+      "½ cup Zunera Deglet Nour dates, pitted and chopped",
+      "¼ cup Zunera almonds, toasted and chopped",
+      "¾ tsp cinnamon"
     ],
     "steps": [
-      "Soak the raisins in a little water for 2 hours, or overnight.",
-      "Drain, then slit each raisin and pick out the seeds.",
-      "Bring the milk to a simmer with the raisins, almonds, cardamom and saffron.",
-      "Simmer on low for 5 minutes, pressing a few raisins against the side of the pan to release their sweetness.",
-      "Pour into a cup and drink warm, raisins and all."
+      "Juice one of the oranges.",
+      "Peel the other four oranges and cut them into chunks.",
+      "In a large bowl, mix the orange juice, orange chunks, dates, almonds and cinnamon until everything is well combined.",
+      "Serve as a light dish on its own, or spooned over morning yoghurt."
     ],
-    "tip": "Soaking makes the seeds easy to remove and plumps the raisins up so they flavour the milk.",
-    "photoBrief": "A cup of warm milk with plump black raisins and a few saffron strands, on a wooden table with a small bowl of raisins beside it. Soft evening light. Landscape 3:2.",
-    "color": "#7A4A5C",
-    "on": "cream"
+    "tip": "The original recipe uses Medjool dates. Deglet Nour are firmer and chop neatly, but either works.",
+    "sources": [
+      {
+        "name": "Sunset Magazine",
+        "url": "https://www.sunset.com/recipe/spiced-orange-date-salad"
+      }
+    ],
+    "photoBrief": "A bowl of orange chunks with chopped golden dates and toasted almonds, dusted with cinnamon. Bright daylight. Landscape 3:2.",
+    "color": "#F0D3A8",
+    "on": "ink"
   },
   {
-    "slug": "deglet-nour-orange-salad",
-    "title": "DATE & ORANGE *salad*",
-    "name": "Date, orange & walnut salad",
-    "category": "Salads",
-    "intro": "Sweet, sharp and crunchy. Slices of golden Deglet Nour with orange, toasted walnuts and a honey-lemon dressing.",
-    "prep": "15 min",
+    "slug": "fig-and-walnut-overnight-oats",
+    "title": "FIG & WALNUT OVERNIGHT *oats*",
+    "name": "Fig & walnut overnight oats",
+    "category": "Breakfast",
+    "intro": "Five minutes the night before, and breakfast is waiting in the fridge. Cinnamon oats topped with figs, apple, walnuts and honey.",
+    "prep": "5 min, plus at least 4 hours",
     "cook": "No cooking",
     "serves": "Serves 2",
     "products": [
-      "deglet-nour-dates",
+      "figs",
       "walnut-kernels"
     ],
     "ingredients": [
-      "2 oranges, peeled and cut into segments",
-      "2 cups rocket or crisp lettuce",
-      "8 Zunera Deglet Nour dates, pitted and sliced",
-      "¼ cup Zunera walnut kernels, lightly toasted",
-      "50 g paneer or feta, crumbled",
-      "2 tbsp olive oil",
-      "1 tbsp lemon juice",
-      "1 tsp honey",
-      "Salt and black pepper, to taste"
+      "⅔ cup rolled oats",
+      "2 tsp chia seeds",
+      "¼ tsp ground cinnamon",
+      "⅔ cup almond milk, or any milk",
+      "½ tsp vanilla extract",
+      "¼ cup diced apple",
+      "¼ cup Zunera dried figs, chopped",
+      "1 tbsp Zunera walnut kernels, chopped",
+      "1 tbsp honey"
     ],
     "steps": [
-      "Whisk the olive oil, lemon juice, honey, salt and pepper in a small bowl.",
-      "Spread the leaves on a plate and arrange the orange segments on top.",
-      "Scatter over the sliced dates, the walnuts and the crumbled cheese.",
-      "Spoon over the dressing just before serving."
+      "Divide the oats, chia seeds and cinnamon between two jars.",
+      "Stir the milk and vanilla together and pour half into each jar. Stir well, close the lids, and refrigerate overnight, or for at least 4 hours.",
+      "In the morning, top each jar with the apple, figs and walnuts, and drizzle over the honey."
     ],
-    "tip": "Deglet Nour dates are firm enough to slice neatly, which is why they work so well in salads.",
-    "photoBrief": "A plate of green leaves with orange segments, sliced golden dates, walnuts and crumbled white cheese, dressing being drizzled on. Bright daylight. Landscape 3:2.",
-    "color": "#F0D3A8",
-    "on": "ink"
+    "tip": "The oats keep in the fridge for up to 4 days. For warm oats, microwave for 30 to 40 seconds before adding the toppings. Use maple syrup instead of honey to make it vegan.",
+    "sources": [
+      {
+        "name": "Valley Fig Growers",
+        "url": "https://valleyfig.com/dried-fig-recipes/fig-overnight-oats-with-apples"
+      }
+    ],
+    "photoBrief": "Two glass jars of overnight oats topped with chopped figs, diced apple, walnuts and a drizzle of honey, a spoon resting on one. Morning light. Landscape 3:2.",
+    "color": "#4C5A31",
+    "on": "cream"
   },
   {
     "slug": "homemade-date-paste",
     "title": "HOMEMADE DATE *paste*",
     "name": "Homemade date paste",
     "category": "Basics",
-    "intro": "A jar of date paste in the fridge is the easiest swap for sugar. Stir it into chai, oats, smoothies and cake batter.",
-    "prep": "10 min, plus 30 min soaking",
+    "intro": "One ingredient, one blender. A jar of date paste is the easiest swap for sugar in baking, oats, smoothies and chai.",
+    "prep": "15 min",
     "cook": "No cooking",
-    "serves": "Makes about 1 cup",
+    "serves": "Makes about 1½ cups",
     "products": [
       "khudri-dates",
       "fard-dates",
       "rabbi-dates",
-      "sufri-dates"
+      "sufri-dates",
+      "deglet-nour-dates"
     ],
     "ingredients": [
-      "250 g Zunera Khudri, Fard, Rabbi or Sufri dates, pitted",
-      "1 cup hot water",
-      "A squeeze of lemon juice (optional)"
+      "450 g Zunera dates, pitted (any variety: Khudri, Fard, Rabbi, Sufri or Deglet Nour all work)",
+      "Hot water, for soaking and blending (optional)"
     ],
     "steps": [
-      "Put the pitted dates in a bowl and pour over the hot water. Leave for 30 minutes, until soft.",
-      "Tip the dates and about half the soaking water into a blender.",
-      "Blend until smooth, adding more of the water a spoonful at a time until it is thick but spreadable.",
-      "Stir in the lemon juice and spoon into a clean jar.",
-      "Keep it in the fridge and use within a week."
+      "Take out the seeds, if your dates have them: cut or pull each date open and lift the seed out.",
+      "If the dates are on the dry side, or your blender is not very strong, soak them in hot water for 30 minutes to soften, then drain.",
+      "Blend the dates until smooth and paste-like. This can take a while, so rest the machine every few minutes so it does not overheat.",
+      "If it will not come together, add hot water one tablespoon at a time.",
+      "When it is smooth and lump-free, spoon it into a clean, airtight jar."
     ],
-    "tip": "Semi-dry dates like Khudri, Fard and Rabbi are ideal here: they soften well and give a thick, rich paste.",
+    "tip": "Semi-dry dates such as Khudri, Fard, Rabbi and Sufri benefit from the 30-minute soak. Made without water, the paste keeps in the fridge for 3 to 4 months; with water, up to 1 month. You can also freeze it in an ice-cube tray.",
+    "sources": [
+      {
+        "name": "Alphafoodie",
+        "url": "https://www.alphafoodie.com/how-to-make-date-paste/"
+      }
+    ],
     "photoBrief": "A glass jar of smooth, glossy date paste with a spoon in it, a few whole dates beside it on a linen cloth. Soft natural light. Landscape 3:2.",
     "color": "#D9A35B",
     "on": "ink"
