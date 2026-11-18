@@ -40,7 +40,7 @@
         "url": "https://www.vegrecipesofindia.com/dry-fruits-ladoo-recipe/"
       }
     ],
-    "photoBrief": "A plate of dry fruit laddoos, a few broken open to show dates, figs and nuts, on a brass thali with a Zunera pouch behind. Warm side light. Landscape 3:2.",
+    "photoBrief": "A plate of dry fruit laddoos, a few broken open to show dates, figs and nuts, on a brass thali with a Zunera pouch behind. Warm side light. Square 1:1.",
     "color": "#E2A93B",
     "on": "ink"
   },
@@ -86,7 +86,7 @@
         "url": "https://www.vegrecipesofindia.com/rice-kheer-recipe-chawal-ki-kheer/"
       }
     ],
-    "photoBrief": "A clay bowl of creamy rice kheer topped with sliced almonds, pistachios and black raisins, a few saffron strands, a brass spoon beside it. Warm light. Landscape 3:2.",
+    "photoBrief": "A clay bowl of creamy rice kheer topped with sliced almonds, pistachios and black raisins, a few saffron strands, a brass spoon beside it. Warm light. Square 1:1.",
     "color": "#F0C9A8",
     "on": "ink"
   },
@@ -125,7 +125,7 @@
         "url": "https://www.vegrecipesofindia.com/badam-milk-recipe/"
       }
     ],
-    "photoBrief": "Two glasses of pale-golden saffron almond milk with saffron strands on top, a small bowl of almonds beside them. Warm light. Landscape 3:2.",
+    "photoBrief": "Two glasses of pale-golden saffron almond milk with saffron strands on top, a small bowl of almonds beside them. Warm light. Square 1:1.",
     "color": "#AEBB6E",
     "on": "ink"
   },
@@ -176,8 +176,104 @@
         "url": "https://www.vegrecipesofindia.com/sheer-khurma-recipe-sheer-korma-recipe/"
       }
     ],
-    "photoBrief": "A bowl of sheer khurma with vermicelli, slivered nuts and chopped dates on top, rose petals scattered on a festive tablecloth. Warm light. Landscape 3:2.",
+    "photoBrief": "A bowl of sheer khurma with vermicelli, slivered nuts and chopped dates on top, rose petals scattered on a festive tablecloth. Warm light. Square 1:1.",
     "color": "#7A4A5C",
+    "on": "cream"
+  },
+  {
+    "slug": "date-rolls",
+    "title": "DATE *rolls*",
+    "name": "Date rolls (dry fruit barfi)",
+    "category": "Sweets",
+    "intro": "A Diwali favourite with no added sugar. Dates, figs and four kinds of nuts, rolled into logs and sliced.",
+    "prep": "20 min",
+    "cook": "5 min",
+    "serves": "Makes 16 pieces",
+    "products": [
+      "mabroom-dates",
+      "rabia-dates",
+      "mashrook-dates",
+      "figs",
+      "almonds",
+      "cashews",
+      "pistachios",
+      "walnut-kernels",
+      "walnuts-in-shell",
+      "black-raisins-seedless"
+    ],
+    "ingredients": [
+      "140 to 150 g Zunera Mabroom, Rabia or Mashrook dates, pitted (about ¾ cup)",
+      "60 g Zunera dried figs (6 to 7)",
+      "1 tbsp Zunera seedless black raisins",
+      "40 g Zunera almonds (about ¼ cup)",
+      "30 g Zunera cashews (about ¼ cup)",
+      "30 g Zunera pistachios, shelled (about ¼ cup)",
+      "30 g walnuts (about ¼ cup): Zunera walnut kernels, or cracked Zunera in-shell walnuts",
+      "2 tbsp unsweetened desiccated coconut",
+      "1 tbsp white sesame seeds (optional)",
+      "1 tsp coconut oil or ghee",
+      "2 tsp rose water, or ¼ to ½ tsp green cardamom powder (optional)"
+    ],
+    "steps": [
+      "Pour ⅓ cup of just-boiled water over the figs and raisins, cover, and leave for 20 minutes. Drain. (If your figs are soft, you can skip this.)",
+      "Meanwhile, pulse the almonds, cashews, pistachios and walnuts in a grinder 3 or 4 times, until they are in small bits. Do not grind them to a powder. Tip them out.",
+      "In the same jar, grind the chopped dates, figs and raisins to a coarse paste.",
+      "Heat the coconut oil in a frying pan and toast the sesame seeds on low heat until they crackle. Stir in the coconut, then add the nuts and sauté for 3 to 4 minutes on low heat.",
+      "Add the date paste and stir lightly. Turn off the heat, add the rose water or cardamom, and mix very well.",
+      "When the mixture is warm rather than hot, divide it in two. Rub a little oil on your palms and roll each half into a log.",
+      "Let the logs cool at room temperature, then slice. They keep for about a week in a covered container in the fridge."
+    ],
+    "tip": "Instead of rolling, you can press the mixture into a greased tray and cut it into squares once cool. The original recipe uses golden raisins; black raisins work the same way.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/dry-fruit-barfi-recipe/"
+      }
+    ],
+    "photoBrief": "Neat round slices of date and nut rolls on a brass plate, showing chopped pistachios and almonds in the dark date mixture, a few whole dates beside them. Warm light. Square 1:1.",
+    "color": "#5A6B38",
+    "on": "cream"
+  },
+  {
+    "slug": "imli-khajur-chutney",
+    "title": "IMLI KHAJUR *chutney*",
+    "name": "Imli khajur chutney",
+    "category": "Chutneys",
+    "intro": "The sweet and tangy tamarind-date chutney that goes on every plate of chaat, pakoras and samosas.",
+    "prep": "5 min",
+    "cook": "15 min",
+    "serves": "Makes about 1½ cups",
+    "products": [
+      "khudri-dates",
+      "fard-dates"
+    ],
+    "ingredients": [
+      "½ cup seedless tamarind, tightly packed",
+      "½ cup Zunera Khudri or Fard dates, pitted",
+      "½ cup jaggery powder or grated jaggery, to taste",
+      "2 cups water",
+      "½ tsp roasted cumin powder",
+      "½ tsp coriander powder",
+      "½ tsp dry ginger powder (saunth)",
+      "¼ to ½ tsp red chilli powder",
+      "Black salt or regular salt, to taste"
+    ],
+    "steps": [
+      "Put the tamarind, dates and water in a pan. Cook uncovered on low to medium-low heat for 8 to 9 minutes, until the tamarind and dates soften.",
+      "Add the jaggery and stir until it dissolves and the mixture thickens a little.",
+      "Add the cumin, coriander, dry ginger, chilli powder and salt. Simmer for 1 to 2 minutes more, then let it cool.",
+      "Blend until smooth, adding a little water if needed. Add more water if you like a thinner, pouring chutney.",
+      "Strain if you like, then store in an airtight jar in the fridge."
+    ],
+    "tip": "It keeps for about a month in the fridge, so it is worth making a full batch for chaat, pani puri, bhel and samosas.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/saunth-chutney-sweet-tamarind-chutney/"
+      }
+    ],
+    "photoBrief": "A small bowl of glossy dark-brown tamarind date chutney with a spoon, beside a plate of samosas and a few whole dates. Warm light. Square 1:1.",
+    "color": "#8E3F2B",
     "on": "cream"
   },
   {
@@ -211,7 +307,7 @@
         "url": "https://walnuts.org/recipe/walnut-butter-stuffed-dates/"
       }
     ],
-    "photoBrief": "Stuffed Medjool dates on a marble board, walnut butter filling and chopped walnuts on top. Overhead, natural light. Landscape 3:2.",
+    "photoBrief": "Stuffed Medjool dates on a marble board, walnut butter filling and chopped walnuts on top. Overhead, natural light. Square 1:1.",
     "color": "#A84E33",
     "on": "cream"
   },
@@ -248,9 +344,61 @@
         "url": "https://www.vegrecipesofindia.com/kaju-shake/"
       }
     ],
-    "photoBrief": "Two tall glasses of thick, beige fig and cashew milkshake, halved dried figs and a few cashews scattered around. Bright natural light. Landscape 3:2.",
+    "photoBrief": "Two tall glasses of thick, beige fig and cashew milkshake, halved dried figs and a few cashews scattered around. Bright natural light. Square 1:1.",
     "color": "#6E3B4E",
     "on": "cream"
+  },
+  {
+    "slug": "dry-fruits-milkshake",
+    "title": "DRY FRUITS *milkshake*",
+    "name": "Dry fruits milkshake",
+    "category": "Drinks",
+    "intro": "Nuts, raisins, figs and a handful of dates blended with cold milk. Sweet without sugar and filling enough for breakfast.",
+    "prep": "35 min, including soaking",
+    "cook": "No cooking",
+    "serves": "Serves 3",
+    "products": [
+      "sukkari-rutab-dates",
+      "mazafati-dates",
+      "sugai-dates",
+      "rabbi-dates",
+      "sukkari-mufatal-dates",
+      "almonds",
+      "pistachios",
+      "cashews",
+      "figs",
+      "black-raisins-seedless"
+    ],
+    "ingredients": [
+      "¼ cup Zunera almonds",
+      "¼ cup Zunera pistachios, shelled",
+      "¼ cup Zunera cashews",
+      "¼ cup Zunera seedless black raisins",
+      "7 to 8 Zunera dates, pitted and chopped: Sukkari Rutab, Mazafati, Sugai, Rabbi or Sukkari Mufatal",
+      "3 to 4 Zunera dried figs",
+      "1 pinch saffron (optional)",
+      "2½ cups chilled milk: dairy, soy or any plant milk",
+      "Raw sugar, only if needed",
+      "1 tbsp chopped almonds or pistachios, to garnish"
+    ],
+    "steps": [
+      "Soak the figs in hot water for 30 minutes, or in room-temperature water for 1 to 2 hours, until soft. Soak the dates too if they are firm or chewy.",
+      "Rinse the nuts, raisins and dates. If you like, soak the nuts and raisins in hot water for 30 minutes as well, and peel the almonds.",
+      "Roughly chop the softened figs and the dates.",
+      "Put the nuts, raisins, dates, figs and saffron in a blender with ½ cup of the milk and blend to a fine paste.",
+      "Add the remaining 2 cups of milk, and a little sugar only if it needs it. Blend again.",
+      "Pour into glasses, scatter over the chopped nuts, and serve straight away."
+    ],
+    "tip": "Soft dates such as Sukkari Rutab and Mazafati blend straight in; firmer ones such as Rabbi need a soak first. Drink it the same day.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/dry-fruits-milkshake/"
+      }
+    ],
+    "photoBrief": "Two tall glasses of creamy beige dry fruits milkshake topped with chopped pistachios and almonds, small bowls of dates, figs and nuts around them. Bright natural light. Square 1:1.",
+    "color": "#CFA77A",
+    "on": "ink"
   },
   {
     "slug": "saudi-coffee-with-dates",
@@ -295,7 +443,7 @@
         "url": "https://gulfnews.com/food/a-quick-guide-to-making-the-perfect-cup-of-saudi-gahwa-at-home-1.1643633219533"
       }
     ],
-    "photoBrief": "A brass dallah pouring pale gahwa into a small finjan cup, a plate of three date varieties beside it. Warm light. Landscape 3:2.",
+    "photoBrief": "A brass dallah pouring pale gahwa into a small finjan cup, a plate of three date varieties beside it. Warm light. Square 1:1.",
     "color": "#5A3A2A",
     "on": "cream"
   },
@@ -333,8 +481,59 @@
         "url": "https://www.vegrecipesofindia.com/hyderabadi-khubani-ka-meetha/"
       }
     ],
-    "photoBrief": "A glass bowl of glossy amber apricot compote topped with sliced almonds and a spoon of cream, dried apricots beside it. Warm light. Landscape 3:2.",
+    "photoBrief": "A glass bowl of glossy amber apricot compote topped with sliced almonds and a spoon of cream, dried apricots beside it. Warm light. Square 1:1.",
     "color": "#E8B07A",
+    "on": "ink"
+  },
+  {
+    "slug": "maamoul",
+    "title": "MA'AMOUL *cookies*",
+    "name": "Ma'amoul (date-filled cookies)",
+    "category": "Baking",
+    "intro": "The semolina shortbread cookies baked across the Middle East for Eid and Ramadan, each one wrapped around a spiced date filling.",
+    "prep": "40 min",
+    "cook": "20 min",
+    "serves": "Makes 35",
+    "products": [
+      "khalas-dates",
+      "amber-dates",
+      "sufri-dates"
+    ],
+    "ingredients": [
+      "For the dough:",
+      "1½ cups fine semolina (not coarse)",
+      "1 cup all-purpose flour",
+      "1½ tbsp sugar",
+      "½ tsp baking powder",
+      "½ cup butter or ghee, at room temperature",
+      "½ cup whole milk",
+      "For the filling:",
+      "225 g date paste, made from about 20 pitted Zunera Khalas, Amber or Sufri dates (see the date paste recipe)",
+      "1 tsp vegetable oil",
+      "1 tsp cinnamon",
+      "½ tsp cardamom",
+      "A ma'amoul mould",
+      "Icing sugar, to dust (optional)"
+    ],
+    "steps": [
+      "Mix the semolina, flour, sugar and baking powder in a large bowl. Rub in the butter or ghee with your hands until evenly combined.",
+      "Add the milk in two batches, mixing after each, until you have a soft dough that rolls into balls.",
+      "Preheat the oven to 175°C and line two baking trays with baking paper.",
+      "For the filling, mix the date paste with the oil, cinnamon and cardamom. Oil your hands and roll it into 35 small balls, a little smaller than your mould.",
+      "Roll the dough into 35 balls, slightly larger than the filling balls.",
+      "Flatten a dough ball, set a date ball in the middle, and gently bring the dough up around it to seal. Roll it smooth between your palms.",
+      "Press it lightly into the mould, then tap the mould on a board to release it. Place it pattern side up on the tray. Repeat, leaving about 2.5 cm between cookies.",
+      "Bake for 18 to 20 minutes, until the bottoms are lightly golden. Dust with icing sugar if you like."
+    ],
+    "tip": "To make the filling from scratch, pit the dates, soak them in hot water for 15 minutes, drain, and blend to a paste. Ma'amoul keep in an airtight container in the fridge for up to 2 weeks.",
+    "sources": [
+      {
+        "name": "Unicorns in the Kitchen",
+        "url": "https://www.unicornsinthekitchen.com/maamoul-recipe-date-filled-cookies/"
+      }
+    ],
+    "photoBrief": "Pale golden ma'amoul cookies with pressed patterns, lightly dusted with icing sugar, on a ceramic plate, one broken open to show the dark date filling, a wooden mould beside them. Warm light. Square 1:1.",
+    "color": "#E3A68C",
     "on": "ink"
   },
   {
@@ -377,7 +576,7 @@
         "url": "https://minimalistbaker.com/10-minute-chocolate-truffles-date-sweetened/"
       }
     ],
-    "photoBrief": "Dark chocolate truffles dusted in cocoa on a small plate, one bitten in half to show the fudgy centre. Dark background, warm light. Landscape 3:2.",
+    "photoBrief": "Dark chocolate truffles dusted in cocoa on a small plate, one bitten in half to show the fudgy centre. Dark background, warm light. Square 1:1.",
     "color": "#3A2530",
     "on": "cream"
   },
@@ -428,9 +627,54 @@
         "url": "https://www.vegrecipesofindia.com/eggless-dates-walnut-coffee-cake/"
       }
     ],
-    "photoBrief": "A round date and walnut cake on a wooden board, two slices cut to show the crumb, walnut halves beside it and a cup of chai. Warm light. Landscape 3:2.",
+    "photoBrief": "A round date and walnut cake on a wooden board, two slices cut to show the crumb, walnut halves beside it and a cup of chai. Warm light. Square 1:1.",
     "color": "#C98B6B",
     "on": "ink"
+  },
+  {
+    "slug": "tomato-khejur-chutney",
+    "title": "TOMATO KHEJUR *chutney*",
+    "name": "Bengali tomato khejur chutney",
+    "category": "Chutneys",
+    "intro": "The sweet, spiced tomato and date chutney served at the end of a Bengali meal, flavoured with panch phoron.",
+    "prep": "5 min",
+    "cook": "15 min",
+    "serves": "Serves 6",
+    "products": [
+      "fard-dates",
+      "rabbi-dates",
+      "black-raisins-seedless"
+    ],
+    "ingredients": [
+      "2 tbsp mustard oil",
+      "1 tsp panch phoron",
+      "2 dry red chillies, broken and seeds removed",
+      "1 inch ginger, finely chopped (or 1 tsp grated)",
+      "250 g tomatoes, chopped (about 3 medium)",
+      "1 tbsp Zunera seedless black raisins",
+      "4 Zunera Fard or Rabbi dates, pitted and chopped (about 2 tbsp)",
+      "1 to 2 tbsp sugar, to taste",
+      "1 tsp dry mango powder (amchur), optional",
+      "Salt, to taste"
+    ],
+    "steps": [
+      "Heat the mustard oil in a heavy pan on low heat until hot.",
+      "Add the panch phoron and red chillies and fry for a few seconds, until they crackle and smell fragrant.",
+      "Add the ginger and sauté for a few seconds, until it no longer smells raw. Do not let it brown.",
+      "Add the tomatoes and salt and mix well. Cover and cook on low to medium-low heat for 9 to 10 minutes, until the tomatoes are soft and mushy.",
+      "Add the raisins, dates, sugar and amchur. Cook for 4 to 5 minutes, stirring often and mashing the tomatoes, until the chutney thickens. Add a splash of water if it starts to stick.",
+      "Serve warm or at room temperature. Leftovers keep for 4 to 5 days in the fridge."
+    ],
+    "tip": "How much sugar you need depends on how tart your tomatoes are. Start with 1 tbsp and taste.",
+    "sources": [
+      {
+        "name": "Dassana's Veg Recipes",
+        "url": "https://www.vegrecipesofindia.com/tomato-khejur-chutney-recipe/"
+      }
+    ],
+    "photoBrief": "A small ceramic bowl of glossy red tomato chutney studded with dates and raisins, on a banana leaf beside rice. Warm light. Square 1:1.",
+    "color": "#C26A43",
+    "on": "cream"
   },
   {
     "slug": "deglet-nour-orange-salad",
@@ -464,7 +708,7 @@
         "url": "https://www.sunset.com/recipe/spiced-orange-date-salad"
       }
     ],
-    "photoBrief": "A bowl of orange chunks with chopped golden dates and toasted almonds, dusted with cinnamon. Bright daylight. Landscape 3:2.",
+    "photoBrief": "A bowl of orange chunks with chopped golden dates and toasted almonds, dusted with cinnamon. Bright daylight. Square 1:1.",
     "color": "#F0D3A8",
     "on": "ink"
   },
@@ -504,7 +748,7 @@
         "url": "https://valleyfig.com/dried-fig-recipes/fig-overnight-oats-with-apples"
       }
     ],
-    "photoBrief": "Two glass jars of overnight oats topped with chopped figs, diced apple, walnuts and a drizzle of honey, a spoon resting on one. Morning light. Landscape 3:2.",
+    "photoBrief": "Two glass jars of overnight oats topped with chopped figs, diced apple, walnuts and a drizzle of honey, a spoon resting on one. Morning light. Square 1:1.",
     "color": "#4C5A31",
     "on": "cream"
   },
@@ -542,7 +786,7 @@
         "url": "https://www.alphafoodie.com/how-to-make-date-paste/"
       }
     ],
-    "photoBrief": "A glass jar of smooth, glossy date paste with a spoon in it, a few whole dates beside it on a linen cloth. Soft natural light. Landscape 3:2.",
+    "photoBrief": "A glass jar of smooth, glossy date paste with a spoon in it, a few whole dates beside it on a linen cloth. Soft natural light. Square 1:1.",
     "color": "#D9A35B",
     "on": "ink"
   }

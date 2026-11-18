@@ -23,6 +23,11 @@ products.forEach((p) => {
   if (!p.image && has(auto)) { p.image = auto; p.imageAlt = p.imageAlt || 'Zunera ' + p.name; }
 });
 site.hasFloorPhoto = has('assets/img/packing-floor.jpg');
+/* Recipe photos: site/assets/img/recipes/<slug>.jpg (square), picked up the same way */
+recipes.forEach((r) => {
+  const auto = 'assets/img/recipes/' + r.slug + '.jpg';
+  if (!r.image && has(auto)) r.image = auto;
+});
 
 /* ---------- Instagram ----------
    The newest posts from @eatzunera are pulled in at build time, and the images are saved into the site.

@@ -562,7 +562,9 @@ const recipeArt = (r, cls = '') => `<span class="rc-art ${cls}">${r.products.sli
 const recipeCard = (r, root, cls = '') => `
 <a class="pc rc reveal${cls}" href="${root}recipes/${r.slug}.html" data-cat="${esc(r.category.toLowerCase())}" style="${tone(r)}">
   <span class="pc-top"><span class="pc-origin">${esc(r.category)}</span><span class="rc-time">${esc(r.prep.split(',')[0])}</span></span>
-  ${recipeArt(r)}
+  ${r.image
+    ? `<span class="pc-photo rc-photo"><img src="${root}${r.image}" alt="${esc(r.name)}" loading="lazy" width="1200" height="1200">${fruit(r.products[0])}</span>`
+    : recipeArt(r)}
   <span class="rc-body">
     <span class="pc-name">${hl(r.title)}</span>
     <span class="pc-short">${esc(r.intro)}</span>
@@ -613,7 +615,9 @@ function recipe({ recipes, products, root, r }) {
     </div>
     <div class="pdp-art reveal">
       ${sparkle('sp sp-a')}${sparkle('sp sp-b')}
-      ${recipeArt(r, 'rc-art-lg float')}
+      ${r.image
+        ? `<figure class="pdp-photo"><img src="${root}${r.image}" alt="${esc(r.name)}" width="1200" height="1200"></figure>${fruit(r.products[0], 'sticker')}`
+        : recipeArt(r, 'rc-art-lg float')}
     </div>
   </div>
 </section>
@@ -632,7 +636,7 @@ function recipe({ recipes, products, root, r }) {
       </ol>
       <div class="tipbox reveal"><strong>Good to know</strong><p>${esc(r.tip)}</p></div>
       ${(r.sources || []).length ? `<p class="source reveal">Adapted from ${r.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(' and ')}.</p>` : ''}
-      <div class="reveal"><div class="taped">${slot(r.name + ' photo', r.photoBrief)}</div></div>
+      ${r.image ? '' : `<div class="reveal"><div class="taped">${slot(r.name + ' photo', r.photoBrief)}</div></div>`}
     </div>
   </div>
 </section>
