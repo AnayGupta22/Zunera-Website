@@ -68,11 +68,10 @@ const pageHero = ({ bg = 'bg-sand', eyebrow, title, lead, extra = '', art = '' }
 
 /* ---------- home ---------- */
 
-function home({ site, products, root }) {
+function home({ site, products, recipes, root }) {
   const bySlug = (s) => products.find((p) => p.slug === s);
   /* The home page shows the highlights listed in content/site.json; the full range lives on the shop page */
   const picks = (site.highlights || []).map(bySlug).filter(Boolean);
-  const all = products.length;
   const marquee = ['Sourced at origin', 'Sorted by hand', 'Packed with care', 'Delivered by Amazon'].map((t) => `<span>${t}</span>${icon('diamond', 'dia')}`).join('');
   const momentColor = { morning: '#E2A93B', chai: '#A84E33', gifting: '#6E3B4E', kitchen: '#AEBB6E' };
   const momentOn = { morning: INK, chai: CREAM, gifting: CREAM, kitchen: INK };
@@ -121,7 +120,7 @@ function home({ site, products, root }) {
         <h2 class="h1 reveal">${hl('A FEW *favourites.*')}</h2>
       </div>
       <div class="shelf-nav reveal">
-        <p class="lead">Start with these. There are ${all} dates and dry fruits in the full range.</p>
+        <p class="lead">Start with these, then explore the full range of dates and dry fruits.</p>
         <button type="button" class="round" data-shelf-prev aria-label="Scroll range left">${icon('chevron', 'flip')}</button>
         <button type="button" class="round" data-shelf-next aria-label="Scroll range right">${icon('chevron')}</button>
       </div>
@@ -131,13 +130,13 @@ function home({ site, products, root }) {
     ${picks.map((p) => card(p, root, picks)).join('')}
     <a class="pc pc-amazon pc-all reveal" href="${root}shop.html">
       <span class="pc-top"><span class="pc-origin">The full range</span></span>
-      <span class="pc-art">${burst('See all', String(all))}</span>
+      <span class="pc-art">${burst('See the', 'range')}</span>
       <span class="pc-name">${hl('THE WHOLE *range*')}</span>
       <span class="pc-short">Every date and dry fruit we carry, in one place.</span>
       <span class="pc-cta">Go to the shop ${go}</span>
     </a>
   </div>
-  <div class="wrap"><div class="btn-row center-row reveal"><a class="btn btn-primary btn-lg" href="${root}shop.html">See all ${all} in the shop ${go}</a></div></div>
+  <div class="wrap"><div class="btn-row center-row reveal"><a class="btn btn-primary btn-lg" href="${root}shop.html">See the full range ${go}</a></div></div>
 </section>
 
 <section class="sec bg-sand packs">
@@ -178,6 +177,31 @@ ${journey(site, "Quality isn't just about what's inside the pack. It is every st
         </a>`).join('')}
       </div>
     </div>`).join('')}
+  </div>
+</section>
+
+<section class="sec bg-terra band scallop">
+  <div class="wrap band-row">
+    <div class="band-copy">
+      <p class="eyebrow">Corporate gifting</p>
+      <h2 class="h1">${hl('GIFTS, BUILT FROM *scratch.*')}</h2>
+      <p class="lead">Custom boxes, your logo, your choice of dates and dry fruits, and a personal note. Delivered across India.</p>
+      <div class="btn-row">
+        <a class="btn btn-saffron btn-lg" href="${root}gifting.html">Explore gifting ${go}</a>
+        <a class="btn btn-outline-light btn-lg" href="${root}enquiry.html?type=gifting">Send a gifting enquiry</a>
+      </div>
+    </div>
+    <div class="band-art">${icon2('gifting', 'band-box')}${icon2('tag', 'band-truck')}${burst('Fully', 'custom', 'burst-saffron')}</div>
+  </div>
+</section>
+
+<section class="sec bg-sand scallop">
+  <div class="wrap">
+    <header class="sec-head">
+      <div><p class="eyebrow reveal">Recipes</p><h2 class="h1 reveal">${hl('FROM THE *kitchen.*')}</h2></div>
+      <a class="btn btn-cream reveal" href="${root}recipes.html">All recipes ${go}</a>
+    </header>
+    <div class="grid three">${(recipes || []).slice(0, 3).map((r) => recipeCard(r, root)).join('')}</div>
   </div>
 </section>
 
