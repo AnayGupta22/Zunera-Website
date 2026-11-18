@@ -82,10 +82,33 @@ const variety = (v) => LAYOUTS[v.lay].map((t, n, all) => date(
   t + (v.sx ? ` translate(100 100) scale(${v.sx} 1) translate(-100 -100)` : ''),
   n < all.length - 1 ? darker(v) : v)).join('');
 
+/* Walnuts: a ridged shell with its seam, and a two-lobed kernel */
+const WSHELL = 'M100 28c38 0 62 30 62 72s-24 74-62 74-62-32-62-74 24-72 62-72z';
+const WSHELL_SHADE = 'M100 28c38 0 62 30 62 72s-24 74-62 74c28-16 40-44 40-74s-12-58-40-72z';
+const walnutShell = (t) => `<g transform="${t}">${F(WSHELL, '#C89A62')}${F(WSHELL_SHADE, '#A87A44')}
+  ${L('M70 60c-10 16-12 40-6 62M82 46c-6 22-4 48 4 72M120 50c8 20 8 46 0 68M136 64c8 16 8 38 2 56', '#8A5E30')}${L('M58 92c0-14 4-26 12-36', '#E6C08C', 6)}
+  ${O(WSHELL)}${L('M100 28c-6 22 6 44 0 66s6 52 0 80', INK, 4)}</g>`;
+/* Kernel outline: a butterfly of scalloped lobes, notched at the top and bottom centre */
+const KERNEL_W = (() => {
+  const half = [[100, 48], [118, 34], [142, 38], [158, 56], [162, 80], [168, 104], [160, 128], [146, 148], [124, 158], [106, 150], [100, 142]];
+  const pts = half.concat(half.slice(1, -1).reverse().map((p) => [200 - p[0], p[1]]));
+  return 'M' + pts[0].join(' ') + pts.slice(1).concat([pts[0]]).map((p, i) => {
+    const q = pts[i], r = Math.hypot(p[0] - q[0], p[1] - q[1]) * .62;
+    return `A${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 ${p[0]} ${p[1]}`;
+  }).join('') + 'z';
+})();
+const walnutKernel = (t) => `<g transform="${t}">${F(KERNEL_W, '#D29A57')}
+  ${L('M100 50c-6 16 6 30 0 46s6 32 0 46', '#6E3D1A', 5)}
+  ${L('M60 62c10 2 14 10 10 18s2 16 12 16M48 104c10 0 14 8 10 16s4 14 14 14M74 44c2 8 10 12 18 10', '#8A5426')}
+  ${L('M140 62c-10 2-14 10-10 18s-2 16-12 16M152 104c-10 0-14 8-10 16s-4 14-14 14M126 44c-2 8-10 12-18 10', '#8A5426')}
+  ${L('M46 86c0-10 4-18 10-24', '#F0C68C', 6)}${O(KERNEL_W)}</g>`;
+
 /* Seeded black raisins: bigger fruit, with two loose seeds */
 const seed = (x, y, r) => `<path d="M0 -10c5 0 8 6 8 11s-3 9-8 9-8-4-8-9 3-11 8-11z" transform="translate(${x} ${y}) rotate(${r})" fill="#E3C48C" ${S4}/>`;
 
 const FRUITS = {
+  walnutKernels: () => walnutShell('translate(96 -6) scale(.5) rotate(20 100 100)') + walnutKernel('translate(-30 34) rotate(-18 100 100) scale(.66)') + walnutKernel('translate(30 30) rotate(14 100 100) scale(.8)'),
+  walnutInShell: () => walnutShell('translate(-34 -18) rotate(-16 100 100) scale(.74)') + walnutShell('translate(40 -6) rotate(18 100 100) scale(.68)') + walnutKernel('translate(20 74) rotate(-8 100 100) scale(.5)'),
   raisinSeeded: () => [
     raisin(70, 80, 34, 42, -20, '#4A2C40', '#7A5270'), raisin(136, 88, 32, 40, 22, '#3B2333', '#6A4560'),
     raisin(96, 138, 34, 38, 4, '#553248', '#835B79')
@@ -128,12 +151,18 @@ const ICONS = {
     <path d="M60 40c-10-17-30-15-27-2 2 9 17 6 27 2zM60 40c10-17 30-15 27-2-2 9-17 6-27 2z" fill="#E3A63B" ${S4}/>`,
   kitchen: `<circle cx="44" cy="54" r="9" fill="#CF9258" ${S4}/><circle cx="62" cy="50" r="10" fill="#F3D9A4" ${S4}/><circle cx="78" cy="54" r="9" fill="#DB9A32" ${S4}/>
     <path d="M20 58h80c0 27-17 44-40 44S20 85 20 58z" fill="#8A9B52" ${S4}/>${L('M34 72c4 10 12 17 22 19', '#B3C27C', 5)}${L('M98 24L78 50', INK, 5)}`,
+  tag: `<path d="M18 62l40-40h40v40l-40 40z" fill="#E3A63B" ${S4}/><circle cx="82" cy="38" r="7" fill="#FBE5C1" ${S4}/>
+    ${L('M82 31c-4-12-16-20-30-16', INK, 4)}${L('M42 72l22-22M54 84l18-18', '#8A3A22', 4)}`,
+  note: `<rect x="16" y="32" width="88" height="60" rx="4" fill="#FBE5C1" ${S4}/>${L('M16 36l44 32 44-32', INK, 4)}
+    <circle cx="60" cy="68" r="11" fill="#A84E33" ${S4}/>${L('M56 68h8M60 64v8', '#FBE5C1', 3)}`,
+  cook: `<path d="M18 56h84v8c0 22-16 36-42 36S18 86 18 64z" fill="#A84E33" ${S4}/>${L('M10 56h100', INK, 5)}
+    ${L('M44 44c-4-8 4-12 0-20M60 44c-4-8 4-12 0-20M76 44c-4-8 4-12 0-20', INK, 4)}${L('M30 70c4 10 12 16 22 18', '#D98A64', 5)}`,
   camera: `<path d="M22 44h18l8-12h24l8 12h18v48H22z" fill="none" ${S4}/><circle cx="60" cy="66" r="15" fill="none" ${S4}/>`
 };
 
 Object.keys(VARIETIES).forEach((k) => { FRUITS[k] = () => variety(VARIETIES[k]); });
 
-const NAME = { 'ajwa-dates': 'ajwa', 'medjool-dates': 'medjool', almonds: 'almond', cashews: 'cashew', pistachios: 'pistachio', raisins: 'raisin', 'black-raisins-seedless': 'raisin', 'black-raisins-seeded': 'raisinSeeded', figs: 'fig', apricots: 'apricot' };
+const NAME = { 'ajwa-dates': 'ajwa', 'medjool-dates': 'medjool', almonds: 'almond', cashews: 'cashew', pistachios: 'pistachio', raisins: 'raisin', 'black-raisins-seedless': 'raisin', 'black-raisins-seeded': 'raisinSeeded', 'walnut-kernels': 'walnutKernels', 'walnuts-in-shell': 'walnutInShell', figs: 'fig', apricots: 'apricot' };
 const fruit = (slug, cls = '') => `<svg class="ill ${cls}" viewBox="0 0 200 200" aria-hidden="true">${(FRUITS[NAME[slug] || slug] || FRUITS.ajwa)()}</svg>`;
 const icon2 = (name, cls = '') => `<svg class="ico ${cls}" viewBox="0 0 120 120" aria-hidden="true">${ICONS[name] || ''}</svg>`;
 

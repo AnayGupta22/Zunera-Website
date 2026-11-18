@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://eatzunera.com/</loc></url>
   <url><loc>https://eatzunera.com/shop.html</loc></url>
+  <url><loc>https://eatzunera.com/recipes.html</loc></url>
+  <url><loc>https://eatzunera.com/gifting.html</loc></url>
   <url><loc>https://eatzunera.com/about.html</loc></url>
   <url><loc>https://eatzunera.com/trade.html</loc></url>
   <url><loc>https://eatzunera.com/contact.html</loc></url>
@@ -26,8 +28,16 @@
   <url><loc>https://eatzunera.com/products/almonds.html</loc></url>
   <url><loc>https://eatzunera.com/products/cashews.html</loc></url>
   <url><loc>https://eatzunera.com/products/pistachios.html</loc></url>
+  <url><loc>https://eatzunera.com/products/walnut-kernels.html</loc></url>
+  <url><loc>https://eatzunera.com/products/walnuts-in-shell.html</loc></url>
   <url><loc>https://eatzunera.com/products/black-raisins-seedless.html</loc></url>
   <url><loc>https://eatzunera.com/products/black-raisins-seeded.html</loc></url>
   <url><loc>https://eatzunera.com/products/figs.html</loc></url>
   <url><loc>https://eatzunera.com/products/apricots.html</loc></url>
+  <url><loc>https://eatzunera.com/recipes/date-and-nut-laddoos.html</loc></url>
+  <url><loc>https://eatzunera.com/recipes/kesar-badam-milk.html</loc></url>
+  <url><loc>https://eatzunera.com/recipes/dry-fruit-kheer.html</loc></url>
+  <url><loc>https://eatzunera.com/recipes/stuffed-medjool-dates.html</loc></url>
+  <url><loc>https://eatzunera.com/recipes/anjeer-milkshake.html</loc></url>
+  <url><loc>https://eatzunera.com/recipes/fig-and-walnut-overnight-oats.html</loc></url>
 </urlset>

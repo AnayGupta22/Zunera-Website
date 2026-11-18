@@ -12,6 +12,7 @@ const pages = require('./templates/pages');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(__dirname, 'content', f), 'utf8'));
 const site = read('site.json');
 const products = read('products.json');
+const recipes = read('recipes.json');
 const out = path.join(__dirname, 'site');
 
 /* Photos are picked up automatically when the file exists:
@@ -107,12 +108,24 @@ const redirects = { 'products/raisins.html': 'products/black-raisins-seedless.ht
 async function main() {
   console.log('Building Zunera site:');
   site.instagramPosts = await instagram();
-  const ctx = { site, products, root: '' };
+  const ctx = { site, products, recipes, root: '' };
 
   write('index.html', { active: 'index.html', content: pages.home(ctx) });
   write('shop.html', { active: 'shop.html', title: 'Shop the range', description: 'Ajwa, Medjool, Sukkari, Mazafati and many more dates, plus almonds, cashews, pistachios, black raisins, figs and apricots from Zunera. Buy on Amazon.', content: pages.shop(ctx) });
   write('about.html', { active: 'about.html', title: 'Our story', description: 'How Zunera sources, imports, sorts and packs dates and dry fruits for India.', content: pages.about(ctx) });
   write('trade.html', { active: 'trade.html', title: 'Trade & bulk', description: 'Bulk cartons, retail-ready packs and gifting programmes from Zunera for retailers, wholesalers and kitchens.', bodyClass: 'page-trade', content: pages.trade(ctx) });
+  write('gifting.html', { active: 'gifting.html', title: 'Corporate gifting', description: 'Custom date and dry fruit gift boxes for festivals, clients and teams, with your logo, your mix and your note. Delivered across India.', content: pages.gifting(ctx) });
+  write('recipes.html', { active: 'recipes.html', title: 'Recipes', description: 'Simple recipes made with Zunera dates and dry fruits: laddoos, kheer, badam milk, milkshakes and more.', content: pages.recipes(ctx) });
+  recipes.forEach((r) => {
+    write('recipes/' + r.slug + '.html', {
+      root: '../',
+      active: 'recipes.html',
+      title: r.name,
+      description: r.intro,
+      themeColor: r.color,
+      content: pages.recipe({ site, products, recipes, root: '../', r })
+    });
+  });
   write('contact.html', { active: 'contact.html', title: 'Contact us', description: 'Talk to Zunera on WhatsApp, email or Instagram.', content: pages.contact(ctx) });
   write('enquiry.html', { title: 'Enquiry form', description: 'Send Zunera a trade, bulk or gifting enquiry.', content: pages.enquiry(ctx) });
   write('404.html', { root: '/', title: 'Page not found', content: pages.notFound({ site, products, root: '/' }) });
@@ -135,8 +148,9 @@ async function main() {
     console.log('  ' + from + ' -> ' + to);
   });
 
-  const urls = ['', 'shop.html', 'about.html', 'trade.html', 'contact.html', 'enquiry.html']
-    .concat(products.map((p) => 'products/' + p.slug + '.html'));
+  const urls = ['', 'shop.html', 'recipes.html', 'gifting.html', 'about.html', 'trade.html', 'contact.html', 'enquiry.html']
+    .concat(products.map((p) => 'products/' + p.slug + '.html'))
+    .concat(recipes.map((r) => 'recipes/' + r.slug + '.html'));
   fs.writeFileSync(path.join(out, 'sitemap.xml'),
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     urls.map((u) => '  <url><loc>' + site.domain + '/' + u + '</loc></url>').join('\n') + '\n</urlset>\n');

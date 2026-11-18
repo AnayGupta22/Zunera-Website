@@ -92,6 +92,8 @@ function footer(site, products, root) {
         <h2 class="foot-h">Company</h2>
         <ul>
           <li><a href="${root}about.html">Our story</a></li>
+          <li><a href="${root}recipes.html">Recipes</a></li>
+          <li><a href="${root}gifting.html">Corporate gifting</a></li>
           <li><a href="${root}trade.html">Trade &amp; bulk</a></li>
           <li><a href="${root}enquiry.html">Enquiry form</a></li>
           <li><a href="${root}contact.html">Contact us</a></li>

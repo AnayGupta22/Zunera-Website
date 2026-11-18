@@ -40,6 +40,14 @@
       "href": "shop.html"
     },
     {
+      "label": "Recipes",
+      "href": "recipes.html"
+    },
+    {
+      "label": "Gifting",
+      "href": "gifting.html"
+    },
+    {
       "label": "Our story",
       "href": "about.html"
     },
@@ -142,5 +150,15 @@
   "taglineItems": [
     "Rooted in sourcing",
     "Driven by quality"
+  ],
+  "highlights": [
+    "ajwa-dates",
+    "medjool-dates",
+    "sukkari-rutab-dates",
+    "almonds",
+    "cashews",
+    "pistachios",
+    "walnut-kernels",
+    "figs"
   ]
 }
