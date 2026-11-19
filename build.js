@@ -80,7 +80,10 @@ async function mediaUrl(token) {
   const t = encodeURIComponent(token);
   if (!/^EAA/.test(token)) return 'https://graph.instagram.com/me/media?fields=' + fields + '&limit=12&access_token=' + t;
   const fb = (p) => get('https://graph.facebook.com/v21.0/' + p + (p.includes('?') ? '&' : '?') + 'access_token=' + t).then((b) => JSON.parse(b.toString('utf8')));
-  let ig = await fb('me?fields=instagram_business_account').then((j) => j.instagram_business_account && j.instagram_business_account.id).catch(() => null);
+  /* A System User token can read an Instagram account assigned to it, given the account's ID
+     (Business Settings > Accounts > Instagram accounts). Set it in content/site.json. */
+  let ig = process.env.INSTAGRAM_USER_ID || site.social.instagramUserId || null;
+  if (!ig) ig = await fb('me?fields=instagram_business_account').then((j) => j.instagram_business_account && j.instagram_business_account.id).catch(() => null);
   if (!ig) {
     const pages = await fb('me/accounts?fields=instagram_business_account').catch(() => ({}));
     const hit = (pages.data || []).find((p) => p.instagram_business_account);
