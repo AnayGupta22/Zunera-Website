@@ -53,6 +53,7 @@ function header(site, root, active) {
     <nav class="nav" aria-label="Main">${links}</nav>
     <div class="header-cta">
       <a class="btn btn-ghost btn-sm hide-sm" href="${root}enquiry.html">Enquire</a>
+      <a class="search-btn" href="${root}search.html" aria-label="Search the site" data-search-open><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></a>
       <a class="btn btn-primary btn-sm header-amazon" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" data-nav-toggle><span></span><span></span><span class="sr">Menu</span></button>
     </div>
@@ -115,6 +116,7 @@ function footer(site, products, root) {
     <img class="footer-mark" src="${root}assets/brand/zunera-wordmark-cream.svg" alt="Zunera" width="2293" height="515" loading="lazy">
     <div class="footer-base">
       <span>© <span data-year>2026</span> Zunera</span>
+      <a href="${root}privacy.html">Privacy policy</a>
       ${site.legal.fssai ? `<span>FSSAI No. ${esc(site.legal.fssai)}</span>` : ''}
       ${site.legal.gst ? `<span>GST ${esc(site.legal.gst)}</span>` : ''}
     </div>
@@ -122,21 +124,43 @@ function footer(site, products, root) {
 </footer>`;
 }
 
-function layout({ site, products, root = '', active = '', title, description, bodyClass = '', themeColor = '#E5BE7D', content }) {
-  const fullTitle = title ? `${title} | Zunera` : 'Zunera | Dry fruits & dates';
+/* Search engines show about 155 characters of a description; cut at a word boundary */
+const clip = (s, n = 155) => {
+  s = String(s || '').replace(/\s+/g, ' ').trim();
+  if (s.length <= n) return s;
+  const cut = s.slice(0, n - 1);
+  return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,.;:]$/, '') + '…';
+};
+
+function layout({ site, products, root = '', active = '', title, titleFull, description, path = '', image, imageAlt, ogType = 'website', jsonld = [], noindex = false, bodyClass = '', themeColor = '#E5BE7D', content }) {
+  const fullTitle = titleFull || (title ? `${title} | Zunera` : 'Zunera | Dates & Dry Fruits in India');
+  const desc = clip(description || site.description);
+  const url = site.domain + '/' + path;
+  const img = site.domain + '/' + (image || 'assets/carton/carton-front.jpg');
   return `<!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(fullTitle)}</title>
-<meta name="description" content="${esc(description || site.description)}">
+<meta name="description" content="${esc(desc)}">
+${noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${esc(url)}">`}
 <meta name="theme-color" content="${themeColor}">
+<meta property="og:site_name" content="Zunera">
+<meta property="og:locale" content="en_IN">
 <meta property="og:title" content="${esc(fullTitle)}">
-<meta property="og:description" content="${esc(description || site.description)}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="${esc(site.domain)}/assets/carton/carton-front.jpg">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:type" content="${ogType}">
+<meta property="og:url" content="${esc(url)}">
+<meta property="og:image" content="${esc(img)}">
+<meta property="og:image:alt" content="${esc(imageAlt || 'Zunera dates and dry fruits')}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(fullTitle)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${esc(img)}">
+${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, '\\u003c')}</script>`).join('\n')}
 <link rel="icon" type="image/svg+xml" href="${root}assets/brand/zunera-mark-olive.svg">
+<link rel="apple-touch-icon" href="${root}assets/brand/apple-touch-icon.png">
 <link rel="preload" href="${root}assets/fonts/Poppins-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${root}assets/fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${root}css/styles.css">
@@ -149,10 +173,20 @@ ${header(site, root, active)}
 ${content}
 </main>
 ${footer(site, products, root)}
+<div class="search-sheet" data-search-sheet data-root="${root}" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search">
+    <form class="search-form" action="${root}search.html" role="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <input type="search" name="q" placeholder="Search dates, nuts, recipes…" aria-label="Search" autocomplete="off" data-search-input>
+      <button type="button" class="search-close" aria-label="Close search" data-search-close>Esc</button>
+    </form>
+    <div class="search-results" data-search-results aria-live="polite"></div>
+  </div>
+</div>
 <script src="${root}js/main.js" defer></script>
 </body>
 </html>
 `;
 }
 
-module.exports = { layout, esc, hl, icon, go, ext, banner, tagline, processStrip, followPill, ruled, slot, sparkle };
+module.exports = { layout, esc, hl, icon, go, ext, banner, tagline, processStrip, followPill, ruled, slot, sparkle, clip };

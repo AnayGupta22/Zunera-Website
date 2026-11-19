@@ -29,7 +29,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Ajwa+Dates",
     "color": "#E2A93B",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Saudipedia: Ajwa dates",
+        "url": "https://saudipedia.com/en/ajwa-dates"
+      }
+    ]
   },
   {
     "slug": "medjool-dates",
@@ -87,10 +93,20 @@
     "sizes": [
       "200 g pouch"
     ],
-    "storage": "Store in a cool, dry place. Refrigerate after opening.",
+    "storage": "Keep refrigerated.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Sukkari+Rutab+Dates",
     "color": "#3F5A44",
-    "on": "cream"
+    "on": "cream",
+    "factSources": [
+      {
+        "name": "Al Madni Trader: Sukkari dates",
+        "url": "https://www.almadnitrader.com/blogs/news/sukkari-dates-sweet-benefits-source-grading"
+      },
+      {
+        "name": "FAO: date ripening stages",
+        "url": "https://www.fao.org/3/t0681E/t0681e03.htm"
+      }
+    ]
   },
   {
     "slug": "amber-dates",
@@ -102,11 +118,11 @@
     "image": "",
     "imageAlt": "",
     "photoBrief": "Zunera pouch with a bowl of large dark-brown Amber dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Large, meaty and mildly sweet.",
-    "description": "Amber dates, also called Anbara, are among the largest dates grown in Saudi Arabia. Long and plump with thick flesh, they are less sugary than most, so it is easy to have a few.",
+    "short": "Large, fleshy and mildly sweet.",
+    "description": "Amber dates, also called Anbara, are known as one of the largest dates of Madinah. Plump and fleshy, with a small seed for their size and a mild sweetness.",
     "notes": {
-      "Taste": "Mild and gently sweet.",
-      "Texture": "Thick, meaty and soft.",
+      "Taste": "Mild to medium sweetness.",
+      "Texture": "Plump, fleshy and soft.",
       "Best with": "Black coffee or a glass of milk."
     },
     "enjoy": [
@@ -120,7 +136,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Amber+Dates",
     "color": "#E8B07A",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Saudipedia: Anbara dates",
+        "url": "https://saudipedia.com/en/anbara-dates"
+      }
+    ]
   },
   {
     "slug": "mazafati-dates",
@@ -147,10 +169,16 @@
     "sizes": [
       "200 g pouch"
     ],
-    "storage": "Store in a cool, dry place. Refrigerate after opening.",
+    "storage": "Keep refrigerated.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Mazafati+Dates",
     "color": "#C26A43",
-    "on": "cream"
+    "on": "cream",
+    "factSources": [
+      {
+        "name": "Amoot Iranian: Mazafati date",
+        "url": "https://amootiranian.com/mazafati-date/"
+      }
+    ]
   },
   {
     "slug": "sugai-dates",
@@ -180,7 +208,17 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Sugai+Dates",
     "color": "#A7B46B",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Saudipedia: Sagai dates",
+        "url": "https://saudipedia.com/en/sagai-dates"
+      },
+      {
+        "name": "Almarai: Sagai dates",
+        "url": "https://www.almarai.com/en/brands/almira/dates/dates/sagai-dates"
+      }
+    ]
   },
   {
     "slug": "deglet-nour-dates",
@@ -210,7 +248,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Tunisian+Deglet+Nour+Dates",
     "color": "#7A4A5C",
-    "on": "cream"
+    "on": "cream",
+    "factSources": [
+      {
+        "name": "Wikipedia: Deglet Nour",
+        "url": "https://en.wikipedia.org/wiki/Deglet_Nour"
+      }
+    ]
   },
   {
     "slug": "sukkari-mufatal-dates",
@@ -221,12 +265,12 @@
     "badge": "",
     "image": "",
     "imageAlt": "",
-    "photoBrief": "Zunera pouch with a bowl of golden, crystallised Sukkari Mufatal dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Golden, crumbly and naturally crystallised.",
-    "description": "Mufatal Sukkari are Sukkari dates rolled by hand as they dry, which lets their natural sugars crystallise. The result is a golden, crumbly date with a light crunch.",
+    "photoBrief": "Zunera pouch with a bowl of firm, wrinkled, golden-brown Sukkari Mufatal dates on linen. Warm side light. Square 1:1.",
+    "short": "Firm, wrinkled and naturally sweet.",
+    "description": "Mufattal is a traditional way of drying Sukkari dates. It leaves them firmer than soft Sukkari, with a slightly crunchy, wrinkled skin, while keeping the sweetness Sukkari is named for.",
     "notes": {
-      "Taste": "Very sweet, like caramelised sugar.",
-      "Texture": "Crumbly, with a light crunch.",
+      "Taste": "Sweet, in the Sukkari style.",
+      "Texture": "Firm, with a slightly crunchy skin.",
       "Best with": "Bitter coffee or strong chai."
     },
     "enjoy": [
@@ -240,7 +284,17 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Sukkari+Mufatal+Dates",
     "color": "#8E3F2B",
-    "on": "cream"
+    "on": "cream",
+    "factSources": [
+      {
+        "name": "Datlex: Sukkari Mufattal",
+        "url": "https://www.datlex.cz/en/sukkari-mufattal-05kg/"
+      },
+      {
+        "name": "Prophetic Blends: Sukkari Mufattal",
+        "url": "https://propheticblends.co.uk/products/premium-sukkari-dates"
+      }
+    ]
   },
   {
     "slug": "mabroom-dates",
@@ -270,7 +324,17 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Mabroom+Dates",
     "color": "#F0D3A8",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Wikipedia: Mabroom",
+        "url": "https://en.wikipedia.org/wiki/Mabroom"
+      },
+      {
+        "name": "Saudipedia: Mabroom date",
+        "url": "https://saudipedia.com/en/mabroom-date"
+      }
+    ]
   },
   {
     "slug": "kalmi-dates",
@@ -282,10 +346,10 @@
     "image": "",
     "imageAlt": "",
     "photoBrief": "Zunera pouch with a bowl of long, very dark Kalmi dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Dark, soft and lightly sweet.",
-    "description": "Kalmi dates, also known as Safawi, are long and very dark, almost black. Soft and moist, with a lighter sweetness than many dates, they make a good everyday date.",
+    "short": "Dark, soft and balanced.",
+    "description": "Kalmi dates, also known as Safawi, come from Madinah. Medium to long and very dark, almost black, they are soft and moist with a balanced sweetness, and one of the most widely eaten dates in India.",
     "notes": {
-      "Taste": "Lightly sweet, a little like molasses.",
+      "Taste": "Balanced and mildly sweet.",
       "Texture": "Soft and moist.",
       "Best with": "Warm milk or black coffee."
     },
@@ -300,7 +364,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Kalmi+Dates",
     "color": "#D9A35B",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Darussalam: Kalmi dates",
+        "url": "https://darussalam.pk/food-items/kalmi-dates-1-kg/"
+      }
+    ]
   },
   {
     "slug": "khalas-dates",
@@ -313,7 +383,7 @@
     "imageAlt": "",
     "photoBrief": "Zunera pouch with a bowl of amber, golden-brown Khalas dates on linen. Warm side light. Portrait 4:5.",
     "short": "Golden-brown with a caramel flavour.",
-    "description": "Khalas dates are amber to golden-brown, soft and smooth, with a flavour often compared to caramel and butterscotch. A much-loved table date in the Gulf.",
+    "description": "Khalas dates are amber to dark brown, soft and fleshy, with a flavour often described as caramel and butterscotch. You will find them at almost every gathering in the Gulf.",
     "notes": {
       "Taste": "Caramel and butterscotch.",
       "Texture": "Soft and smooth.",
@@ -330,7 +400,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Khalas+Dates",
     "color": "#5A3A2A",
-    "on": "cream"
+    "on": "cream",
+    "factSources": [
+      {
+        "name": "Saudipedia: Khalas dates",
+        "url": "https://saudipedia.com/en/khalas-dates"
+      }
+    ]
   },
   {
     "slug": "khudri-dates",
@@ -342,11 +418,11 @@
     "image": "",
     "imageAlt": "",
     "photoBrief": "Zunera pouch with a bowl of oblong, dark-brown Khudri dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Dark, firm and good for every day.",
-    "description": "Khudri dates are oblong and dark brown, with a firm skin and a semi-dry, chewy flesh. Mild in sweetness, they are a popular everyday date in Saudi Arabia.",
+    "short": "Dark, chewy and good for every day.",
+    "description": "Khudri dates are oblong and dark reddish-brown, with a chewy, slightly firm texture. They are one of Saudi Arabia's most widely exported dates.",
     "notes": {
-      "Taste": "Mild and gently sweet.",
-      "Texture": "Semi-dry and chewy.",
+      "Taste": "Naturally sweet.",
+      "Texture": "Chewy and slightly firm.",
       "Best with": "A glass of milk or a bowl of oats."
     },
     "enjoy": [
@@ -360,7 +436,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Khudri+Dates",
     "color": "#B9C48A",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "House of Saud: Saudi dates guide",
+        "url": "https://houseofsaud.com/travel/saudi-dates-guide/"
+      }
+    ]
   },
   {
     "slug": "rabia-dates",
@@ -371,12 +453,12 @@
     "badge": "",
     "image": "",
     "imageAlt": "",
-    "photoBrief": "Zunera pouch with a bowl of long, dark Rabia dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Long, dark and gently chewy.",
-    "description": "Rabia dates are long and dark, with a soft-to-chewy texture and a moderate sweetness.",
+    "photoBrief": "Zunera pouch with a bowl of small, brownish-black Rabia dates on linen. Warm side light. Square 1:1.",
+    "short": "Small, dark and naturally sweet.",
+    "description": "Rabia dates are small, brownish-black dates from Saudi Arabia, and a popular everyday khajoor in India.",
     "notes": {
-      "Taste": "Moderately sweet.",
-      "Texture": "Soft to chewy.",
+      "Taste": "Naturally sweet.",
+      "Texture": "Small and easy to eat whole.",
       "Best with": "Black coffee or chai."
     },
     "enjoy": [
@@ -390,7 +472,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Rabia+Dates",
     "color": "#C98B6B",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Amazon.in listing: Rabia dates",
+        "url": "https://www.amazon.in/Nabat-Dates-Premium-Arabian-Naturally/dp/B0GSK7XHYL"
+      }
+    ]
   },
   {
     "slug": "rabbi-dates",
@@ -401,12 +489,12 @@
     "badge": "",
     "image": "",
     "imageAlt": "",
-    "photoBrief": "Zunera pouch with a bowl of long, slim, dark Rabbi dates on linen. Warm side light. Portrait 4:5.",
+    "photoBrief": "Zunera pouch with a bowl of long, near-black, slightly shiny Rabbi dates on linen. Warm side light. Square 1:1.",
     "short": "Long, dark and semi-dry.",
-    "description": "Rabbi dates are long, slim and dark. Semi-dry, with a firm, chewy bite and a balanced sweetness.",
+    "description": "Rabbi dates come from Iran's Sistan and Baluchestan province. Long and near-black with a slight shine, they are semi-dry yet soft, with a gentle chew.",
     "notes": {
-      "Taste": "Balanced and gently sweet.",
-      "Texture": "Semi-dry with a firm bite.",
+      "Taste": "Gently sweet.",
+      "Texture": "Semi-dry but soft, with a gentle chew.",
       "Best with": "Chai or a handful of nuts."
     },
     "enjoy": [
@@ -420,7 +508,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Rabbi+Dates",
     "color": "#D7B98E",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Wikipedia: Rabbi (date)",
+        "url": "https://en.wikipedia.org/wiki/Rabbi_(date)"
+      }
+    ]
   },
   {
     "slug": "sufri-dates",
@@ -431,12 +525,12 @@
     "badge": "",
     "image": "",
     "imageAlt": "",
-    "photoBrief": "Zunera pouch with a bowl of light-brown Sufri dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Semi-dry with a gentle sweetness.",
-    "description": "Sufri dates are medium-sized and light brown, semi-dry with a pleasant chew. Their sweetness is gentle, so they suit anyone who likes a lighter date.",
+    "photoBrief": "Zunera pouch with a bowl of golden-brown Sufri dates on linen. Warm side light. Square 1:1.",
+    "short": "Golden-brown, chewy and lightly sweet.",
+    "description": "Sufri dates are golden-brown and chewy, with a lighter sweetness than many other varieties, so they suit anyone who likes a gentler date.",
     "notes": {
-      "Taste": "Gentle and nutty-sweet.",
-      "Texture": "Semi-dry and chewy.",
+      "Taste": "Lightly sweet, with caramel notes.",
+      "Texture": "Soft and chewy.",
       "Best with": "Green tea or black coffee."
     },
     "enjoy": [
@@ -450,7 +544,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Sufri+Dates",
     "color": "#2F4A3A",
-    "on": "cream"
+    "on": "cream",
+    "factSources": [
+      {
+        "name": "Kings Madina Dates: Sufri",
+        "url": "https://kingsmadinadates.com/product/sufri/"
+      }
+    ]
   },
   {
     "slug": "mashrook-dates",
@@ -461,12 +561,12 @@
     "badge": "",
     "image": "",
     "imageAlt": "",
-    "photoBrief": "Zunera pouch with a bowl of semi-dry Mashrook dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Firm, chewy and lightly sweet.",
-    "description": "Mashrook dates are a semi-dry variety with a firm, chewy flesh and a lighter sweetness. Easy to carry and easy to snack on.",
+    "photoBrief": "Zunera pouch with a bowl of soft, glossy, dark reddish-brown Mashrook dates on linen. Warm side light. Square 1:1.",
+    "short": "Soft, moist and caramel-sweet.",
+    "description": "Mashrook dates come from Madinah. Medium-sized and dark brown to reddish-brown, they have soft, moist flesh and a caramel-like sweetness.",
     "notes": {
-      "Taste": "Lightly sweet.",
-      "Texture": "Firm and chewy.",
+      "Taste": "Caramel-sweet.",
+      "Texture": "Soft, moist and a little sticky.",
       "Best with": "Chai or black coffee."
     },
     "enjoy": [
@@ -480,7 +580,13 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Mashrook+Dates",
     "color": "#E3A68C",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Sahari Dates: Mashrook",
+        "url": "https://saharidates.com/product/mashrook-dates/"
+      }
+    ]
   },
   {
     "slug": "fard-dates",
@@ -491,12 +597,12 @@
     "badge": "",
     "image": "",
     "imageAlt": "",
-    "photoBrief": "Zunera pouch with a bowl of dark-brown, semi-dry Fard dates on linen. Warm side light. Portrait 4:5.",
-    "short": "Dark, firm and not too sweet.",
-    "description": "Fard dates are dark brown and semi-dry, with a firm bite and a mild sweetness. They keep well, which makes them a good date to have in the cupboard.",
+    "photoBrief": "Zunera pouch with a bowl of small, dark, near-black Fard dates on linen. Warm side light. Square 1:1.",
+    "short": "Small, dark and slightly chewy.",
+    "description": "Fard dates are widely grown in Oman. Small and dark brown to near-black, with a small seed and a firm, slightly chewy bite, they travel well and keep their shape.",
     "notes": {
-      "Taste": "Mild and earthy.",
-      "Texture": "Semi-dry with a firm bite.",
+      "Taste": "Naturally sweet.",
+      "Texture": "Firm and slightly chewy.",
       "Best with": "Chai, or chopped into oats."
     },
     "enjoy": [
@@ -510,7 +616,17 @@
     "storage": "Store in a cool, dry place. Refrigerate after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Fard+Dates",
     "color": "#C9B48A",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Wikipedia: Fard (date)",
+        "url": "https://en.wikipedia.org/wiki/Fard_(date)"
+      },
+      {
+        "name": "NPR: dates in Oman",
+        "url": "https://www.kcur.org/2017-05-11/a-love-affair-with-dates-the-fruit-at-the-cultural-heart-of-oman"
+      }
+    ]
   },
   {
     "slug": "almonds",
@@ -761,9 +877,9 @@
     "badge": "",
     "image": "",
     "imageAlt": "",
-    "photoBrief": "Zunera apricot pouch with a wicker basket of bright orange dried apricots, green leaves at the edge. Golden-hour light. Portrait 4:5.",
-    "short": "Bright, tangy-sweet and tender.",
-    "description": "Dried apricots selected for colour and softness. Sorted piece by piece so the pack holds whole, tender fruit with a clean, bright flavour.",
+    "photoBrief": "Zunera apricot pouch with a wicker basket of whole sun-dried apricots, green leaves at the edge. Golden-hour light. Square 1:1.",
+    "short": "Sun-dried, tangy-sweet and tender.",
+    "description": "Dried apricots from Afghanistan, sorted piece by piece so the pack holds whole, tender fruit with a clean, tangy-sweet flavour.",
     "notes": {
       "Taste": "Tangy-sweet, like late summer.",
       "Texture": "Tender and fleshy.",
@@ -780,6 +896,12 @@
     "storage": "Store in a cool, dry place. Reseal after opening.",
     "amazon": "https://www.amazon.in/s?k=Zunera+Dried+Apricots",
     "color": "#F0C9A8",
-    "on": "ink"
+    "on": "ink",
+    "factSources": [
+      {
+        "name": "Drying of apricots (technical guide)",
+        "url": "https://library.uniteddiversity.coop/Food/Food_Production_and_Processing/drying_of_apricots.pdf"
+      }
+    ]
   }
 ]

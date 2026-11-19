@@ -8,6 +8,7 @@ const http = require('http');
 const https = require('https');
 const { layout } = require('./templates/layout');
 const pages = require('./templates/pages');
+const seo = require('./seo');
 
 const read = (f) => JSON.parse(fs.readFileSync(path.join(__dirname, 'content', f), 'utf8'));
 const site = read('site.json');
@@ -131,37 +132,57 @@ async function main() {
   site.instagramPosts = await instagram();
   const ctx = { site, products, recipes, root: '' };
 
-  write('index.html', { active: 'index.html', content: pages.home(ctx) });
-  write('shop.html', { active: 'shop.html', title: 'Shop the range', description: 'Ajwa, Medjool, Sukkari, Mazafati and many more dates, plus almonds, cashews, pistachios, black raisins, figs and apricots from Zunera. Buy on Amazon.', content: pages.shop(ctx) });
-  write('about.html', { active: 'about.html', title: 'Our story', description: 'How Zunera sources, imports, sorts and packs dates and dry fruits for India.', content: pages.about(ctx) });
-  write('trade.html', { active: 'trade.html', title: 'Trade & bulk', description: 'Bulk cartons, retail-ready packs and gifting programmes from Zunera for retailers, wholesalers and kitchens.', bodyClass: 'page-trade', content: pages.trade(ctx) });
-  write('gifting.html', { active: 'gifting.html', title: 'Corporate gifting', description: 'Custom date and dry fruit gift boxes for festivals, clients and teams, with your logo, your mix and your note. Delivered across India.', content: pages.gifting(ctx) });
-  write('recipes.html', { active: 'recipes.html', title: 'Recipes', description: 'Simple recipes made with Zunera dates and dry fruits: laddoos, kheer, badam milk, milkshakes and more.', content: pages.recipes(ctx) });
+  const catLabel = (id) => (site.categories.find((c) => c.id === id) || {}).label || '';
+
+  write('index.html', { path: '', active: 'index.html', titleFull: 'Zunera | Premium Dates & Dry Fruits from Trusted Origins',
+    description: 'Zunera brings Ajwa, Medjool, Sukkari and many more date varieties, plus almonds, cashews, pistachios, walnuts and dried fruit, from trusted origins to India.',
+    jsonld: [seo.organization(site), seo.website(site)], content: pages.home(ctx) });
+  write('shop.html', { path: 'shop.html', active: 'shop.html', titleFull: 'Shop Dates & Dry Fruits | Zunera',
+    description: 'Ajwa, Medjool, Sukkari, Mazafati, Khalas and more dates, plus almonds, cashews, pistachios, walnuts, black raisins, figs and apricots from Zunera.',
+    content: pages.shop(ctx) });
+  write('about.html', { path: 'about.html', active: 'about.html', title: 'Our Story', description: 'How Zunera sources, imports, sorts and packs dates and dry fruits for homes and businesses in India.', content: pages.about(ctx) });
+  write('trade.html', { path: 'trade.html', active: 'trade.html', titleFull: 'Bulk Dates & Dry Fruits for Trade | Zunera', description: 'Bulk cartons, retail-ready packs and gifting programmes of dates and dry fruits for retailers, wholesalers, hotels and kitchens across India.', bodyClass: 'page-trade', content: pages.trade(ctx) });
+  write('gifting.html', { path: 'gifting.html', active: 'gifting.html', titleFull: 'Corporate Dry Fruit & Date Gift Boxes | Zunera', description: 'Custom date and dry fruit gift boxes for Diwali, Eid, weddings and clients, with your logo, your mix and a personal note. Delivered across India.', image: 'assets/img/gift-boxes.jpg', content: pages.gifting(ctx) });
+  write('recipes.html', { path: 'recipes.html', active: 'recipes.html', titleFull: 'Recipes with Dates & Dry Fruits | Zunera', description: 'Tried-and-tested recipes with dates and dry fruits: dry fruit laddoos, kheer, sheer khurma, badam milk, date chutneys, ma\'amoul and more.', image: recipes[0] && recipes[0].image, content: pages.recipes(ctx) });
   recipes.forEach((r) => {
     write('recipes/' + r.slug + '.html', {
       root: '../',
+      path: 'recipes/' + r.slug + '.html',
       active: 'recipes.html',
-      title: r.name,
-      description: r.intro,
+      titleFull: r.name.replace(/(^|[\s(-])([a-z])/g, (m, a, b) => a + b.toUpperCase()) + ' Recipe | Zunera',
+      description: r.name + ' recipe: ' + r.intro,
+      image: r.image,
+      imageAlt: r.name,
+      ogType: 'article',
       themeColor: r.color,
+      jsonld: [seo.recipe(site, r, products), seo.breadcrumbs(site, [['Home', ''], ['Recipes', 'recipes.html'], [r.name, 'recipes/' + r.slug + '.html']])],
       content: pages.recipe({ site, products, recipes, root: '../', r })
     });
   });
-  write('contact.html', { active: 'contact.html', title: 'Contact us', description: 'Talk to Zunera on WhatsApp, email or Instagram.', content: pages.contact(ctx) });
-  write('enquiry.html', { title: 'Enquiry form', description: 'Send Zunera a trade, bulk or gifting enquiry.', content: pages.enquiry(ctx) });
-  write('404.html', { root: '/', title: 'Page not found', content: pages.notFound({ site, products, root: '/' }) });
+  write('contact.html', { path: 'contact.html', active: 'contact.html', titleFull: 'Contact Zunera', description: 'Talk to Zunera on WhatsApp, phone or email about orders, products, trade or corporate gifting. We reply within one working day.', content: pages.contact(ctx) });
+  write('enquiry.html', { path: 'enquiry.html', titleFull: 'Trade, Bulk & Gifting Enquiry | Zunera', description: 'Send Zunera a trade, bulk or corporate gifting enquiry for dates and dry fruits. Our team replies with formats and pricing within one working day.', content: pages.enquiry(ctx) });
+  write('privacy.html', { path: 'privacy.html', title: 'Privacy Policy', description: 'How Zunera and Foodsy Exports handle the information you share with us through eatzunera.com.', content: pages.privacy(ctx) });
+  write('search.html', { path: 'search.html', title: 'Search', noindex: true, content: pages.search(ctx) });
+  write('404.html', { root: '/', title: 'Page not found', noindex: true, content: pages.notFound({ site, products, root: '/' }) });
 
   products.forEach((p) => {
     write('products/' + p.slug + '.html', {
       root: '../',
+      path: 'products/' + p.slug + '.html',
       active: 'shop.html',
-      title: p.name,
-      description: p.short + ' ' + p.description,
+      titleFull: p.name + ' from ' + p.origin + ' | Zunera',
+      description: p.name + ' from ' + p.origin + ': ' + p.short.charAt(0).toLowerCase() + p.short.slice(1) + ' Tasting notes, pack sizes and recipes from Zunera.',
+      image: p.image,
+      imageAlt: p.imageAlt || p.name,
       bodyClass: 'page-product',
       themeColor: p.color,
+      jsonld: [seo.product(site, p, catLabel(p.category)), seo.breadcrumbs(site, [['Home', ''], ['Shop', 'shop.html'], [p.name, 'products/' + p.slug + '.html']])],
       content: pages.product({ site, products, recipes, root: '../', p })
     });
   });
+
+  fs.writeFileSync(path.join(out, 'search-index.json'), JSON.stringify(seo.searchIndex(site, products, recipes)));
+  console.log('  search-index.json');
 
   Object.keys(redirects).forEach((from) => {
     const to = '/' + redirects[from];
@@ -169,7 +190,7 @@ async function main() {
     console.log('  ' + from + ' -> ' + to);
   });
 
-  const urls = ['', 'shop.html', 'recipes.html', 'gifting.html', 'about.html', 'trade.html', 'contact.html', 'enquiry.html']
+  const urls = ['', 'shop.html', 'recipes.html', 'gifting.html', 'about.html', 'trade.html', 'contact.html', 'enquiry.html', 'privacy.html']
     .concat(products.map((p) => 'products/' + p.slug + '.html'))
     .concat(recipes.map((r) => 'recipes/' + r.slug + '.html'));
   fs.writeFileSync(path.join(out, 'sitemap.xml'),

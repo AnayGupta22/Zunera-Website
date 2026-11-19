@@ -71,12 +71,12 @@ const VARIETIES = {
   'sufri-dates': { b: '#94592F', s: '#73411E', w: '#B4774B', h: '#D8A273', sx: .9, lay: 'pair' },
   'mashrook-dates': { b: '#5E3424', s: '#40200F', w: '#7E5038', h: '#A6785A', sx: .84, lay: 'trio' },
   'khudri-dates': { b: '#553022', s: '#381C12', w: '#754A36', h: '#9E7258', sx: .8, lay: 'big' },
-  'rabia-dates': { b: '#4B2A1F', s: '#311810', w: '#6C4534', h: '#97705C', sx: .74, lay: 'pair' },
+  'rabia-dates': { b: '#3A241C', s: '#24140E', w: '#5C3E30', h: '#8C6A58', lay: 'trio' },
   'mazafati-dates': { b: '#2E1A14', s: '#1A0D09', w: '#4A3026', h: '#9A7A6A', lay: 'trio' },
   'rabbi-dates': { b: '#3E2219', s: '#26130C', w: '#5E3E30', h: '#8C6A58', sx: .7, lay: 'big' },
   'deglet-nour-dates': { b: '#C98A45', s: '#A86C2E', w: '#E0A866', h: '#F8DBAA', sx: .76, lay: 'pair' },
   'sukkari-rutab-dates': { b: '#C98B3A', s: '#A66C22', w: '#E2A85A', h: '#F6D08E', lay: 'big' },
-  'sukkari-mufatal-dates': { b: '#C29043', s: '#9E7030', w: '#DDAE66', h: '#F2D49A', sugar: true, lay: 'trio' }
+  'sukkari-mufatal-dates': { b: '#A87436', s: '#835624', w: '#7A4E22', h: '#E2B271', lay: 'trio' }
 };
 const variety = (v) => LAYOUTS[v.lay].map((t, n, all) => date(
   t + (v.sx ? ` translate(100 100) scale(${v.sx} 1) translate(-100 -100)` : ''),

@@ -668,6 +668,53 @@ function recipe({ recipes, products, root, r }) {
 </section>`;
 }
 
+/* ---------- search ---------- */
+
+function search({ root }) {
+  return `
+<section class="sec bg-sand phero search-page">
+  <div class="wrap">
+    <p class="eyebrow">Search</p>
+    <h1 class="mega">${hl('FIND IT *fast.*')}</h1>
+    <form class="search-form search-form-lg" action="${root}search.html" role="search" data-search-page>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <input type="search" name="q" placeholder="Try ajwa, badam, kheer or gifting" aria-label="Search" autocomplete="off" data-search-input>
+    </form>
+    <div class="search-results search-results-lg" data-search-results aria-live="polite"></div>
+  </div>
+</section>`;
+}
+
+/* ---------- privacy ---------- */
+
+function privacy({ site }) {
+  const c = site.contact;
+  const sections = [
+    ['Who we are', `<p>Zunera is a brand of ${esc(site.legal.company)}, ${esc(c.addressLines.slice(1).join(', '))}. This policy covers the website eatzunera.com and explains what information we receive through it and how we use it.</p>`],
+    ['What this website collects', `<p>You can browse the whole site without giving us any personal information. There are no accounts and no checkout: products are sold through Amazon.</p>
+      <p>Our contact and enquiry forms do not send anything to our servers. When you press a send button, your message opens in WhatsApp or in your own email app, already filled in, and you decide whether to send it. If you do, we receive what you chose to include, such as your name, phone number, email address, company, city and message.</p>
+      <p>The site search runs entirely in your browser. What you type is not sent to us.</p>`],
+    ['Cookies and tracking', `<p>This website does not set cookies and does not use analytics, advertising or tracking tools. Our fonts and images are served from our own site. If we add analytics in future, we will update this page first.</p>`],
+    ['Hosting', `<p>The site is hosted on GitHub Pages. Like any web host, GitHub may record basic technical information, such as your IP address, to keep the service running securely. You can read <a class="inline-link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's privacy statement</a>.</p>`],
+    ['Other websites', `<p>Links to Amazon, WhatsApp, Instagram and other sites take you to services with their own privacy policies. We are not responsible for how they handle your information.</p>`],
+    ['How we use your information', `<p>We use the details you send us only to reply to you, to prepare quotations, samples and orders, and to keep the business records we are required to keep by law, such as tax and food-safety records.</p>`],
+    ['Sharing', `<p>We do not sell or rent your personal information. We share it only where needed to complete what you asked for, for example with a courier delivering your order, or where the law requires us to.</p>`],
+    ['How long we keep it', `<p>We keep your messages for as long as we need them to respond to you and to meet our legal and accounting obligations, and then delete them.</p>`],
+    ['Your rights', `<p>Under India's Digital Personal Data Protection Act, 2023, you can ask us what personal information we hold about you, ask us to correct or delete it, and withdraw any consent you have given. Email us at <a class="inline-link" href="mailto:${esc(c.email)}">${esc(c.email)}</a> and we will respond.</p>`],
+    ['Children', `<p>This website is not directed at children, and we do not knowingly collect personal information from anyone under 18.</p>`],
+    ['Questions and grievances', `<p>For any question or complaint about your personal information, contact us:</p>
+      <p>${c.addressLines.map(esc).join('<br>')}<br>Email: <a class="inline-link" href="mailto:${esc(c.email)}">${esc(c.email)}</a><br>Phone: ${esc(c.whatsappDisplay)}</p>`],
+    ['Changes to this policy', `<p>If this policy changes, the new version will be posted on this page with a new date.</p>`]
+  ];
+  return `
+${pageHero({ eyebrow: 'Privacy policy', title: 'YOUR INFORMATION, *respected.*', lead: 'Last updated 19 November 2026.' })}
+<section class="sec bg-cream scallop">
+  <div class="wrap prose">
+    ${sections.map((s) => `<h2 class="h2">${esc(s[0])}</h2>${s[1]}`).join('\n    ')}
+  </div>
+</section>`;
+}
+
 /* ---------- forms ---------- */
 
 const formAttrs = (site) => `data-enquiry data-wa="${esc(site.contact.whatsapp)}" data-email="${esc(site.contact.email)}" novalidate`;
@@ -776,4 +823,4 @@ function notFound({ root }) {
 ${pageHero({ bg: 'bg-peach', eyebrow: 'Page not found', title: 'THIS SHELF IS *empty.*', lead: 'The page you were looking for has moved or never existed. The good stuff is one step away.', art: pile(['cashews', 'raisins']), extra: `<div class="btn-row reveal"><a class="btn btn-primary btn-lg" href="${root}shop.html">Explore the range ${go}</a><a class="btn btn-cream btn-lg" href="${root}index.html">Back to home</a></div>` })}`;
 }
 
-module.exports = { home, shop, product, about, trade, gifting, recipes, recipe, contact, enquiry, notFound };
+module.exports = { home, shop, product, about, trade, gifting, recipes, recipe, contact, enquiry, notFound, search, privacy };

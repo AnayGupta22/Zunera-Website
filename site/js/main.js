@@ -194,4 +194,71 @@
       }
     });
   });
+
+  /* Site search. The index (search-index.json) is built with the site and loaded only when needed. */
+  var sheet = $('[data-search-sheet]');
+  var root = sheet ? sheet.getAttribute('data-root') : '';
+  var index = null, loading = null;
+  var loadIndex = function () {
+    if (index) return Promise.resolve(index);
+    if (!loading) loading = fetch(root + 'search-index.json').then(function (r) { return r.json(); }).then(function (d) { index = d; return d; });
+    return loading;
+  };
+  var norm = function (s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9& ]+/g, ' '); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var find = function (q) {
+    var terms = norm(q).split(/\s+/).filter(Boolean);
+    if (!terms.length) return [];
+    return index.map(function (row) {
+      var title = ' ' + norm(row.t), rest = ' ' + norm(row.k + ' ' + row.d + ' ' + row.x), score = 0;
+      for (var i = 0; i < terms.length; i++) {
+        var t = terms[i], w = ' ' + t;
+        if (title.indexOf(w) > -1) score += 10;
+        else if (title.indexOf(t) > -1) score += 6;
+        else if (rest.indexOf(w) > -1) score += 3;
+        else if (t.length > 3 && rest.indexOf(t) > -1) score += 1;
+        else return null;
+      }
+      if (row.k !== 'Page' && row.k !== 'Recipe') score += 0.5;
+      return { row: row, score: score };
+    }).filter(Boolean).sort(function (a, b) { return b.score - a.score; }).map(function (h) { return h.row; });
+  };
+  var render = function (box, q, limit) {
+    if (!q.trim()) { box.innerHTML = ''; return; }
+    loadIndex().then(function () {
+      var hits = find(q), shown = limit ? hits.slice(0, limit) : hits;
+      box.innerHTML = hits.length
+        ? '<ul>' + shown.map(function (h) {
+            return '<li><a href="' + root + h.u + '"><span class="sr-kind">' + esc(h.k) + '</span><strong>' + esc(h.t) + '</strong><small>' + esc(h.d) + '</small></a></li>';
+          }).join('') + '</ul>' + (limit && hits.length > limit ? '<a class="search-all" href="' + root + 'search.html?q=' + encodeURIComponent(q) + '">See all ' + hits.length + ' results</a>' : '')
+        : '<p class="search-empty">Nothing found for “' + esc(q) + '”. Try a product, an ingredient or a recipe name.</p>';
+    }).catch(function () { box.innerHTML = '<p class="search-empty">Search is not available right now.</p>'; });
+  };
+  var wire = function (form, limit) {
+    var input = $('[data-search-input]', form.parentNode), box = $('[data-search-results]', form.parentNode);
+    if (!input || !box) return null;
+    var timer;
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { render(box, input.value, limit); }, 120); });
+    /* In the pop-up, Enter opens the full results page; on the results page it just refreshes the list */
+    if (!limit) form.addEventListener('submit', function (e) { e.preventDefault(); render(box, input.value, 0); history.replaceState(null, '', '?q=' + encodeURIComponent(input.value)); });
+    return input;
+  };
+  if (sheet) {
+    var sheetInput = wire($('form', sheet), 6);
+    var openSearch = function () { sheet.hidden = false; document.body.classList.add('search-open'); loadIndex(); setTimeout(function () { sheetInput.focus(); }, 30); };
+    var closeSearch = function () { sheet.hidden = true; document.body.classList.remove('search-open'); };
+    $$('[data-search-open]').forEach(function (a) { a.addEventListener('click', function (e) { if ($('[data-search-page]')) return; e.preventDefault(); openSearch(); }); });
+    $('[data-search-close]', sheet).addEventListener('click', closeSearch);
+    sheet.addEventListener('click', function (e) { if (e.target === sheet) closeSearch(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !sheet.hidden) closeSearch();
+      if (e.key === '/' && sheet.hidden && !/input|textarea|select/i.test((document.activeElement || {}).tagName)) { e.preventDefault(); openSearch(); }
+    });
+  }
+  var pageForm = $('[data-search-page]');
+  if (pageForm) {
+    var pageInput = wire(pageForm, 0);
+    var q = new URLSearchParams(window.location.search).get('q') || '';
+    if (pageInput) { pageInput.value = q; if (q) render($('[data-search-results]', pageForm.parentNode), q, 0); pageInput.focus(); }
+  }
 })();

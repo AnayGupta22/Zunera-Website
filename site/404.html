@@ -1,16 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found | Zunera</title>
 <meta name="description" content="Zunera brings dates and dry fruits from trusted origins to Indian homes and businesses. Sourced, sorted and packed with care. Available on Amazon.">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#E5BE7D">
+<meta property="og:site_name" content="Zunera">
+<meta property="og:locale" content="en_IN">
 <meta property="og:title" content="Page not found | Zunera">
 <meta property="og:description" content="Zunera brings dates and dry fruits from trusted origins to Indian homes and businesses. Sourced, sorted and packed with care. Available on Amazon.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://eatzunera.com/">
 <meta property="og:image" content="https://eatzunera.com/assets/carton/carton-front.jpg">
+<meta property="og:image:alt" content="Zunera dates and dry fruits">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Page not found | Zunera">
+<meta name="twitter:description" content="Zunera brings dates and dry fruits from trusted origins to Indian homes and businesses. Sourced, sorted and packed with care. Available on Amazon.">
+<meta name="twitter:image" content="https://eatzunera.com/assets/carton/carton-front.jpg">
+
 <link rel="icon" type="image/svg+xml" href="/assets/brand/zunera-mark-olive.svg">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/Poppins-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/styles.css">
@@ -27,6 +38,7 @@
     <nav class="nav" aria-label="Main"><a href="/shop.html">Shop</a><a href="/recipes.html">Recipes</a><a href="/gifting.html">Gifting</a><a href="/about.html">Our story</a><a href="/trade.html">Trade</a><a href="/contact.html">Contact</a></nav>
     <div class="header-cta">
       <a class="btn btn-ghost btn-sm hide-sm" href="/enquiry.html">Enquire</a>
+      <a class="search-btn" href="/search.html" aria-label="Search the site" data-search-open><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></a>
       <a class="btn btn-primary btn-sm header-amazon" href="https://www.amazon.in/s?k=Zunera+dry+fruits" target="_blank" rel="noopener">Shop on Amazon <span class="ext" aria-hidden="true">↗</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" data-nav-toggle><span></span><span></span><span class="sr">Menu</span></button>
     </div>
@@ -127,11 +139,22 @@
     <img class="footer-mark" src="/assets/brand/zunera-wordmark-cream.svg" alt="Zunera" width="2293" height="515" loading="lazy">
     <div class="footer-base">
       <span>© <span data-year>2026</span> Zunera</span>
+      <a href="/privacy.html">Privacy policy</a>
       <span>FSSAI No. 10823999000048</span>
       <span>GST 06AAIFF3841N1Z5</span>
     </div>
   </div>
 </footer>
+<div class="search-sheet" data-search-sheet data-root="/" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search">
+    <form class="search-form" action="/search.html" role="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <input type="search" name="q" placeholder="Search dates, nuts, recipes…" aria-label="Search" autocomplete="off" data-search-input>
+      <button type="button" class="search-close" aria-label="Close search" data-search-close>Esc</button>
+    </form>
+    <div class="search-results" data-search-results aria-live="polite"></div>
+  </div>
+</div>
 <script src="/js/main.js" defer></script>
 </body>
 </html>
