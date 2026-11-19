@@ -66,7 +66,9 @@ function normalise(json) {
     const medium = x.sizes && x.sizes.medium && x.sizes.medium.mediaUrl;
     const img = medium || (video ? x.thumbnail_url || x.thumbnailUrl : x.media_url || x.mediaUrl);
     const caption = String(x.prunedCaption || x.caption || '').split('\n')[0].replace(/#\S+/g, '').trim();
-    return { id: String(x.id || '').replace(/[^\w-]/g, ''), img, link: x.permalink, caption, video };
+    /* For reels, media_url is the video file itself */
+    const videoUrl = video ? x.media_url || x.mediaUrl || null : null;
+    return { id: String(x.id || '').replace(/[^\w-]/g, ''), img, link: x.permalink, caption, video, videoUrl };
   }).filter((x) => x.id && x.img && /^https:\/\/(www\.)?instagram\.com\//.test(x.link || ''));
 }
 
@@ -110,7 +112,17 @@ async function instagram() {
       const buf = await get(p.img);
       const file = LIVE_DIR + '/' + p.id + extFor(buf);
       fs.writeFileSync(path.join(out, file), buf);
-      saved.push({ src: file, link: p.link, alt: p.caption ? 'Instagram post: ' + p.caption.slice(0, 120) : 'A recent Zunera Instagram post', video: p.video });
+      /* Reels: keep the video too, so it can play silently on the page. Very large files are skipped
+         (the cover image is shown instead) to keep the home page quick on phones. */
+      let videoSrc = null;
+      if (p.videoUrl) {
+        const vid = await get(p.videoUrl).catch(() => null);
+        if (vid && vid.length < 25 * 1024 * 1024) {
+          videoSrc = LIVE_DIR + '/' + p.id + '.mp4';
+          fs.writeFileSync(path.join(out, videoSrc), vid);
+        }
+      }
+      saved.push({ src: file, videoSrc, link: p.link, alt: p.caption ? 'Instagram post: ' + p.caption.slice(0, 120) : 'A recent Zunera Instagram post' });
     }
     console.log('  Instagram: ' + saved.length + ' recent posts');
     return saved;

@@ -362,10 +362,8 @@ figure.taped-wide img { aspect-ratio: 3 / 2; }
 .insta-row::-webkit-scrollbar { display: none; }
 .insta-row .post { flex: none; width: clamp(200px, 17vw, 244px); padding: 8px; background: var(--cream); border: var(--line); border-radius: 16px; box-shadow: var(--hard); scroll-snap-align: center; transition: transform 320ms var(--spring); }
 .insta-row .post { position: relative; }
-.insta-row .post img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; }
-/* Video posts get a small play badge */
-.post-play { position: absolute; top: 18px; right: 18px; width: 34px; height: 34px; border-radius: 50%; background: var(--saffron); border: var(--line); }
-.post-play::after { content: ""; position: absolute; left: 12px; top: 9px; border-left: 11px solid var(--hair); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+/* Reels play silently in place of a still image (see main.js) */
+.insta-row .post img, .insta-row .post video { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; background: var(--sand); }
 .insta-row .post:nth-child(odd) { transform: rotate(-2.5deg); }
 .insta-row .post:nth-child(even) { transform: rotate(2deg) translateY(14px); }
 .insta-row .post:first-child { margin-left: auto; }

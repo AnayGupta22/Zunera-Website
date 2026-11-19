@@ -195,6 +195,21 @@
     });
   });
 
+  /* Instagram reels: play silently on a loop while on screen, pause when scrolled away.
+     Nothing loads until a reel is near the screen, and nothing moves for people who prefer less motion. */
+  var reels = $$('video[data-autoplay]');
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reels.length && !calm && 'IntersectionObserver' in window) {
+    var watcher = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else v.pause();
+      });
+    }, { threshold: 0.35 });
+    reels.forEach(function (v) { watcher.observe(v); });
+  }
+
   /* Site search. The index (search-index.json) is built with the site and loaded only when needed. */
   var sheet = $('[data-search-sheet]');
   var root = sheet ? sheet.getAttribute('data-root') : '';

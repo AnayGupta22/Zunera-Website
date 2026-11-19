@@ -223,7 +223,9 @@ ${tradeBand(root)}
     ${(site.instagramPosts && site.instagramPosts.length
       ? site.instagramPosts
       : [1, 2, 3, 4, 5].map((n) => ({ src: `assets/social/post-${n}.jpg`, link: site.social.instagram, alt: `Zunera Instagram post ${n} of 5` }))
-    ).map((p) => `<a class="post reveal" href="${esc(p.link)}" target="_blank" rel="noopener"><img src="${root}${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" width="808" height="1080">${p.video ? '<span class="post-play" aria-label="Video"></span>' : ''}</a>`).join('')}
+    ).map((p) => `<a class="post reveal" href="${esc(p.link)}" target="_blank" rel="noopener">${p.videoSrc
+      ? `<video src="${root}${esc(p.videoSrc)}" poster="${root}${esc(p.src)}" muted loop playsinline preload="none" width="808" height="1080" aria-label="${esc(p.alt)}" data-autoplay></video>`
+      : `<img src="${root}${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" width="808" height="1080">`}</a>`).join('')}
   </div>
 </section>`;
 }
