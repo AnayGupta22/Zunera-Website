@@ -6,6 +6,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # Rebuild every day at 06:30 IST (01:00 UTC) so new Instagram posts appear on the home page
+  schedule:
+    - cron: '0 1 * * *'
 
 permissions:
   contents: read
