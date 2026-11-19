@@ -831,10 +831,19 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
 }
 
 /* ---------- Brand texture from Instagram: debossed ZUNERA pattern on olive and cocoa ---------- */
-.bg-olive, .bg-cocoa, .site-footer, .pdp {
-  background-image: url("../assets/brand/deboss-pattern.svg"), linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(0, 0, 0, .16));
-  background-size: clamp(250px, 62vw, 820px) auto, 100% 100%;
-  background-repeat: repeat, no-repeat;
+/* The texture from the Instagram posts, cut into a seamless tile from the original image */
+.bg-olive {
+  background-color: #45501F;
+  background-image: url("../assets/brand/emboss-olive.jpg");
+  background-size: clamp(250px, 66vw, 774px) auto;
+  background-repeat: repeat;
+}
+/* The same pressed-in pattern and grain over the other brand colours */
+.bg-cocoa, .site-footer, .pdp {
+  background-image: url("../assets/brand/emboss-detail.jpg");
+  background-size: clamp(250px, 66vw, 774px) auto;
+  background-repeat: repeat;
+  background-blend-mode: overlay;
 }
 
 /* Thin line-and-diamond flourish, as used under headings in the Instagram posts */
