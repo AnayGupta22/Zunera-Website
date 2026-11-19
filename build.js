@@ -72,15 +72,33 @@ function normalise(json) {
 
 const extFor = (buf) => (buf.slice(0, 4).toString() === 'RIFF' ? '.webp' : buf[0] === 0x89 ? '.png' : '.jpg');
 
+/* Tokens from "Instagram Login" (start with IG) read graph.instagram.com directly. Tokens from
+   "Facebook Login" (start with EAA) reach the Instagram account through its linked Facebook Page,
+   which needs the pages_show_list, pages_read_engagement and instagram_basic permissions. */
+async function mediaUrl(token) {
+  const fields = 'id,caption,media_type,media_url,thumbnail_url,permalink';
+  const t = encodeURIComponent(token);
+  if (!/^EAA/.test(token)) return 'https://graph.instagram.com/me/media?fields=' + fields + '&limit=12&access_token=' + t;
+  const fb = (p) => get('https://graph.facebook.com/v21.0/' + p + (p.includes('?') ? '&' : '?') + 'access_token=' + t).then((b) => JSON.parse(b.toString('utf8')));
+  let ig = await fb('me?fields=instagram_business_account').then((j) => j.instagram_business_account && j.instagram_business_account.id).catch(() => null);
+  if (!ig) {
+    const pages = await fb('me/accounts?fields=instagram_business_account').catch(() => ({}));
+    const hit = (pages.data || []).find((p) => p.instagram_business_account);
+    ig = hit && hit.instagram_business_account.id;
+  }
+  if (!ig) throw new Error('token cannot see an Instagram business account');
+  return 'https://graph.facebook.com/v21.0/' + ig + '/media?fields=' + fields + '&limit=12&access_token=' + t;
+}
+
 async function instagram() {
   const feed = process.env.INSTAGRAM_FEED_URL, token = process.env.INSTAGRAM_TOKEN;
   if (!feed && !token) return [];
   try {
-    const url = feed || 'https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&limit=12&access_token=' + encodeURIComponent(token);
+    const url = feed || await mediaUrl(token);
     const posts = normalise(JSON.parse((await get(url)).toString('utf8'))).slice(0, INSTA_POSTS);
     if (!posts.length) throw new Error('no posts in the feed');
     /* Instagram tokens last 60 days; each build asks for an extension. A failure here is harmless. */
-    if (token) await get('https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=' + encodeURIComponent(token)).catch(() => {});
+    if (token && !/^EAA/.test(token)) await get('https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=' + encodeURIComponent(token)).catch(() => {});
     const dir = path.join(out, LIVE_DIR);
     fs.mkdirSync(dir, { recursive: true });
     fs.readdirSync(dir).forEach((f) => fs.unlinkSync(path.join(dir, f)));
