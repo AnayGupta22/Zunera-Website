@@ -117,6 +117,7 @@ function footer(site, products, root) {
     <div class="footer-base">
       <span>© <span data-year>2026</span> Zunera</span>
       <a href="${root}privacy.html">Privacy policy</a>
+      <a href="${root}data-deletion.html">Data deletion</a>
       ${site.legal.fssai ? `<span>FSSAI No. ${esc(site.legal.fssai)}</span>` : ''}
       ${site.legal.gst ? `<span>GST ${esc(site.legal.gst)}</span>` : ''}
     </div>
