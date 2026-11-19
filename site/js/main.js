@@ -260,8 +260,17 @@
   };
   if (sheet) {
     var sheetInput = wire($('form', sheet), 6);
-    var openSearch = function () { sheet.hidden = false; document.body.classList.add('search-open'); loadIndex(); setTimeout(function () { sheetInput.focus(); }, 30); };
-    var closeSearch = function () { sheet.hidden = true; document.body.classList.remove('search-open'); };
+    /* Opening: the button pings, the page dims and the panel drops in. Closing plays it in reverse. */
+    var openSearch = function () {
+      $$('[data-search-open]').forEach(function (b) { b.classList.remove('pinging'); void b.offsetWidth; b.classList.add('pinging'); });
+      sheet.classList.remove('closing'); sheet.hidden = false; document.body.classList.add('search-open');
+      loadIndex(); setTimeout(function () { sheetInput.focus(); }, 60);
+    };
+    var closeSearch = function () {
+      if (sheet.hidden || sheet.classList.contains('closing')) return;
+      sheet.classList.add('closing');
+      setTimeout(function () { sheet.hidden = true; sheet.classList.remove('closing'); document.body.classList.remove('search-open'); }, 180);
+    };
     $$('[data-search-open]').forEach(function (a) { a.addEventListener('click', function (e) { if ($('[data-search-page]')) return; e.preventDefault(); openSearch(); }); });
     $('[data-search-close]', sheet).addEventListener('click', closeSearch);
     sheet.addEventListener('click', function (e) { if (e.target === sheet) closeSearch(); });

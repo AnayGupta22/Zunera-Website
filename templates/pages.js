@@ -140,23 +140,6 @@ function home({ site, products, recipes, root }) {
   <div class="wrap"><div class="btn-row center-row reveal"><a class="btn btn-primary btn-lg" href="${root}shop.html">See the full range ${go}</a></div></div>
 </section>
 
-<section class="sec bg-sand packs">
-  <div class="wrap packs-grid">
-    <div class="packs-copy">
-      <p class="eyebrow reveal">The packs</p>
-      <h2 class="h1 reveal">${hl('BIG BOXES, SMALL *pouches.*')}</h2>
-      <p class="lead reveal">Gift boxes in gold and green for the days that matter, and pouches for every other day. Every pack is designed in-house and filled by hand.</p>
-      <a class="btn btn-primary reveal" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
-    </div>
-    <figure class="hotshot reveal">
-      <img src="${root}assets/img/range.jpg" alt="Zunera date gift boxes in gold and green, two pouches and an open tray of dates on a marble counter" width="1600" height="1073" loading="lazy">
-      ${hotspots.map((h) => `<span class="hot${h[0] > 70 ? ' hot-r' : ''}" style="left:${h[0]}%;top:${h[1]}%"><i></i><b>${esc(h[2])}</b></span>`).join('')}
-    </figure>
-  </div>
-</section>
-
-${journey(site, "Quality isn't just about what's inside the pack. It is every step between the orchard and your shelf, and we handle each one ourselves.")}
-
 <section class="sec bg-peach moments scallop">
   <div class="wrap">
     <header class="sec-head center">
@@ -181,6 +164,31 @@ ${journey(site, "Quality isn't just about what's inside the pack. It is every st
   </div>
 </section>
 
+<section class="sec bg-cream scallop">
+  <div class="wrap">
+    <header class="sec-head">
+      <div><p class="eyebrow reveal">Recipes</p><h2 class="h1 reveal">${hl('FROM THE *kitchen.*')}</h2></div>
+      <a class="btn btn-cream reveal" href="${root}recipes.html">All recipes ${go}</a>
+    </header>
+    <div class="grid three rc-grid">${(recipes || []).slice(0, 3).map((r) => recipeCard(r, root)).join('')}</div>
+  </div>
+</section>
+
+<section class="sec bg-sand packs">
+  <div class="wrap packs-grid">
+    <div class="packs-copy">
+      <p class="eyebrow reveal">The packs</p>
+      <h2 class="h1 reveal">${hl('BIG BOXES, SMALL *pouches.*')}</h2>
+      <p class="lead reveal">Gift boxes in gold and green for the days that matter, and pouches for every other day. Every pack is designed in-house and filled by hand.</p>
+      <a class="btn btn-primary reveal" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
+    </div>
+    <figure class="hotshot reveal">
+      <img src="${root}assets/img/range.jpg" alt="Zunera date gift boxes in gold and green, two pouches and an open tray of dates on a marble counter" width="1600" height="1073" loading="lazy">
+      ${hotspots.map((h) => `<span class="hot${h[0] > 70 ? ' hot-r' : ''}" style="left:${h[0]}%;top:${h[1]}%"><i></i><b>${esc(h[2])}</b></span>`).join('')}
+    </figure>
+  </div>
+</section>
+
 <section class="sec bg-terra band scallop">
   <div class="wrap band-row">
     <div class="band-copy">
@@ -197,26 +205,23 @@ ${journey(site, "Quality isn't just about what's inside the pack. It is every st
   </div>
 </section>
 
-<section class="sec bg-sand scallop">
-  <div class="wrap">
-    <header class="sec-head">
-      <div><p class="eyebrow reveal">Recipes</p><h2 class="h1 reveal">${hl('FROM THE *kitchen.*')}</h2></div>
-      <a class="btn btn-cream reveal" href="${root}recipes.html">All recipes ${go}</a>
-    </header>
-    <div class="grid three rc-grid">${(recipes || []).slice(0, 3).map((r) => recipeCard(r, root)).join('')}</div>
-  </div>
-</section>
+${journey(site, "Quality isn't just about what's inside the pack. It is every step between the orchard and your shelf, and we handle each one ourselves.")}
 
 ${tradeBand(root)}
 
-<section class="sec bg-cream insta scallop">
+<section class="sec bg-olive insta">
   <div class="wrap">
-    <header class="sec-head">
+    <header class="insta-head">
       <div>
         <p class="eyebrow reveal">Follow along</p>
         <h2 class="h1 reveal">${hl('MEET THE *brand.*')}</h2>
+        ${flourish('flourish-left')}
       </div>
-      <div class="reveal">${followPill(site)}</div>
+      <a class="ig-profile reveal" href="${esc(site.social.instagram)}" target="_blank" rel="noopener">
+        <span class="ig-avatar"><img src="${root}assets/brand/apple-touch-icon.png" alt="" width="180" height="180"></span>
+        <span class="ig-who"><strong>${esc(site.social.instagramHandle.replace('@', ''))}</strong><small>Dates &amp; dry fruits, sourced with care</small></span>
+        <span class="ig-follow">Follow</span>
+      </a>
     </header>
   </div>
   <div class="insta-row">
@@ -225,7 +230,7 @@ ${tradeBand(root)}
       : [1, 2, 3, 4, 5].map((n) => ({ src: `assets/social/post-${n}.jpg`, link: site.social.instagram, alt: `Zunera Instagram post ${n} of 5` }))
     ).map((p) => `<a class="post reveal" href="${esc(p.link)}" target="_blank" rel="noopener">${p.videoSrc
       ? `<video src="${root}${esc(p.videoSrc)}" poster="${root}${esc(p.src)}" muted loop playsinline preload="none" width="808" height="1080" aria-label="${esc(p.alt)}" data-autoplay></video>`
-      : `<img src="${root}${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" width="808" height="1080">`}</a>`).join('')}
+      : `<img src="${root}${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" width="808" height="1080">`}<span class="post-cta">${icon('instagram', 'post-ig')}<span>View on Instagram</span></span></a>`).join('')}
   </div>
 </section>`;
 }
@@ -416,8 +421,8 @@ function trade({ site, products, root }) {
       </div>
     </div>
     <div class="carton-stack reveal">
-      <img class="carton-a" src="${root}assets/carton/carton-front.jpg" alt="Front panel of the Zunera bulk carton" width="2000" height="1359">
-      <img class="carton-b" src="${root}assets/carton/carton-side-contact.jpg" alt="Side panel of the Zunera bulk carton with FSSAI, GST and contact details" width="1000" height="1359" loading="lazy">
+      <img class="carton-a" src="${root}assets/carton/carton-front.jpg" alt="Front panel of the Zunera bulk carton" width="1492" height="1011">
+      <img class="carton-b" src="${root}assets/carton/carton-side-contact.jpg" alt="Side panel of the Zunera bulk carton with FSSAI, GST and contact details" width="507" height="692" loading="lazy">
       ${burst('Bulk', 'pack', 'burst-terra carton-burst')}
     </div>
   </div>
