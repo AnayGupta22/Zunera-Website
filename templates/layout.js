@@ -145,6 +145,7 @@ function layout({ site, products, root = '', active = '', title, titleFull, desc
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(desc)}">
 ${noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${esc(url)}">`}
+${site.googleVerification ? `<meta name="google-site-verification" content="${esc(site.googleVerification)}">` : ''}
 <meta name="theme-color" content="${themeColor}">
 <meta property="og:site_name" content="Zunera">
 <meta property="og:locale" content="en_IN">
