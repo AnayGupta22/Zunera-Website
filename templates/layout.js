@@ -53,7 +53,7 @@ function header(site, root, active) {
     <nav class="nav" aria-label="Main">${links}</nav>
     <div class="header-cta">
       <a class="btn btn-ghost btn-sm hide-sm" href="${root}enquiry.html">Enquire</a>
-      <a class="btn btn-primary btn-sm" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
+      <a class="btn btn-primary btn-sm header-amazon" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" data-nav-toggle><span></span><span></span><span class="sr">Menu</span></button>
     </div>
   </div>
@@ -62,6 +62,7 @@ function header(site, root, active) {
   <nav aria-label="Mobile">
     ${site.nav.map((n, i) => `<a href="${root}${n.href}"><em>0${i + 1}</em>${esc(n.label)}</a>`).join('')}
     <a href="${root}enquiry.html"><em>0${site.nav.length + 1}</em>Enquire</a>
+    <a href="${esc(site.amazonStore)}" target="_blank" rel="noopener"><em>0${site.nav.length + 2}</em>Shop on Amazon</a>
   </nav>
   ${followPill(site)}
 </div>`;
@@ -86,7 +87,7 @@ function footer(site, products, root) {
       </div>
       <div>
         <h2 class="foot-h">Shop</h2>
-        <ul>${products.map((p) => `<li><a href="${root}products/${p.slug}.html">${esc(p.name)}</a></li>`).join('')}</ul>
+        <ul class="foot-shop">${products.map((p) => `<li><a href="${root}products/${p.slug}.html">${esc(p.name)}</a></li>`).join('')}<li class="foot-more"><a href="${root}shop.html">See the full range ${go}</a></li></ul>
       </div>
       <div>
         <h2 class="foot-h">Company</h2>

@@ -516,7 +516,7 @@ figure.taped-wide img { aspect-ratio: 3 / 2; }
 .contacts-lg a { display: flex; width: 100%; padding: 13px 0; font-size: 16px; }
 .contacts-lg a:hover { color: var(--saffron); }
 .contacts-lg .glyph { width: 17px; height: 17px; color: var(--saffron); }
-.contacts-lg small { margin-left: auto; font: 600 10px/1 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; border: 1.5px solid currentColor; border-radius: 999px; padding: 5px 9px; }
+.contacts-lg small { margin-left: auto; font: 600 11px/1 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; border: 1.5px solid currentColor; border-radius: 999px; padding: 5px 9px; }
 .panel-note { margin: 0; font-size: 14px; color: rgba(251, 229, 193, .85); }
 .statutory { display: flex; flex-direction: column; gap: 2px; font-size: 13.5px; color: rgba(251, 229, 193, .85); }
 .enquiry-aside { position: sticky; top: 104px; }
@@ -571,6 +571,9 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
 
 /* ---------- 24. Responsive ---------- */
 @media (max-width: 1099px) {
+  /* The full menu needs about 1100px; below that it moves into the menu drawer */
+  .nav { display: none; }
+  .nav-toggle { display: inline-flex; }
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .stage-stamp { right: -20px; }
@@ -620,13 +623,13 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
   .marquee span:nth-of-type(even) { font-size: 19px; }
   .grid, .grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
   .grid .pc { padding: 12px 12px 14px; border-radius: 20px; box-shadow: 4px 4px 0 var(--ink); }
-  .grid .pc-origin { height: 24px; padding: 0 8px; font-size: 9.5px; letter-spacing: .04em; }
+  .grid .pc-origin { height: 24px; padding: 0 8px; font-size: 10.5px; letter-spacing: .03em; }
   .grid .pc-no { font-size: 17px; }
   .grid .pc-name { font-size: 18px; }
   .grid .pc-short { font-size: 13px; }
-  .grid.three .pc:nth-child(3) { display: none; }
+  .more .grid.three:not(.rc-grid) .pc:nth-child(3) { display: none; }
   .shelf .pc { flex-basis: 240px; }
-  .hot b { font-size: 9.5px; padding: 5px 7px; }
+  .hot b { font-size: 10.5px; padding: 5px 8px; }
   .hot-r { flex-direction: row-reverse; transform: translate(calc(-100% + 9px), -50%); }
 .hot i { width: 14px; height: 14px; }
   .mtiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -713,3 +716,77 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
 .rc .rc-photo img { aspect-ratio: 4 / 3; }
 .rc-feature .rc-photo { margin-top: 10px; }
 .rc-feature .rc-photo img { aspect-ratio: 1; }
+
+/* ---------- Ingredient sub-headings and enquiry groups ---------- */
+.ingredients li.ing-head { border-bottom: 0; padding: 16px 0 2px; font: 700 13px/1.2 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--terra); }
+.ingredients li.ing-head:first-child { padding-top: 4px; }
+.choice-group { flex: 1 0 100%; margin: 10px 0 0; font: 700 12px/1 var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.choice-group:first-child { margin-top: 0; }
+.foot-shop .foot-more { display: none; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+  .grid.rc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .band-art { height: 170px; }
+  .band-art .ico { width: 120px; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 700px) {
+  /* Recipe cards become compact rows: photo on the left, title and intro on the right */
+  .grid.rc-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .rc-grid .rc, .rc-grid .rc-feature, .rc-grid .rc-wide { grid-column: auto; display: grid; grid-template-columns: 40% minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 14px; padding: 12px 14px 14px 12px; }
+  .rc-grid .rc .pc-top { grid-column: 1 / -1; }
+  .rc-grid .rc .rc-photo, .rc-grid .rc .rc-art { grid-column: 1; grid-row: 2; align-self: start; width: 100%; margin: 10px 0 0; }
+  .rc-grid .rc .rc-photo img { aspect-ratio: 1; border-radius: 14px; }
+  .rc-grid .rc .rc-photo .ill { width: 46%; right: -8px; bottom: -10px; }
+  .rc-grid .rc .rc-art { aspect-ratio: 1.1; }
+  .rc-grid .rc .rc-body { grid-column: 2; grid-row: 2; padding-top: 10px; }
+  .rc-grid .rc .pc-name { font-size: 19px; }
+  .rc-grid .rc .pc-short { min-height: 0; margin-bottom: 10px; font-size: 13.5px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .rc-grid .rc .pc-cta { padding-top: 10px; font-size: 11px; }
+
+  /* Footer: the first six products, then a link to the whole range; bigger tap areas */
+  .foot-shop li:nth-child(n+7):not(.foot-more) { display: none; }
+  .foot-shop .foot-more { display: list-item; }
+  .site-footer ul:not(.contacts) li { margin-bottom: 2px; }
+  .site-footer ul:not(.contacts) li a { display: inline-block; padding: 8px 0; }
+  .site-footer .foot-shop .foot-more a { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; color: var(--saffron); }
+
+  /* Trade table: each product becomes a small stacked card */
+  .table-card { overflow: visible; padding: 4px 16px; }
+  .trade-table { min-width: 0; }
+  .trade-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .trade-table tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; padding: 14px 0; border-top: 2px dashed rgba(45, 48, 28, .22); }
+  .trade-table tbody tr:first-child { border-top: 0; }
+  .trade-table td { display: block; padding: 0; border: 0; font-size: 14px; }
+  .trade-table td:first-child { grid-column: 1 / -1; }
+  .trade-table td[data-label]::before { content: attr(data-label) ": "; font-weight: 600; color: var(--ink-soft); }
+  .trade-table td[data-label="Bulk"] { grid-column: 1; }
+  .trade-table td:last-child { grid-column: 2; grid-row: 2 / span 3; align-self: center; text-align: right; }
+
+  /* About: keep both photo captions visible */
+  .story-photos { aspect-ratio: 1 / 1.62; }
+  .pol-a { width: 74%; }
+  .pol-b { width: 64%; }
+
+  /* Bands: smaller illustrations so the buttons stay close to the copy */
+  .band-art { height: 140px; max-width: 300px; }
+  .band-art .ico { width: 96px; }
+  .band-art .burst { width: 108px; }
+  .band .btn-row .btn { flex: 1 1 100%; }
+}
+
+/* ---------- Small phones: keep the logo readable next to the header buttons ---------- */
+@media (max-width: 400px) {
+  .brand { flex: none; }
+  .brand img { height: 22px; }
+  .header-row { gap: 10px; }
+  .header-cta { gap: 8px; }
+  .header-cta .btn-sm { height: 38px; padding: 0 12px; font-size: 11px; letter-spacing: .04em; }
+}
+/* Very small phones: the Amazon link lives in the menu drawer instead */
+@media (max-width: 359px) {
+  .header-amazon { display: none; }
+  .brand img { height: 24px; }
+}

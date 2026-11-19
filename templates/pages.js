@@ -201,7 +201,7 @@ ${journey(site, "Quality isn't just about what's inside the pack. It is every st
       <div><p class="eyebrow reveal">Recipes</p><h2 class="h1 reveal">${hl('FROM THE *kitchen.*')}</h2></div>
       <a class="btn btn-cream reveal" href="${root}recipes.html">All recipes ${go}</a>
     </header>
-    <div class="grid three">${(recipes || []).slice(0, 3).map((r) => recipeCard(r, root)).join('')}</div>
+    <div class="grid three rc-grid">${(recipes || []).slice(0, 3).map((r) => recipeCard(r, root)).join('')}</div>
   </div>
 </section>
 
@@ -319,7 +319,7 @@ ${cookWith.length ? `
       <div><p class="eyebrow reveal">Recipes</p><h2 class="h1 reveal">${hl('COOK WITH *it.*')}</h2></div>
       <a class="btn btn-cream reveal" href="${root}recipes.html">All recipes ${go}</a>
     </header>
-    <div class="grid three">${cookWith.map((r) => recipeCard(r, root)).join('')}</div>
+    <div class="grid three rc-grid">${cookWith.map((r) => recipeCard(r, root)).join('')}</div>
   </div>
 </section>` : ''}
 
@@ -454,9 +454,9 @@ function trade({ site, products, root }) {
         <tbody>
           ${products.map((p) => `<tr>
             <td><a class="tt-name" href="${root}products/${p.slug}.html"><span class="tt-dot" style="${tone(p)}">${fruit(p.slug)}</span>${esc(p.name)}</a></td>
-            <td>${esc(p.origin)}</td>
-            <td>${p.sizes.map(esc).join(', ')}</td>
-            <td>Carton, on enquiry</td>
+            <td data-label="Origin">${esc(p.origin)}</td>
+            <td data-label="Retail packs">${p.sizes.map(esc).join(', ')}</td>
+            <td data-label="Bulk">Carton, on enquiry</td>
             <td><a class="text-link" href="${root}enquiry.html?type=trade&amp;product=${p.slug}">Enquire ${go}</a></td>
           </tr>`).join('')}
         </tbody>
@@ -626,7 +626,9 @@ function recipe({ recipes, products, root, r }) {
   <div class="wrap recipe-grid">
     <aside class="ingredients reveal">
       <h2 class="h2">${hl('YOU WILL *need*')}</h2>
-      <ul>${r.ingredients.map((x) => `<li><label><input type="checkbox"><span>${esc(x)}</span></label></li>`).join('')}</ul>
+      <ul>${r.ingredients.map((x) => /:$/.test(x)
+        ? `<li class="ing-head">${esc(x.slice(0, -1))}</li>`
+        : `<li><label><input type="checkbox"><span>${esc(x)}</span></label></li>`).join('')}</ul>
       <p class="fineprint">Tick things off as you go.</p>
     </aside>
     <div>
@@ -661,7 +663,7 @@ function recipe({ recipes, products, root, r }) {
       <h2 class="h1 reveal">${hl('MORE TO *cook.*')}</h2>
       <a class="btn btn-cream reveal" href="${root}recipes.html">All recipes ${go}</a>
     </header>
-    <div class="grid three">${more.map((m) => recipeCard(m, root)).join('')}</div>
+    <div class="grid three rc-grid">${more.map((m) => recipeCard(m, root)).join('')}</div>
   </div>
 </section>`;
 }
@@ -735,7 +737,7 @@ ${pageHero({ bg: 'bg-pistachio', eyebrow: 'Enquiry form', title: 'TELL US WHAT Y
       <fieldset>
         <legend><em>02</em>Which products?</legend>
         <div class="choice-row">
-          ${products.map((p) => `<label class="choice choice-fruit"><input type="checkbox" name="Products" value="${esc(p.name)}" data-product="${p.slug}"><span>${fruit(p.slug)}${esc(p.name)}</span></label>`).join('')}
+          ${site.categories.map((c) => `<p class="choice-group">${esc(c.label)}</p>${products.filter((p) => p.category === c.id).map((p) => `<label class="choice choice-fruit"><input type="checkbox" name="Products" value="${esc(p.name)}" data-product="${p.slug}"><span>${fruit(p.slug)}${esc(p.name)}</span></label>`).join('')}`).join('')}
         </div>
         <label class="field"><span>Approximate quantity</span>
           <select name="Quantity">${qty.map((q) => `<option>${esc(q)}</option>`).join('')}</select>
