@@ -571,9 +571,6 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
 
 /* ---------- 24. Responsive ---------- */
 @media (max-width: 1099px) {
-  /* The full menu needs about 1100px; below that it moves into the menu drawer */
-  .nav { display: none; }
-  .nav-toggle { display: inline-flex; }
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .stage-stamp { right: -20px; }
@@ -722,7 +719,7 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
 .ingredients li.ing-head:first-child { padding-top: 4px; }
 .choice-group { flex: 1 0 100%; margin: 10px 0 0; font: 700 12px/1 var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
 .choice-group:first-child { margin-top: 0; }
-.foot-shop .foot-more { display: none; }
+.foot-shop .foot-more a { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; color: var(--saffron); }
 
 /* ---------- Tablet ---------- */
 @media (max-width: 900px) {
@@ -747,8 +744,6 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
   .rc-grid .rc .pc-cta { padding-top: 10px; font-size: 11px; }
 
   /* Footer: the first six products, then a link to the whole range; bigger tap areas */
-  .foot-shop li:nth-child(n+7):not(.foot-more) { display: none; }
-  .foot-shop .foot-more { display: list-item; }
   .site-footer ul:not(.contacts) li { margin-bottom: 2px; }
   .site-footer ul:not(.contacts) li a { display: inline-block; padding: 8px 0; }
   .site-footer .foot-shop .foot-more a { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; color: var(--saffron); }
@@ -838,7 +833,7 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
 /* ---------- Brand texture from Instagram: debossed ZUNERA pattern on olive and cocoa ---------- */
 .bg-olive, .bg-cocoa, .site-footer, .pdp {
   background-image: url("../assets/brand/deboss-pattern.svg"), linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(0, 0, 0, .16));
-  background-size: clamp(420px, 40vw, 680px) auto, 100% 100%;
+  background-size: clamp(250px, 62vw, 820px) auto, 100% 100%;
   background-repeat: repeat, no-repeat;
 }
 
@@ -901,3 +896,9 @@ legend em { font: italic 500 26px/1 var(--font-serif); color: var(--terra); }
 .pc, .vcard, .note, .pick, .mtile, .panel, .form, .ingredients, .table-card, .stage, .gsteps li, .search-panel { box-shadow: var(--soft); }
 .pc:hover, .pick:hover, .vcard:hover { box-shadow: var(--soft-lg); }
 .slot { border: 1px dashed rgba(45, 38, 22, .35); }
+
+/* The full menu (with search and Amazon) needs about 1240px; below that it moves into the menu drawer */
+@media (max-width: 1239px) {
+  .nav { display: none; }
+  .nav-toggle { display: inline-flex; }
+}

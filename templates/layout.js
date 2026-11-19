@@ -88,7 +88,7 @@ function footer(site, products, root) {
       </div>
       <div>
         <h2 class="foot-h">Shop</h2>
-        <ul class="foot-shop">${products.map((p) => `<li><a href="${root}products/${p.slug}.html">${esc(p.name)}</a></li>`).join('')}<li class="foot-more"><a href="${root}shop.html">See the full range ${go}</a></li></ul>
+        <ul class="foot-shop">${(site.highlights || []).map((s) => products.find((p) => p.slug === s)).filter(Boolean).map((p) => `<li><a href="${root}products/${p.slug}.html">${esc(p.name)}</a></li>`).join('')}<li class="foot-more"><a href="${root}shop.html">See the full range ${go}</a></li></ul>
       </div>
       <div>
         <h2 class="foot-h">Company</h2>
