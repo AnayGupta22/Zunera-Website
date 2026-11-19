@@ -24,6 +24,11 @@ products.forEach((p) => {
   if (!p.image && has(auto)) { p.image = auto; p.imageAlt = p.imageAlt || 'Zunera ' + p.name; }
 });
 site.hasFloorPhoto = has('assets/img/packing-floor.jpg');
+/* A fingerprint of the stylesheet and script. Pages link to css/styles.css?v=<this>, so browsers
+   fetch fresh copies as soon as either file changes instead of mixing old and new. */
+site.assetVersion = require('crypto').createHash('md5')
+  .update(fs.readFileSync(path.join(out, 'css/styles.css'))).update(fs.readFileSync(path.join(out, 'js/main.js')))
+  .digest('hex').slice(0, 10);
 /* Recipe photos: site/assets/img/recipes/<slug>.jpg (square), picked up the same way */
 recipes.forEach((r) => {
   const auto = 'assets/img/recipes/' + r.slug + '.jpg';

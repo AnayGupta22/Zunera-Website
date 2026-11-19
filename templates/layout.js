@@ -168,7 +168,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).repl
 <link rel="apple-touch-icon" href="${root}assets/brand/apple-touch-icon.png">
 <link rel="preload" href="${root}assets/fonts/Poppins-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${root}assets/fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${root}css/styles.css">
+<link rel="stylesheet" href="${root}css/styles.css?v=${site.assetVersion || ''}">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="${bodyClass}">
@@ -188,7 +188,7 @@ ${footer(site, products, root)}
     <div class="search-results" data-search-results aria-live="polite"></div>
   </div>
 </div>
-<script src="${root}js/main.js" defer></script>
+<script src="${root}js/main.js?v=${site.assetVersion || ''}" defer></script>
 </body>
 </html>
 `;
