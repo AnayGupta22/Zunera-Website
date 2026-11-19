@@ -703,7 +703,7 @@ function privacy({ site }) {
     ['How we use your information', `<p>We use the details you send us only to reply to you, to prepare quotations, samples and orders, and to keep the business records we are required to keep by law, such as tax and food-safety records.</p>`],
     ['Sharing', `<p>We do not sell or rent your personal information. We share it only where needed to complete what you asked for, for example with a courier delivering your order, or where the law requires us to.</p>`],
     ['How long we keep it', `<p>We keep your messages for as long as we need them to respond to you and to meet our legal and accounting obligations, and then delete them.</p>`],
-    ['Your rights', `<p>Under India's Digital Personal Data Protection Act, 2023, you can ask us what personal information we hold about you, ask us to correct or delete it, and withdraw any consent you have given. Email us at <a class="inline-link" href="mailto:${esc(c.email)}">${esc(c.email)}</a> and we will respond.</p>`],
+    ['Your rights', `<p>Under India's Digital Personal Data Protection Act, 2023, you can ask us what personal information we hold about you, ask us to correct or delete it, and withdraw any consent you have given. Email us at <a class="inline-link" href="mailto:${esc(c.email)}">${esc(c.email)}</a> and we will respond. Our <a class="inline-link" href="data-deletion.html">data deletion page</a> explains how to ask us to delete your information.</p>`],
     ['Children', `<p>This website is not directed at children, and we do not knowingly collect personal information from anyone under 18.</p>`],
     ['Questions and grievances', `<p>For any question or complaint about your personal information, contact us:</p>
       <p>${c.addressLines.map(esc).join('<br>')}<br>Email: <a class="inline-link" href="mailto:${esc(c.email)}">${esc(c.email)}</a><br>Phone: ${esc(c.whatsappDisplay)}</p>`],
@@ -714,6 +714,29 @@ ${pageHero({ eyebrow: 'Privacy policy', title: 'YOUR INFORMATION, *respected.*',
 <section class="sec bg-cream scallop">
   <div class="wrap prose">
     ${sections.map((s) => `<h2 class="h2">${esc(s[0])}</h2>${s[1]}`).join('\n    ')}
+  </div>
+</section>`;
+}
+
+/* ---------- data deletion (required by Meta for apps that use Facebook or Instagram data) ---------- */
+
+function dataDeletion({ site, root }) {
+  const c = site.contact;
+  return `
+${pageHero({ eyebrow: 'Data deletion', title: 'DELETING YOUR *data.*', lead: 'How to ask us to delete any information we hold about you. Last updated 19 November 2026.' })}
+<section class="sec bg-cream">
+  <div class="wrap prose">
+    <h2 class="h2">What we hold</h2>
+    <p>eatzunera.com does not have accounts or logins, and does not store personal information on its own. The only Facebook or Instagram data our website uses is the public posts from our own Instagram account, @eatzunera, which we show on our home page. We do not collect or store data about people who visit the site or interact with our posts.</p>
+    <p>If you have contacted us by WhatsApp, email or phone, we hold the details you chose to send us, such as your name, phone number and message.</p>
+    <h2 class="h2">How to ask for deletion</h2>
+    <p>Email <a class="inline-link" href="mailto:${esc(c.email)}?subject=${encodeURIComponent('Data deletion request')}">${esc(c.email)}</a> with the subject "Data deletion request". Tell us the name and the phone number or email address you used to contact us, so we can find your details.</p>
+    <p>We will confirm that we have received your request, delete your personal information within 30 days, and write back to confirm when it is done. We may keep records that the law requires us to keep, such as tax invoices, and will tell you if that applies.</p>
+    <h2 class="h2">Removing our app's access</h2>
+    <p>You can also remove access for any app connected to your Facebook or Instagram account at any time, in Facebook under Settings and privacy, then Settings, then Apps and websites.</p>
+    <h2 class="h2">Questions</h2>
+    <p>${c.addressLines.map(esc).join('<br>')}<br>Email: <a class="inline-link" href="mailto:${esc(c.email)}">${esc(c.email)}</a><br>Phone: ${esc(c.whatsappDisplay)}</p>
+    <p>See also our <a class="inline-link" href="${root}privacy.html">privacy policy</a>.</p>
   </div>
 </section>`;
 }
@@ -826,4 +849,4 @@ function notFound({ root }) {
 ${pageHero({ bg: 'bg-peach', eyebrow: 'Page not found', title: 'THIS SHELF IS *empty.*', lead: 'The page you were looking for has moved or never existed. The good stuff is one step away.', art: pile(['cashews', 'raisins']), extra: `<div class="btn-row reveal"><a class="btn btn-primary btn-lg" href="${root}shop.html">Explore the range ${go}</a><a class="btn btn-cream btn-lg" href="${root}index.html">Back to home</a></div>` })}`;
 }
 
-module.exports = { home, shop, product, about, trade, gifting, recipes, recipe, contact, enquiry, notFound, search, privacy };
+module.exports = { home, shop, product, about, trade, gifting, recipes, recipe, contact, enquiry, notFound, search, privacy, dataDeletion };

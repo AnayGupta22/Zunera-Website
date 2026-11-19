@@ -183,6 +183,7 @@ async function main() {
   write('contact.html', { path: 'contact.html', active: 'contact.html', titleFull: 'Contact Zunera', description: 'Talk to Zunera on WhatsApp, phone or email about orders, products, trade or corporate gifting. We reply within one working day.', content: pages.contact(ctx) });
   write('enquiry.html', { path: 'enquiry.html', titleFull: 'Trade, Bulk & Gifting Enquiry | Zunera', description: 'Send Zunera a trade, bulk or corporate gifting enquiry for dates and dry fruits. Our team replies with formats and pricing within one working day.', content: pages.enquiry(ctx) });
   write('privacy.html', { path: 'privacy.html', title: 'Privacy Policy', description: 'How Zunera and Foodsy Exports handle the information you share with us through eatzunera.com.', content: pages.privacy(ctx) });
+  write('data-deletion.html', { path: 'data-deletion.html', title: 'Data Deletion', description: 'How to ask Zunera and Foodsy Exports to delete any personal information we hold about you.', content: pages.dataDeletion(ctx) });
   write('search.html', { path: 'search.html', title: 'Search', noindex: true, content: pages.search(ctx) });
   write('404.html', { root: '/', title: 'Page not found', noindex: true, content: pages.notFound({ site, products, root: '/' }) });
 
