@@ -139,7 +139,7 @@ const ICONS = {
     <circle cx="60" cy="56" r="5" fill="#5B3423" ${S4}/><circle cx="71" cy="58" r="5" fill="#5B3423" ${S4}/>${L('M12 104h96', INK, 4)}`,
   import: `<rect x="34" y="50" width="18" height="26" rx="2" fill="#E3A63B" ${S4}/><rect x="54" y="50" width="18" height="26" rx="2" fill="#8A9B52" ${S4}/><rect x="74" y="58" width="14" height="18" rx="2" fill="#FBE5C1" ${S4}/>
     <path d="M16 76h88l-10 22H28z" fill="#A84E33" ${S4}/>${L('M60 50V32l14 8-14 6', INK, 4)}${L('M10 108c8-6 16-6 24 0s16 6 24 0 16-6 24 0 16 6 24 0', INK, 4)}`,
-  quality: `${L('M76 76l26 26', INK, 11)}<circle cx="52" cy="52" r="32" fill="#FBE5C1" ${S4}/>${L('M37 53l11 11 20-23', '#4C5A31', 7)}`,
+  quality: `${L('M76 76l26 26', INK, 11)}<circle cx="52" cy="52" r="32" fill="#FBE5C1" ${S4}/>${L('M37 53l11 11 20-23', '#47561E', 7)}`,
   pack: `<path d="M22 46l38-17 38 17v44l-38 17-38-17z" fill="#DDA56A" ${S4}/><path d="M60 63l38-17v44l-38 17z" fill="#BE8548"/>
     ${L('M22 46l38 17 38-17M60 63v44', INK, 4)}<path d="M40 38l38 17v14l-10 4V59L30 42z" fill="#FBE5C1" ${S4}/><path d="M22 46l38-17 38 17v44l-38 17-38-17z" fill="none" ${S4}/>`,
   supply: `<rect x="12" y="40" width="58" height="42" rx="4" fill="#FBE5C1" ${S4}/><path d="M70 52h22l14 16v14H70z" fill="#E3A63B" ${S4}/><path d="M78 58h11l8 10H78z" fill="#FBE5C1" ${S4}/>
@@ -172,7 +172,7 @@ const sparkle = (cls = '') => `<svg class="sparkle ${cls}" viewBox="0 0 24 24" a
 /* Rotating text stamp. `id` must be unique on the page. */
 const stamp = (id, text, root, cls = '') => `<svg class="stamp ${cls}" viewBox="0 0 200 200" aria-hidden="true">
   <defs><path id="${id}" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1-144 0"/></defs>
-  <circle cx="100" cy="100" r="97" fill="var(--stamp-bg, #4C5A31)" stroke="${INK}" stroke-width="4"/>
+  <circle cx="100" cy="100" r="97" fill="var(--stamp-bg, #47561E)" stroke="${INK}" stroke-width="4"/>
   <g class="stamp-ring"><text fill="var(--stamp-fg, #FBE5C1)" font-family="Poppins, sans-serif" font-weight="600" font-size="17" letter-spacing="2.5"><textPath href="#${id}" textLength="448" lengthAdjust="spacing">${text}</textPath></text></g>
   <circle cx="100" cy="100" r="46" fill="none" stroke="var(--stamp-fg, #FBE5C1)" stroke-width="1.5" stroke-dasharray="3 5"/>
   <image href="${root}assets/brand/zunera-mark-cream.svg" x="74" y="66" width="52" height="68" class="stamp-mark"/>

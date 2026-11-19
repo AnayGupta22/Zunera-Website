@@ -1,7 +1,7 @@
 /* Every page of the site. Copy lives right here in plain text: edit it, then run `node build.js`.
    Headings use *stars* around the ONE word that takes the Playfair italic accent. */
 
-const { esc, hl, icon, go, ext, banner, tagline, processStrip, followPill, ruled, slot, sparkle } = require('./layout');
+const { esc, hl, icon, go, ext, banner, tagline, processStrip, followPill, ruled, slot, sparkle, flourish } = require('./layout');
 const { fruit, icon2, stamp, burst } = require('./art');
 
 /* ---------- shared pieces ---------- */
@@ -41,6 +41,7 @@ const tradeBand = (root) => `
     <div class="band-copy">
       <p class="eyebrow">Trade &amp; bulk</p>
       <h2 class="h1">${hl('BUYING FOR A *business?*')}</h2>
+      ${flourish('flourish-left')}
       <p class="lead">Bulk packs, retail-ready packs and gifting programmes. Our trade desk replies within one working day.</p>
       <div class="btn-row">
         <a class="btn btn-saffron btn-lg" href="${root}enquiry.html?type=trade">Send an enquiry ${go}</a>
@@ -185,6 +186,7 @@ ${journey(site, "Quality isn't just about what's inside the pack. It is every st
     <div class="band-copy">
       <p class="eyebrow">Corporate gifting</p>
       <h2 class="h1">${hl('GIFTS, BUILT FROM *scratch.*')}</h2>
+      ${flourish('flourish-left')}
       <p class="lead">Custom boxes, your logo, your choice of dates and dry fruits, and a personal note. Delivered across India.</p>
       <div class="btn-row">
         <a class="btn btn-saffron btn-lg" href="${root}gifting.html">Explore gifting ${go}</a>
@@ -543,6 +545,7 @@ ${pageHero({ bg: 'bg-plum', eyebrow: 'Corporate gifting', title: 'GIFTS, BUILT F
     <div class="band-copy">
       <p class="eyebrow">Corporate gifting</p>
       <h2 class="h1">${hl("TELL US WHAT YOU'RE *planning.*")}</h2>
+      ${flourish('flourish-left')}
       <p class="lead">Share the occasion, the numbers and the date. Our team replies within one working day.</p>
       <div class="btn-row">
         <a class="btn btn-saffron btn-lg" href="${root}enquiry.html?type=gifting">Send a gifting enquiry ${go}</a>

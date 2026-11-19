@@ -75,7 +75,7 @@ function footer(site, products, root) {
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-cta">
-      <p class="footer-big">${hl('GOOD THINGS, WELL *sourced.*')}</p>
+      <div><p class="footer-big">${hl('GOOD THINGS, WELL *sourced.*')}</p>${flourish('flourish-left')}</div>
       <div class="btn-row">
         <a class="btn btn-saffron btn-lg" href="${esc(site.amazonStore)}" target="_blank" rel="noopener">Shop on Amazon ${ext}</a>
         <a class="btn btn-outline-light btn-lg" href="${root}enquiry.html">Trade enquiry ${go}</a>
@@ -123,6 +123,9 @@ function footer(site, products, root) {
   </div>
 </footer>`;
 }
+
+/* The thin line-and-diamond flourish used as a divider in the Instagram posts */
+const flourish = (cls = '') => `<svg class="flourish ${cls}" viewBox="0 0 260 22" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M4 11H96M164 11H256"/><path d="M96 11c6 0 9-6 15-6 4 0 5 3 3 5M164 11c-6 0-9-6-15-6-4 0-5 3-3 5M96 11c6 0 9 6 15 6 4 0 5-3 3-5M164 11c-6 0-9 6-15 6-4 0-5-3-3-5"/></g><path d="M130 3l8 8-8 8-8-8z" fill="currentColor"/><circle cx="117" cy="11" r="1.6" fill="currentColor"/><circle cx="143" cy="11" r="1.6" fill="currentColor"/></svg>`;
 
 /* Search engines show about 155 characters of a description; cut at a word boundary */
 const clip = (s, n = 155) => {
@@ -190,4 +193,4 @@ ${footer(site, products, root)}
 `;
 }
 
-module.exports = { layout, esc, hl, icon, go, ext, banner, tagline, processStrip, followPill, ruled, slot, sparkle, clip };
+module.exports = { layout, esc, hl, icon, go, ext, banner, tagline, processStrip, followPill, ruled, slot, sparkle, clip, flourish };
