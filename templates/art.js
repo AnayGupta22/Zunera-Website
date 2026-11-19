@@ -2,8 +2,8 @@
    a rounded ink outline. Fruits are on a 200×200 grid, icons on 120×120. */
 
 const INK = '#2D301C';
-const S = `stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"`;
-const S4 = `stroke="${INK}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"`;
+const S = `stroke="${INK}" stroke-opacity=".82" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"`;
+const S4 = `stroke="${INK}" stroke-opacity=".82" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"`;
 const L = (d, c, w = 4, o = 1) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" opacity="${o}"/>`;
 const O = (d) => `<path d="${d}" fill="none" ${S}/>`;
 const F = (d, c, o = 1) => `<path d="${d}" fill="${c}" opacity="${o}"/>`;
@@ -172,7 +172,7 @@ const sparkle = (cls = '') => `<svg class="sparkle ${cls}" viewBox="0 0 24 24" a
 /* Rotating text stamp. `id` must be unique on the page. */
 const stamp = (id, text, root, cls = '') => `<svg class="stamp ${cls}" viewBox="0 0 200 200" aria-hidden="true">
   <defs><path id="${id}" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1-144 0"/></defs>
-  <circle cx="100" cy="100" r="97" fill="var(--stamp-bg, #47561E)" stroke="${INK}" stroke-width="4"/>
+  <circle cx="100" cy="100" r="97" fill="var(--stamp-bg, #47561E)" stroke="${INK}" stroke-opacity=".3" stroke-width="1.5"/>
   <g class="stamp-ring"><text fill="var(--stamp-fg, #FBE5C1)" font-family="Poppins, sans-serif" font-weight="600" font-size="17" letter-spacing="2.5"><textPath href="#${id}" textLength="448" lengthAdjust="spacing">${text}</textPath></text></g>
   <circle cx="100" cy="100" r="46" fill="none" stroke="var(--stamp-fg, #FBE5C1)" stroke-width="1.5" stroke-dasharray="3 5"/>
   <image href="${root}assets/brand/zunera-mark-cream.svg" x="74" y="66" width="52" height="68" class="stamp-mark"/>
@@ -181,12 +181,12 @@ const stamp = (id, text, root, cls = '') => `<svg class="stamp ${cls}" viewBox="
 /* Star-burst sticker outline */
 const burstPath = (() => {
   const pts = [];
-  for (let i = 0; i < 32; i++) {
-    const r = i % 2 ? 84 : 98, a = (Math.PI * 2 * i) / 32;
+  for (let i = 0; i < 48; i++) {
+    const r = i % 2 ? 93 : 98, a = (Math.PI * 2 * i) / 48;
     pts.push((100 + r * Math.cos(a)).toFixed(1) + ' ' + (100 + r * Math.sin(a)).toFixed(1));
   }
   return 'M' + pts.join('L') + 'Z';
 })();
-const burst = (line1, line2, cls = '') => `<span class="burst ${cls}"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="${burstPath}" fill="currentColor" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/></svg><span><b>${line1}</b>${line2 ? `<i>${line2}</i>` : ''}</span></span>`;
+const burst = (line1, line2, cls = '') => `<span class="burst ${cls}"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="${burstPath}" fill="currentColor" stroke="${INK}" stroke-opacity=".35" stroke-width="1.5" stroke-linejoin="round"/><circle cx="100" cy="100" r="84" fill="none" stroke="${INK}" stroke-opacity=".3" stroke-width="1.2"/></svg><span><b>${line1}</b>${line2 ? `<i>${line2}</i>` : ''}</span></span>`;
 
 module.exports = { fruit, icon2, sparkle, stamp, burst, INK };
