@@ -52,7 +52,21 @@ function get(url, hops = 4) {
         res.resume();
         return resolve(get(new URL(res.headers.location, url).href, hops - 1));
       }
-      if (res.statusCode !== 200) { res.resume(); return reject(new Error('HTTP ' + res.statusCode)); }
+      if (res.statusCode !== 200) {
+        /* Keep the API's own error text (never the token) so the build log says what went wrong */
+        const body = [];
+        res.on('data', (c) => body.push(c));
+        res.on('end', () => {
+          let why = '';
+          try {
+            const er = JSON.parse(Buffer.concat(body).toString('utf8')).error || {};
+            why = [er.message, er.code && 'code ' + er.code, er.error_subcode && 'subcode ' + er.error_subcode].filter(Boolean).join(', ');
+          } catch (e) { /* not JSON */ }
+          why = why.replace(/(EAA|IG)[A-Za-z0-9]{20,}/g, '[token]').slice(0, 300);
+          reject(new Error('HTTP ' + res.statusCode + (why ? ': ' + why : '')));
+        });
+        return;
+      }
       const chunks = [];
       res.on('data', (c) => chunks.push(c));
       res.on('end', () => resolve(Buffer.concat(chunks)));
@@ -109,14 +123,12 @@ async function instagram() {
     if (!posts.length) throw new Error('no posts in the feed');
     /* Instagram tokens last 60 days; each build asks for an extension. A failure here is harmless. */
     if (token && !/^EAA/.test(token)) await get('https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=' + encodeURIComponent(token)).catch(() => {});
-    const dir = path.join(out, LIVE_DIR);
-    fs.mkdirSync(dir, { recursive: true });
-    fs.readdirSync(dir).forEach((f) => fs.unlinkSync(path.join(dir, f)));
-    const saved = [];
+    /* Download everything first, so a failure part-way leaves the last good feed untouched */
+    const files = [], saved = [];
     for (const p of posts) {
       const buf = await get(p.img);
       const file = LIVE_DIR + '/' + p.id + extFor(buf);
-      fs.writeFileSync(path.join(out, file), buf);
+      files.push([file, buf]);
       /* Reels: keep the video too, so it can play silently on the page. Very large files are skipped
          (the cover image is shown instead) to keep the home page quick on phones. */
       let videoSrc = null;
@@ -124,14 +136,28 @@ async function instagram() {
         const vid = await get(p.videoUrl).catch(() => null);
         if (vid && vid.length < 25 * 1024 * 1024) {
           videoSrc = LIVE_DIR + '/' + p.id + '.mp4';
-          fs.writeFileSync(path.join(out, videoSrc), vid);
+          files.push([videoSrc, vid]);
         }
       }
       saved.push({ src: file, videoSrc, link: p.link, alt: p.caption ? 'Instagram post: ' + p.caption.slice(0, 120) : 'A recent Zunera Instagram post' });
     }
+    const dir = path.join(out, LIVE_DIR);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.readdirSync(dir).forEach((f) => fs.unlinkSync(path.join(dir, f)));
+    files.forEach(([f, buf]) => fs.writeFileSync(path.join(out, f), buf));
+    fs.writeFileSync(path.join(dir, 'feed.json'), JSON.stringify({ fetched: new Date().toISOString(), posts: saved }, null, 2));
     console.log('  Instagram: ' + saved.length + ' recent posts');
     return saved;
   } catch (e) {
+    /* Fall back to the last feed that worked (the deploy workflow keeps it between builds) */
+    try {
+      const last = JSON.parse(fs.readFileSync(path.join(out, LIVE_DIR, 'feed.json'), 'utf8'));
+      const ok = last.posts.length && last.posts.every((p) => fs.existsSync(path.join(out, p.src)) && (!p.videoSrc || fs.existsSync(path.join(out, p.videoSrc))));
+      if (ok) {
+        console.log('  Instagram: feed unavailable (' + e.message + '), keeping the last feed from ' + last.fetched);
+        return last.posts;
+      }
+    } catch (e2) { /* no saved feed */ }
     console.log('  Instagram: feed unavailable (' + e.message + '), showing the saved photos');
     return [];
   }

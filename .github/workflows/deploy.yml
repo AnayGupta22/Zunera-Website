@@ -36,6 +36,14 @@ jobs:
         with:
           node-version: 22
 
+      # Keep the last Instagram posts that downloaded, so a failed fetch never falls back to old photos
+      - name: Restore last Instagram feed
+        uses: actions/cache@v4
+        with:
+          path: site/assets/social/live
+          key: instagram-feed-${{ github.run_id }}
+          restore-keys: instagram-feed-
+
       - name: Build Zunera website
         run: node build.js
         env:
