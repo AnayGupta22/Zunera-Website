@@ -19,13 +19,11 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+# Build and deploy run as separate jobs (GitHub's recommended layout). In one job, the deploy step
+# sometimes looked for the uploaded site before GitHub had registered it, and the run failed.
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -61,6 +59,15 @@ jobs:
         with:
           path: ./site
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
